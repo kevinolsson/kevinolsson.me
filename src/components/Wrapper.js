@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from './Layout';
+import Layout from './Layout/Layout';
 
 const Wrapper = (props) => {
   const { children } = props;
   return (
-    <div>
-      Outside the layout
+    <>
       <Layout>{children}</Layout>
-    </div>
+    </>
   );
 };
 

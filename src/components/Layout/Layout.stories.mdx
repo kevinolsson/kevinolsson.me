@@ -1,0 +1,23 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Layout from './Layout';
+
+<Meta title='Layout' component={Layout} />
+
+# Layout
+
+Any component wrapped inside the `Layout` component will have a specific set of CSS styles applied to it.
+This is so that every component wrapped inside will have consistent top level layout related stylings.
+
+Refer to `Layout.js` to check out said styles.
+
+<Preview>
+  <Story name="Default" height="100px">
+     <Layout>
+        Hello World
+      </Layout>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={Layout} />

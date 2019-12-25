@@ -1,12 +1,12 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import Router from './Router';
 import theme from './components/Theme';
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <MuiThemeProvider theme={theme}>
     <Router />
-  </ThemeProvider>
+  </MuiThemeProvider>
 );
 
 export default App;

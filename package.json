@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "storybook": "start-storybook -s ./public"
   },
   "browserslist": {
     "production": [
@@ -35,6 +36,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@storybook/addon-docs": "^5.3.0-beta.25",
+    "@storybook/react": "^5.3.0-beta.25",
+    "babel-loader": "^8.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",

@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '1024px',
     margin: `${theme.spacing(4)}px auto`,
     padding: theme.spacing(4),
+    paddingBottom: theme.spacing(24),
   },
 }), { name: 'layout' });
 

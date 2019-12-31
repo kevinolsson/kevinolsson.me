@@ -8,6 +8,7 @@ import {
 import Wrapper from 'components/Wrapper';
 import Home from 'components/Home/Home';
 import BlogPost from 'components/BlogPost/BlogPost';
+import Contact from 'components/Contact/Contact';
 
 const Router = () => (
   <>
@@ -33,7 +34,7 @@ const Router = () => (
             Resume
           </Route>
           <Route path="/contact" exact>
-            Conact
+            <Contact />
           </Route>
           <Route>
             404 error

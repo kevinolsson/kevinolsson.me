@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navigation from 'components/Navigation/Navigation';
 import HamburgerButton from 'components/HamburgerButton/HamburgerButton';
+import Box from '@material-ui/core/Box';
 import contextAwareNavigation from 'components/Navigation/contextAwareNavigation';
 import contextAwareHamburgerButton from 'components/HamburgerButton/contextAwareHamburgerButton';
 
@@ -55,11 +56,11 @@ const MobileNavigation = () => {
         visible && classes.rootVisible,
       ].filter(Boolean).join(' ')}
       >
-        <div className={classes.background}>
+        <Box onClick={toggleVisible} className={classes.background}>
           <div className={classes.mobileNavigation}>
             <ContextAwareNavigation handleClickCallback={toggleVisible} view="mobile" />
           </div>
-        </div>
+        </Box>
       </div>
       <ContextAwareHamburgerButton active={visible} handleClickCallback={toggleVisible} />
     </>

@@ -13,11 +13,12 @@ const Contact = () => (
     <Typography gutterBottom variant="h5">
     Alternatively, you can reach out to me on
       {' '}
-      <Box href="https://linkedin.com" component={Link} fontWeight="fontWeightBold" color="portfolio.dark">LinkedIn</Box>
+      <Box href="https://www.linkedin.com/in/kevin-olsson-54bb21136/" component={Link} fontWeight="fontWeightBold" color="portfolio.dark">LinkedIn</Box>
       {' '}
 or
       {' '}
-      <Box href="https://twitter.com" component={Link} fontWeight="fontWeightBold" color="portfolio.dark">Twitter</Box>
+      <Box href="https://twitter.com/olssoneerz" component={Link} fontWeight="fontWeightBold" color="portfolio.dark">Twitter</Box>
+.
     </Typography>
     <Typography variant="body1" paragraph>
       I am currently employed full time at Påmind AB as a Front-end developer.

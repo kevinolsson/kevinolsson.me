@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
+    "@storybook/preset-create-react-app": "^1.5.0",
+    "@storybook/addon-knobs": "5.2.8",
     "@storybook/addon-docs": "^5.3.0-beta.25",
     "@storybook/react": "^5.3.0-beta.25",
     "babel-loader": "^8.0.6",

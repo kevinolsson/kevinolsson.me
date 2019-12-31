@@ -1,41 +1,48 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import theme from 'components/Theme';
 
-const Palette = (props) => {
-  const { value, palette, group } = props;
-  return (
-    <Box width={1} bgcolor={palette} display="table" height="100px">
-      <Box
-        display="table-cell"
-        paddingLeft={4}
-        style={{ verticalAlign: 'middle' }}
-      >
-        <Typography variant="body1" component="div">
-          <Box
-            style={{ textTransform: 'uppercase' }}
-            fontWeight="fontWeightBold"
-            fontSize="body1.fontSize"
-          >
-            {palette}
-          </Box>
-          {/^\d+$/.test(value)
-            ? `theme.palette.${group}[${value}]`
-            : `theme.palette.${group}.${value}`}
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    color: theme.palette.text.primary,
+  },
+  palette: {
+    textAlign: 'center',
+  },
+  circle: {
+    display: 'block',
+    width: '124px',
+    height: '124px',
+    borderRadius: '100%',
+    margin: theme.spacing(4),
+  },
+  title: {
+    textTransform: 'capitalize',
+  },
+  pink: { backgroundColor: (portfolio) => portfolio.pink },
+  green: { backgroundColor: (portfolio) => portfolio.green },
+  dark: { backgroundColor: (portfolio) => portfolio.dark },
+  grey: { backgroundColor: (portfolio) => portfolio.grey },
 
-Palette.propTypes = {
-  group: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  palette: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]).isRequired,
+}, { name: 'palette' });
+
+const Palette = () => {
+  const { portfolio } = theme.palette;
+  const classes = useStyles(portfolio);
+  return portfolio ? (
+    <div className={classes.root}>
+      { Object.keys(portfolio).map((palette) => (
+        <Box className={classes.palette} key={palette}>
+          <Box className={`${classes.circle} ${classes[palette]}`} />
+          <Typography className={classes.title} variant="h4">{palette}</Typography>
+          <Typography variant="body1">{portfolio[palette]}</Typography>
+        </Box>
+      )) }
+    </div>
+  ) : null;
 };
 
 export default Palette;

@@ -5,21 +5,23 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
+import Home from 'components/Home/Home';
+import BlogPost from 'components/BlogPost/BlogPost';
 
 const Router = () => (
   <>
-    <Wrapper>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Wrapper>
         <Switch>
           <Route path="/" exact>
-            Home
+            <Home />
           </Route>
           <Route path="/blog" exact>
             <Redirect to="/" />
           </Route>
           <Route path="/blog/:blogSlug">
-            Blog Post
+            <BlogPost />
           </Route>
           <Route path="/projects" exact>
             Projects
@@ -37,8 +39,8 @@ const Router = () => (
             404 error
           </Route>
         </Switch>
-      </BrowserRouter>
-    </Wrapper>
+      </Wrapper>
+    </BrowserRouter>
   </>
 );
 

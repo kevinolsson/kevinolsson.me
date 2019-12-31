@@ -1,13 +1,21 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import Title from './Title';
 
-<Meta title='Title' component={Title} />
+<Meta title='Components|Title' component={Title} />
 
 # Title
 
+Every element in the is block on mobile. Avatar and title shares a line when on desktop.
+
 <Preview>
   <Story name="Default">
-    <Title />
+    <Title/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Prominent">
+    <Title prominent/>
   </Story>
 </Preview>
 

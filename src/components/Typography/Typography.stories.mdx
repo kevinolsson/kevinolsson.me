@@ -1,0 +1,41 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Typography from '@material-ui/core/Typography';
+
+<Meta title='System|Typography' component={Typography} />
+
+# Typography
+
+**Major Third (5/4)** musical Interval is used as ratio paired with a Base font size of 18px.
+Body type follows a lineheight multiplier of 1.6, while the headers follow a multiplier of 1.2
+
+**Font-size** is computed by multiplying the Major Third (1.25) by itself X number of times
+and then multiplying the product by the base font size of 18px.
+X is any value where the final font-size returns a desireable result.
+
+**Line-height** is computed by multiplying the font-size with the respective multipler,
+then getting the highest available number divisible by 4. (x % 4 === 0)
+
+<Preview>
+  <Story name="Default">
+    <React.Fragment>
+      <Typography variant="h1">This is an H1 Tag</Typography>
+      <Typography variant="h2">This is an H2 Tag</Typography>
+      <Typography variant="h3">This is an H3 Tag</Typography>
+      <Typography variant="h4">This is an H4 Tag</Typography>
+      <Typography variant="h5" gutterBottom >This is an H5 Tag</Typography>
+      <Typography paragraph variant="body1">
+        Major Third (5/4) musical Interval is used as ratio paired with a Base font size of 18px.
+        Body type follows a lineheight multiplier of 1.6, while the headers follow a multiplier of 1.2
+      </Typography>
+      <Typography paragraph variant="body1">
+        Font-size is computed by multiplying the Major Third (1.25) by itself X number of times and
+        then multiplying the product by the base font size of 18px. X is any value where the
+        final font-size returns a desireable result.
+      </Typography>
+      <Typography paragraph variant="body1">
+        Line-height is computed by multiplying the font-size with the respective multipler,
+        then getting the highest available number divisible by 4. (x % 4 === 0)
+      </Typography>
+    </React.Fragment>
+  </Story>
+</Preview>

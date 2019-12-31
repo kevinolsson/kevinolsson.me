@@ -1,0 +1,27 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Typography from '@material-ui/core/Typography';
+import MobileNavigation from './MobileNavigation';
+
+<Meta title='Components|MobileNavigation' component={MobileNavigation} />
+
+# MobileNavigation
+
+<Preview>
+  <Story name="Default" height="460px"> 
+  <div>
+    <Typography variant="body1">Regular content goes here</Typography>
+    <MobileNavigation    
+      active="/hello-world"
+      menu={[
+        {name: 'Hello World 1', url: '/hello-world'},
+        {name: 'Hello World 2', url: '/hello-world-2'},
+        {name: 'Hello World 3', url: '/hello-world-3'}
+      ]}
+    />
+  </div>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={MobileNavigation} />

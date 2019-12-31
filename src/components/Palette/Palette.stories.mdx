@@ -1,0 +1,21 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Palette from './Palette';
+
+<Meta title='System|Palette' component={Palette} />
+
+# Palette
+
+Using MaterialUI gives me access to a lot of palettes which I don't necessarily need.
+So I've placed all the colors I'm using in its own palette group `theme.palette.portfolio.<color>`
+and will be accessing these colors when I need them.
+
+This way, I won't have to worry about having to define (or overwrite) each default MaterialUI palette
+when I start building on top of some of their components.
+
+<Preview>
+  <Story name="Portfolio">
+    <Palette />
+  </Story>
+</Preview>
+
+I've deliberately left out the MaterialUI palettes in the preview as they are not really relevant.

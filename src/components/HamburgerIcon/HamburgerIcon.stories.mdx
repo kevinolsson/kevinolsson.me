@@ -1,9 +1,8 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean } from "@storybook/addon-knobs";
 import HamburgerIcon from './HamburgerIcon';
 import Typography from '@material-ui/core/Typography';
 
-<Meta title='Components|HamburgerIcon' component={HamburgerIcon} decorators={[withKnobs]}/>
+<Meta title='Components|HamburgerIcon' component={HamburgerIcon} />
 
 # HamburgerIcon
 
@@ -18,7 +17,7 @@ import Typography from '@material-ui/core/Typography';
 <Preview>
   <Story name="Active" height="200px">
   <div style={{backgroundColor: '#000', display: 'inline-block'}}>
-    <HamburgerIcon active={boolean('active', true)} />
+    <HamburgerIcon active />
   </div>
   </Story>
 </Preview>

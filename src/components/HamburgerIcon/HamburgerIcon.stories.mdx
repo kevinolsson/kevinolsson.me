@@ -1,0 +1,27 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import HamburgerIcon from './HamburgerIcon';
+import Typography from '@material-ui/core/Typography';
+
+<Meta title='Components|HamburgerIcon' component={HamburgerIcon} />
+
+# HamburgerIcon
+
+<Preview>
+  <Story name="Default" height="200px">
+  <div>
+    <HamburgerIcon />
+  </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Active" height="200px">
+  <div style={{backgroundColor: '#000', display: 'inline-block'}}>
+    <HamburgerIcon active />
+  </div>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={HamburgerIcon} />

@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import HamburgerIcon from 'components/HamburgerIcon/HamburgerIcon';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles({
-  root: ({ theme, forceMobileView }) => ({
+const useStyles = makeStyles((theme) => ({
+  root: ({ forceMobileView }) => ({
     position: 'fixed',
     zIndex: 150,
     bottom: theme.spacing(4),
@@ -14,7 +16,7 @@ const useStyles = makeStyles({
       display: !forceMobileView && 'none',
     },
   }),
-  button: ({ theme }) => ({
+  button: {
     width: theme.spacing(16),
     height: theme.spacing(16),
     border: 'none',
@@ -23,11 +25,12 @@ const useStyles = makeStyles({
     backgroundColor: theme.palette.portfolio.green,
     position: 'relative',
     zIndex: 10,
-  }),
-  buttonActive: ({ theme }) => ({
+    padding: 0,
+  },
+  buttonActive: {
     backgroundColor: theme.palette.portfolio.grey,
-  }),
-  buttonBack: ({ theme }) => ({
+  },
+  buttonBack: {
     position: 'absolute',
     transition: '0.1s ease-out right',
     width: theme.spacing(12),
@@ -36,19 +39,22 @@ const useStyles = makeStyles({
     top: theme.spacing(2),
     right: 0,
     zIndex: 5,
-  }),
-  buttonBackActive: ({ theme }) => ({
+  },
+  buttonBackActive: {
     right: theme.spacing(14),
-  }),
-}, { name: 'hamburgerButton' });
+  },
+  backIcon: {
+    margin: theme.spacing(3),
+    fill: theme.palette.common.white,
+  },
+}), { name: 'hamburgerButton' });
 
 
 const HamburgerButton = ({
   handleClickCallback, active, forceMobileView, back, showBack,
 }) => {
   const [backActive, setBackActive] = React.useState(false);
-  const theme = useTheme();
-  const classes = useStyles({ theme, forceMobileView });
+  const classes = useStyles({ forceMobileView });
 
   const handleClick = () => {
     if (handleClickCallback) {
@@ -72,7 +78,9 @@ const HamburgerButton = ({
           classes.button,
           active && classes.buttonActive,
         ].filter(Boolean).join(' ')}
-      />
+      >
+        <HamburgerIcon active={active} />
+      </button>
       { back && (
         <Component
           to={typeof back === 'string' ? back : undefined}
@@ -82,7 +90,9 @@ const HamburgerButton = ({
             classes.buttonBack,
             backActive && classes.buttonBackActive,
           ].filter(Boolean).join(' ')}
-        />
+        >
+          <ArrowBackIcon className={classes.backIcon} />
+        </Component>
       )}
     </div>
   );

@@ -30,5 +30,6 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension' : 'off',
+    'react/no-array-index-key' : 'off'
   },
 };

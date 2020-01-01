@@ -1,0 +1,34 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import ExperienceBlock from './ExperienceBlock';
+import Typography from '@material-ui/core/Typography';
+
+
+<Meta title='Components|ExperienceBlock' component={ExperienceBlock} />
+
+# ExperienceBlock
+
+
+<Preview>
+  <Story name="Default">
+  <div>
+    <ExperienceBlock 
+      avatar={`${process.env.PUBLIC_URL}/comeon.jpg`}
+      company="ComeOn! Stockholm AB" 
+      position="UX Designer &amp; Front-end developer" 
+      details={['Stockholm, Sweden', 'March 2017 - May 2019']} 
+      description="Worked both as a designer and a developer. 
+      Developed prototypes through either code (HTML, Sass, JS) or design tools (Proto.io, Principle, Sketch). 
+      Took ownership of ComeOn!’s promotions platform which involved: working with brand teams to determine requirements, 
+      creating roadmaps to cover short and long term plans for platform, 
+      developing new while maintaining legacy promotions, 
+      coordinating with external agencies to get work done for said platform, 
+      and introducing new workflows which eventually led to leading a 
+      now dedicated in-house team for said platform."
+    />
+  </div>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={ExperienceBlock} />

@@ -29,13 +29,16 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     ...theme.typography.h2,
+    fontFamily: theme.typography.fontFamily,
   },
   titleProminent: {
     ...theme.typography.h1,
+    fontFamily: theme.typography.fontFamily,
   },
   subtitle: {
     display: 'block',
     paddingRight: theme.spacing(12),
+    whiteSpace: 'pre-line',
   },
   transition: {
     transition: '0.1s ease-out all',
@@ -52,10 +55,34 @@ const Title = (props) => {
   const Component = url ? Link : Box;
   return (
     <Component to={url} className={classes.root}>
-      <Avatar src={avatar} alt={name} className={[classes.avatar, classes.transition, prominent && classes.avatarProminent].filter(Boolean).join(' ')} />
+      <Avatar
+        src={avatar}
+        alt={name}
+        className={[
+          classes.avatar,
+          classes.transition,
+          prominent && classes.avatarProminent,
+        ].filter(Boolean).join(' ')}
+      />
       <Box>
-        <Typography className={[classes.title, classes.transtition, prominent && classes.titleProminent].filter(Boolean).join(' ')} component={prominent ? 'h1' : 'h2'}>{name}</Typography>
-        { prominent && (<Typography className={classes.subtitle} variant="body1">{introduction}</Typography>)}
+        <Typography
+          className={[
+            classes.title,
+            classes.transtition,
+            prominent && classes.titleProminent,
+          ].filter(Boolean).join(' ')}
+          component={prominent ? 'h1' : 'h2'}
+        >
+          {name}
+        </Typography>
+        { prominent && (
+        <Typography
+          className={classes.subtitle}
+          variant="body1"
+        >
+          {introduction}
+        </Typography>
+        )}
       </Box>
     </Component>
   );
@@ -63,9 +90,9 @@ const Title = (props) => {
 
 Title.defaultProps = {
   prominent: false,
-  avatar: `${process.env.PUBLIC_URL}/profile.jpg`,
+  avatar: `${process.env.PUBLIC_URL}/images/profile.jpg`,
   name: 'Kevin Olsson',
-  introduction: 'Front-end developer & UX Designer. I finally built a blog.',
+  introduction: 'Front-end developer & UX Designer.\n I finally built a blog.',
   url: '/',
 };
 

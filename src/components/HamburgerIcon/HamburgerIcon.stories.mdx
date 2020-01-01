@@ -1,10 +1,14 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import HamburgerIcon from './HamburgerIcon';
+import HamburgerIconStory from './HamburgerIconStory';
 import Typography from '@material-ui/core/Typography';
+
 
 <Meta title='Components|HamburgerIcon' component={HamburgerIcon} />
 
 # HamburgerIcon
+
+Interactive icon with a cute transition <3. Falls under component as its really not an SVG but instead created using CSS.
 
 <Preview>
   <Story name="Default" height="200px">
@@ -14,11 +18,11 @@ import Typography from '@material-ui/core/Typography';
   </Story>
 </Preview>
 
+Quick demo of how the HamburgerIcon jumps between non active and active state.
+
 <Preview>
-  <Story name="Active" height="200px">
-  <div style={{backgroundColor: '#000', display: 'inline-block'}}>
-    <HamburgerIcon active />
-  </div>
+  <Story name="Demo" height="200px">
+  <HamburgerIconStory />
   </Story>
 </Preview>
 

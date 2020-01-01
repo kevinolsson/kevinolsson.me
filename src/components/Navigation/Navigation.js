@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   }),
   link: ({ view }) => ({
     ...view === 'mobile' ? theme.typography.h2 : undefined,
+    fontFamily: theme.typography.fontFamily,
     fontWeight: 700,
     color: theme.palette.portfolio.dark,
     textDecoration: 'none',

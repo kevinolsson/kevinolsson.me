@@ -9,6 +9,7 @@ import Wrapper from 'components/Wrapper';
 import Home from 'components/Home/Home';
 import BlogPost from 'components/BlogPost/BlogPost';
 import Contact from 'components/Contact/Contact';
+import Resume from 'components/Resume/Resume';
 
 const Router = () => (
   <>
@@ -31,7 +32,7 @@ const Router = () => (
             Project Post Page
           </Route>
           <Route path="/resume" exact>
-            Resume
+            <Resume />
           </Route>
           <Route path="/contact" exact>
             <Contact />

@@ -13593,6 +13593,11 @@ token-stream@0.0.1:
   resolved "https://registry.yarnpkg.com/token-stream/-/token-stream-0.0.1.tgz#ceeefc717a76c4316f126d0b9dbaa55d7e7df01a"
   integrity sha1-zu78cXp2xDFvEm0LnbqlXX598Bo=
 
+tornis@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/tornis/-/tornis-0.2.1.tgz#cd8de5e721f375a1184eb32af006ce3e0689507a"
+  integrity sha512-fYLAP+58AXN23MmQ+eSU+igcpKo/dSCHi3UyuAAxaW1wQZqcex9ucPGrGi/2r0w0btEzUFtq6zospd5c5W+OBw==
+
 tough-cookie@^2.3.3, tough-cookie@^2.3.4, tough-cookie@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"

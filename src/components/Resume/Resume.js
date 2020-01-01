@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import ResumeIntroduction from 'components/Resume/ResumeIntroduction';
 import ResumeExperience from 'components/Resume/ResumeExperience';
 import ResumeOther from 'components/Resume/ResumeOther';
 import ResumeEducation from 'components/Resume/ResumeEducation';
@@ -10,13 +9,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridGap: theme.spacing(8),
     [theme.breakpoints.up('md')]: {
+      gridColumnGap: theme.spacing(8),
       gridTemplateColumns: '60% 40%',
     },
   },
   introduction: {
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(16),
   },
   experience: {
     gridRowStart: '3',
@@ -27,26 +26,14 @@ const useStyles = makeStyles((theme) => ({
   other: {
     gridRowStart: '2',
   },
-}), { name: 'resume' });
+}), { name: 'resumeGrid' });
 
 const Resume = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.introduction}>
-        <Typography variant="body1">
-        Passion for building things and collaborating with people.
-        Has a degree in Computer Science. Based in Stockholm.
-        Previously headed a design studio in Manila.
-        You can download a
-          {' '}
-          <Link
-            href="https://docs.google.com/document/d/1318YrMoWYcCMl-CE6q0R-yDoUZoTXWmleTqhrxeegOY/export?format=pdf"
-            underline="always"
-          >
-PDF version of this page here.
-          </Link>
-        </Typography>
+        <ResumeIntroduction />
       </div>
       <div className={classes.experience}>
         <ResumeExperience />

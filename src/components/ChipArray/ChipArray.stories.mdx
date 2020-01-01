@@ -1,5 +1,6 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import ChipArray from './ChipArray';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 
 <Meta title='Components|ChipArray' component={ChipArray} />
@@ -7,9 +8,17 @@ import ChipArray from './ChipArray';
 # ChipArray
 
 <Preview>
-  <Story name="Default" height="200px">
+  <Story name="Default">
   <div>
     <ChipArray label={['Label', 'Hello', 'World', 'Pugs']} />
+  </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Array as label">
+  <div>
+    <ChipArray label={['Label', ['Hello', <FavoriteBorderIcon />], 'World', 'Pugs']} />
   </div>
   </Story>
 </Preview>

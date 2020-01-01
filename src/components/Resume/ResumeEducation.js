@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       height: '80px',
     },
   },
-}), { name: 'education' });
+}), { name: 'resumeEducation' });
 
 const ResumeEducation = () => {
   const classes = useStyles();
@@ -49,7 +49,13 @@ const ResumeEducation = () => {
             {' '}
             Most outstanding thesis:
             {' '}
-            <Link underline="always" href="https://github.com/mixxorz/potator">A Tor-based distributed VPN network system</Link>
+            <Link
+              underline="always"
+              color="primary"
+              href="https://github.com/mixxorz/potator"
+            >
+              A Tor-based distributed VPN network system (Potator)
+            </Link>
 
           </Box>
         </Typography>

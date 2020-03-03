@@ -21,12 +21,30 @@ or
 .
     </Typography>
     <Typography variant="body1" paragraph>
-      I am currently employed full time at Påmind AB as a Front-end developer.
-      However, don’t let that stop you from reaching out!I love building things
-so I am always open for small side projects.
+      I am currently employed full time at
       {' '}
-Alternatively,
-      my friends at Kirigami could always lend a helping hand!
+      <Link
+        href="https://www.pamind.se/"
+        underline="always"
+        color="primary"
+      >
+        Påmind AB
+      </Link>
+      {' '}
+       as a Front-end developer.
+      However, don’t let that stop you from reaching out!I love building things
+      so I am always open for small side projects. Alternatively,
+      my friends at
+      {' '}
+      <Link
+        href="https://kirigami.co/"
+        underline="always"
+        color="primary"
+      >
+        Kirigami
+      </Link>
+      {' '}
+      could always lend a helping hand!
     </Typography>
   </Box>
 );

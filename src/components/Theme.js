@@ -17,55 +17,55 @@ const typography = {
   h1: {
     fontFamily: 'Lora, serif',
     fontSize: '43.94px',
-    lineHeight: '56px',
+    lineHeight: '52px',
     fontWeight: 700,
     [scaffolding.breakpoints.up('md')]: {
       fontSize: '68.66px',
-      lineHeight: '84px',
+      lineHeight: '80px',
       fontWeight: 700,
     },
   },
   h2: {
     fontFamily: 'Lora, serif',
     fontSize: '35.16px',
-    lineHeight: '48px',
+    lineHeight: '44px',
     fontWeight: 700,
     [scaffolding.breakpoints.up('md')]: {
       fontSize: '43.94px',
-      lineHeight: '56px',
+      lineHeight: '52px',
       fontWeight: 700,
     },
   },
   h3: {
     fontFamily: 'Open Sans, sans-serif',
     fontSize: '28.12px',
-    lineHeight: '36px',
+    lineHeight: '32px',
     fontWeight: 700,
     [scaffolding.breakpoints.up('md')]: {
       fontSize: '35.16px',
-      lineHeight: '48px',
+      lineHeight: '44px',
       fontWeight: 700,
     },
   },
   h4: {
     fontFamily: 'Open Sans, sans-serif',
     fontSize: '22.5px',
-    lineHeight: '32px',
+    lineHeight: '28px',
     fontWeight: 700,
     [scaffolding.breakpoints.up('md')]: {
       fontSize: '28.12px',
-      lineHeight: '36px',
+      lineHeight: '32px',
       fontWeight: 700,
     },
   },
   h5: {
     fontFamily: 'Open Sans, sans-serif',
     fontSize: '22.5px',
-    lineHeight: '32px',
+    lineHeight: '28px',
     fontWeight: 400,
     [scaffolding.breakpoints.up('md')]: {
       fontSize: '28.12px',
-      lineHeight: '36px',
+      lineHeight: '32px',
       fontWeight: 400,
     },
   },
@@ -119,6 +119,9 @@ const theme = createMuiTheme({
     ...scaffolding.typography,
     ...typography,
     fontFamily: 'Open Sans, sans-serif',
+  },
+  shape: {
+    borderRadius: '3px',
   },
   overrides: {
     MuiTypography: {

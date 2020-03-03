@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'grid',
     gridTemplateColumns: '1fr 1px',
-    marginBottom: theme.spacing(16),
+    marginBottom: theme.spacing(8),
     [theme.breakpoints.up('md')]: {
       gridGap: theme.spacing(4),
       gridTemplateColumns: '1fr auto',

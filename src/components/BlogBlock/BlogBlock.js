@@ -19,7 +19,7 @@ const BlogBlock = ({
   const classes = useStyles();
   return (
     <Link to={url} className={classes.root}>
-      {title && <Typography color={featured && 'primary'} variant="h2">{title}</Typography>}
+      {title && <Typography paragraph color={featured ? 'primary' : 'black'} variant="h2">{title}</Typography>}
       {date && <Typography paragraph variant="body1"><strong>{date}</strong></Typography>}
       {body && <Typography variant="body1">{body}</Typography>}
     </Link>

@@ -14,7 +14,7 @@ const useStyles = makeStyles(
   { name: 'IgnoreLayoutWrapper' },
 );
 
-export const IgnoreLayoutWrapper = ({ children }) => {
+const IgnoreLayoutWrapper = ({ children }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

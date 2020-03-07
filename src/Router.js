@@ -10,6 +10,9 @@ import Home from 'components/Home/Home';
 import BlogPost from 'components/BlogPost/BlogPost';
 import Contact from 'components/Contact/Contact';
 import Resume from 'components/Resume/Resume';
+import Projects from 'components/Projects/Projects';
+import ProjectRouter from 'components/ProjectRouter/ProjectRouter';
+import ErrorMessage from 'components/ErrorMessage/ErrorMessage';
 
 const Router = () => (
   <>
@@ -26,10 +29,10 @@ const Router = () => (
             <BlogPost />
           </Route>
           <Route path="/projects" exact>
-            Projects
+            <Projects />
           </Route>
           <Route path="/projects/:projectSlug">
-            Project Post Page
+            <ProjectRouter />
           </Route>
           <Route path="/resume" exact>
             <Resume />
@@ -38,7 +41,7 @@ const Router = () => (
             <Contact />
           </Route>
           <Route>
-            404 error
+            <ErrorMessage code={404} />
           </Route>
         </Switch>
       </Wrapper>

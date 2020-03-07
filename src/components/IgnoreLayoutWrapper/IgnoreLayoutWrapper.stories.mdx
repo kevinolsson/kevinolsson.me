@@ -1,0 +1,25 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Typography from '@material-ui/core/Typography';
+import IgnoreLayoutWrapper from './IgnoreLayoutWrapper';
+import Layout from 'components/Layout/Layout';
+
+<Meta title='Components|IgnoreLayoutWrapper' component={IgnoreLayoutWrapper} />
+
+# IgnoreLayoutWrapper
+
+Any component wrapped inside the `IgnoreLayoutWrapper` component will ignore the constraints set by the Layout component a few levels up
+
+<Preview>
+  <Story name="Default">
+    <Layout>
+      Everything in here will follow the Layout component
+      <IgnoreLayoutWrapper>
+        Everything in here will ignore the Layout Component
+      </IgnoreLayoutWrapper>
+      </Layout>
+  </Story>
+</Preview>
+
+
+## Props
+<Props of={IgnoreLayoutWrapper} />

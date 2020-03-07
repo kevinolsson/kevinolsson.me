@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import { Box } from '@material-ui/core';
+import { Box, Link as MuiLink } from '@material-ui/core';
+import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -18,7 +19,7 @@ const useStyles = makeStyles(
   { name: 'Thumbnail' },
 );
 
-export const Thumbnail = ({ thumbnail: thumbnailProp, url }) => {
+const Thumbnail = ({ type, thumbnail: thumbnailProp, url }) => {
   const [hasLoaded, setHasLoaded] = React.useState(false);
   const [error, setError] = React.useState(false);
 
@@ -32,19 +33,21 @@ export const Thumbnail = ({ thumbnail: thumbnailProp, url }) => {
   thumbnail.src = thumbnailProp;
 
   const classes = useStyles({ src: thumbnailProp });
-  const Component = url ? Link : Box;
+  // eslint-disable-next-line no-nested-ternary
+  const Component = type === 'external' ? MuiLink : url ? Link : Box;
 
-  if (error) return (<div>You suck</div>);
-  return hasLoaded ? (
-    <Component className={classes.root} to={url} />
-  ) : <div>Hello World</div>;
+  return hasLoaded && !error ? (
+    <Component className={classes.root} to={url} href={type === 'external' ? url : undefined} />
+  ) : <Skeleton variant="rect" height="100%" />;
 };
 
 Thumbnail.defaultProps = {
+  type: 'default',
   url: undefined,
 };
 
 Thumbnail.propTypes = {
+  type: PropTypes.oneOf(['component', 'external', 'default']),
   thumbnail: PropTypes.string.isRequired,
   url: PropTypes.string,
 };

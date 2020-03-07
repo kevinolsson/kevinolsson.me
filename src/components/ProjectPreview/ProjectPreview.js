@@ -47,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectPreview = ({ projects }) => {
   const classes = useStyles();
-  const showMore = projects.length === 3;
+  const showMore = projects.length > 3;
   return (
     <div className={classes.root}>
       <div className={classes.grid}>
-        { projects.map((project, index) => (
-          <div key={index} className={[classes.thumbnailWrapper, index === 0 ? classes.thumbnailWrapperFirst : undefined, index + 1 === projects.length ? classes.thumbnailWrapperLast : undefined].join(' ')}>
+        { projects.slice(0, 3).map((project, index) => (
+          <div key={index} className={[classes.thumbnailWrapper, index === 0 ? classes.thumbnailWrapperFirst : undefined, (projects.length > 3 && index + 1 === 3) || (projects.length <= 3 && index + 1 === projects.length) ? classes.thumbnailWrapperLast : undefined].join(' ')}>
             <Thumbnail thumbnail={project.thumbnail} url={project.url} />
           </div>
         ))}

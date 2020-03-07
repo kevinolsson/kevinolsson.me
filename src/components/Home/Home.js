@@ -3,28 +3,12 @@ import ProjectPreview from 'components/ProjectPreview/ProjectPreview';
 import BlogBlock from 'components/BlogBlock/BlogBlock';
 import IgnoreLayoutWrapper from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
 import { blogs } from 'blogs';
+import { projects } from 'projects';
 
 const Home = () => (
   <div>
     <IgnoreLayoutWrapper>
-      <ProjectPreview projects={[
-        {
-          name: 'City',
-          url: '/projects/project-city-1',
-          thumbnail: 'https://source.unsplash.com/640x480/?city',
-        },
-        {
-          name: 'Nature',
-          url: '/projects/project-nature-2',
-          thumbnail: 'https://source.unsplash.com/640x480/?nature',
-        },
-        {
-          name: 'racing',
-          url: '/projects/project-racing',
-          thumbnail: 'https://source.unsplash.com/640x480/?motorsport',
-        },
-      ]}
-      />
+      <ProjectPreview projects={projects} />
     </IgnoreLayoutWrapper>
     {!!blogs.length && blogs.map((blog, index) => !!blog && (
     <BlogBlock

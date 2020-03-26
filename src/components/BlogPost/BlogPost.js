@@ -1,35 +1,22 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import DataContext from 'DataContext';
 import { useHistory, Link } from 'react-router-dom';
-import { blogs } from 'blogs';
-import Button from 'components/Button/Button';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Content from 'components/Content/Content';
 
-
-const BlogPost = () => {
+export const BlogPost = () => {
   const history = useHistory();
+  const { posts } = React.useContext(DataContext); 
+
   const slug = history.location.pathname.split('/')[2];
-  const post = blogs.find((blog) => blog.slug === slug);
+  const post = posts.find((post) => post.name === slug);
+
+  const { title, body } = post;
 
   return post ? (
     <div>
-      <Button
-        component={Link}
-        to="/"
-        startIcon={<ArrowBackIcon />}
-      >
-        Back to blog
-      </Button>
-      {post.title && <Typography gutterBottom variant="h1">{post.title}</Typography>}
-      <div style={{ maxWidth: '540px' }}>
-        {post.date && <Typography paragraph variant="body1"><strong>{post.date}</strong></Typography>}
-        {post.subtitle && <Typography gutterBottom variant="h5">{post.subtitle}</Typography>}
-        <Typography>
-          {post.body}
-        </Typography>
-      </div>
+      <Link to='/blog'>Back to blog</Link>
+      <h1>{title}</h1>
+      <Content src={body} />
     </div>
-  ) : '404 not found';
+  ) : <div>404 not found</div>;
 };
-
-export default BlogPost;

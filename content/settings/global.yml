@@ -1,0 +1,12 @@
+siteTitle: Barebones Netlify CMS + React Starter
+siteUrl: 'https://barebones-netlify-cms-react-starter.netlify.com/'
+siteDescription: >-
+  Barebone starter project for creating JAMstack sites with Netlify CMS. Ideal
+  for someone who is accustomed to working with create-react-app and someone who
+  is not interested in dealing with Gatsby or Preact
+socialMediaCard:
+  image: /images/uploads/card-og.png
+  twitterCreatorAccount: '@Olssoneerz'
+  twitterSiteAccount: ''
+headerScripts: <!-- Add your analytics scripts / verification meta here -->
+enableServiceWorker: false

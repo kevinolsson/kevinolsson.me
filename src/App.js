@@ -1,12 +1,17 @@
 import React from 'react';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import Router from './Router';
-import theme from './components/Theme';
+import { DataProvider } from './DataContext'
+import { Head } from 'components/Head/Head'; 
+import { Router } from 'Router';
+import data from './data.json'
 
-const App = () => (
-  <MuiThemeProvider theme={theme}>
-    <Router />
-  </MuiThemeProvider>
-);
+const App = () => {
+  console.log('data: ',data)
+  return (
+    <DataProvider value={data}>
+      <Head />
+      <Router />
+    </DataProvider>
+  );
+};
 
 export default App;

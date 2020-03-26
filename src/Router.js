@@ -1,52 +1,38 @@
 import React from 'react';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
-import Wrapper from 'components/Wrapper';
-import Home from 'components/Home/Home';
-import BlogPost from 'components/BlogPost/BlogPost';
-import Contact from 'components/Contact/Contact';
-import Resume from 'components/Resume/Resume';
-import Projects from 'components/Projects/Projects';
-import ProjectRouter from 'components/ProjectRouter/ProjectRouter';
-import ErrorMessage from 'components/ErrorMessage/ErrorMessage';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Home } from 'components/Home/Home';
+import { About } from 'components/About/About';
+import { Blog } from 'components/Blog/Blog';
+import { BlogPost } from 'components/BlogPost/BlogPost';
+import { Contact } from 'components/Contact/Contact';
+import { GoogleAnalytics } from 'components/GoogleAnalytics/GoogleAnalytics'
+ 
+export const Router = props => {
 
-const Router = () => (
-  <>
+  return (
     <BrowserRouter>
-      <Wrapper>
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/blog" exact>
-            <Redirect to="/" />
-          </Route>
-          <Route path="/blog/:blogSlug">
-            <BlogPost />
-          </Route>
-          <Route path="/projects" exact>
-            <Projects />
-          </Route>
-          <Route path="/projects/:projectSlug">
-            <ProjectRouter />
-          </Route>
-          <Route path="/resume" exact>
-            <Resume />
-          </Route>
-          <Route path="/contact" exact>
-            <Contact />
-          </Route>
-          <Route>
-            <ErrorMessage code={404} />
-          </Route>
-        </Switch>
-      </Wrapper>
+      <GoogleAnalytics />
+      <Switch>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+        <Route path='/about' exact >
+          <About />
+        </Route>
+        <Route path='/blog' exact>
+          <Blog />
+        </Route>
+        <Route path='/blog/:blugSlug' >
+          <BlogPost />
+        </Route>
+        <Route path='/contact' exact>
+          <Contact />
+        </Route>
+      </Switch>
     </BrowserRouter>
-  </>
-);
+  );
+};
 
-export default Router;
+Router.propTypes = {
+  
+};

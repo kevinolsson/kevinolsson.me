@@ -7,13 +7,21 @@ import { theme } from 'Theme';
 import data from './data.json'
 
 const App = () => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
   return (
+    <div id="app" style={hasMounted ? { opacity: 1} : undefined}>
       <MuiThemeProvider theme={theme}>
         <DataProvider value={data}>
           <Head />
           <Router />
         </DataProvider>
       </MuiThemeProvider>
+    </div>
   );
 };
 

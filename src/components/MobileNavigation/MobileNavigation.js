@@ -1,11 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Navigation } from 'components/Navigation/Navigation';
+import { HamburgerButton } from 'components/HamburgerButton/HamburgerButton.js';
 import Box from '@material-ui/core/Box';
 import { contextAwareNavigation } from 'components/Navigation/contextAwareNavigation';
-
+import { contextAwareHamburgerButton } from 'components/HamburgerButton/contextAwareHamburgerButton';
 
 const ContextAwareNavigation = contextAwareNavigation(Navigation);
+const ContextAwareHamburgerButton = contextAwareHamburgerButton(HamburgerButton);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +62,7 @@ export const MobileNavigation = () => {
           </div>
         </Box>
       </div>
-      <button active={visible} onClick={toggleVisible}>Hello World</button>
+      <ContextAwareHamburgerButton active={visible} handleClickCallback={toggleVisible} />
     </>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import DataContext from 'DataContext';
 import { useHistory, Link } from 'react-router-dom';
 import Content from 'components/Content/Content';
+import Meta from 'components/Meta/Meta';
 
 export const BlogPost = () => {
   const history = useHistory();
@@ -13,10 +14,13 @@ export const BlogPost = () => {
   const { title, body } = post;
 
   return post ? (
-    <div>
-      <Link to='/blog'>Back to blog</Link>
-      <h1>{title}</h1>
-      <Content src={body} />
-    </div>
+    <React.Fragment>
+      <Meta title={title} />
+      <div>
+        <Link to='/blog'>Back to blog</Link>
+        <h1>{title}</h1>
+        <Content src={body} />
+      </div>
+    </React.Fragment>
   ) : <div>404 not found</div>;
 };

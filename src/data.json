@@ -1,130 +1,21 @@
 {
-  "pages": [
-    {
-      "content": "",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "About page title",
-      "featuredImage": "/images/uploads/tim-marshall-155597.jpg",
-      "section1": "## Lorem Ipsum\n\nNetlify CMS works with both `.md` and `.json`.\n\n![Image test](/images/uploads/isabella juskova.jpg)\n\n[Link test](/images/uploads/isabella juskova.jpg)\n\n### Embed Test\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Js00yn142ic\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>",
-      "section2": "## This is a Container component\n\nA sem vel nec sodales mi vivamus senectus sed potenti a parturient nascetur\ntincidunt nisi pulvinar rhoncus a. Risus imperdiet taciti suspendisse facilisi\na per metus cubilia varius a nostra adipiscing amet ultrices quisque ac mi a.\nDictumst a ultrices mi a dignissim ad fermentum eget a nam et a blandit\nscelerisque. Taciti lorem tempor quam vestibulum dis habitasse vestibulum diam\nvel est ut proin dis auctor. Suscipit scelerisque orci magna interdum vel\nbibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt\nvestibulum.\n\nThe image below will have a `srcset` attribute generated:\n\n![Tim Marshall](/images/uploads/tim-marshall-155597.jpg)",
-      "name": "about",
-      "body": ""
-    },
-    {
-      "content": "",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "Blog",
-      "featuredImage": "/images/uploads/ng-32703.jpg",
-      "name": "blog",
-      "body": ""
-    },
-    {
-      "content": "\n# Example contact form\n\nThis form is setup to use Netlify's form handling:\n\n* the form action is set to the current absolute url: `action: '/contact/'`\n* a name attribute is sent with the form's data `'form-name': 'Contact'`\n* netlify data attributes are added to the form `data-netlify data-netlify-honeypot`\n\nFind out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).\n",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "Contact us",
-      "subtitle": "",
-      "featuredImage": "/images/uploads/mark-chang-74-3.jpg",
-      "address": "404 James St, Burleigh Heads QLD 4220",
-      "phone": "0987 123 456",
-      "email": "example@example.com",
-      "name": "contact",
-      "body": "\n# Example contact form\n\nThis form is setup to use Netlify's form handling:\n\n* the form action is set to the current absolute url: `action: '/contact/'`\n* a name attribute is sent with the form's data `'form-name': 'Contact'`\n* netlify data attributes are added to the form `data-netlify data-netlify-honeypot`\n\nFind out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).\n"
-    },
-    {
-      "content": "# Barebones Netlify CMS + React Starter\n\nDo note that this is a stripped down and modified version of [Jinksi/Netlify CMS + React Starter](https://github.com/Jinksi/netlify-cms-react-starter)- Do check his [Jinksi](https://github.com/Jinksi/)'s repo out as he explains everything in a much better fashion.\n\nBarebone starter point for creating JAMstack sites with Netlify CMS. Ideal for someone who is:\n\n* Accustomed to working with create-react-app\n* Not interested in dealing with Gatsby or Preact\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#so-how-does-this-repo-differ)So how does this repo differ?\n\n* Stripped down to almost nothing. Sometimes when starting a new project, you just want the bare minimum. This repo aims to achieve that.\n* Modified to use ContextProviders for accessing data. There are a few examples in the components I've created.\n* Probably am not following best-practices. Then again, there's barely anything there.\n* The admin end of this repo has no preview at the moment. That means that when writing posts / pages, you will get an unstructured and unstyled output as your preview instead of something nice.\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#todo)Todo\n\n* Rewrite some of Jinksis component to into functional components.\n* Further remove dependencies that I don't need / can be achieved with my own code.\n* Preview for your pages and post.\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#relevant-links)Relevant Links\n\n* [Jinksi/Netlify CMS + React Starter](https://github.com/Jinksi/netlify-cms-react-starter)\n* [Netlify CMS Docs](https://www.netlifycms.org/docs/)\n* [Netlify CMS Repo](https://github.com/netlify/netlify-cms)",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "Hello World!",
-      "featuredImage": "/images/uploads/isabella juskova.jpg",
-      "subtitle": "This is the home page subtitle",
-      "meta": {
-        "title": ""
-      },
-      "name": "home",
-      "body": "# Barebones Netlify CMS + React Starter\n\nDo note that this is a stripped down and modified version of [Jinksi/Netlify CMS + React Starter](https://github.com/Jinksi/netlify-cms-react-starter)- Do check his [Jinksi](https://github.com/Jinksi/)'s repo out as he explains everything in a much better fashion.\n\nBarebone starter point for creating JAMstack sites with Netlify CMS. Ideal for someone who is:\n\n* Accustomed to working with create-react-app\n* Not interested in dealing with Gatsby or Preact\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#so-how-does-this-repo-differ)So how does this repo differ?\n\n* Stripped down to almost nothing. Sometimes when starting a new project, you just want the bare minimum. This repo aims to achieve that.\n* Modified to use ContextProviders for accessing data. There are a few examples in the components I've created.\n* Probably am not following best-practices. Then again, there's barely anything there.\n* The admin end of this repo has no preview at the moment. That means that when writing posts / pages, you will get an unstructured and unstyled output as your preview instead of something nice.\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#todo)Todo\n\n* Rewrite some of Jinksis component to into functional components.\n* Further remove dependencies that I don't need / can be achieved with my own code.\n* Preview for your pages and post.\n\n## [](https://github.com/kevinolsson/barebones-netlify-cms-react-starter#relevant-links)Relevant Links\n\n* [Jinksi/Netlify CMS + React Starter](https://github.com/Jinksi/netlify-cms-react-starter)\n* [Netlify CMS Docs](https://www.netlifycms.org/docs/)\n* [Netlify CMS Repo](https://github.com/netlify/netlify-cms)"
-    }
-  ],
-  "postCategories": [
-    {
-      "content": "\n",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "News",
-      "name": "news",
-      "body": "\n"
-    },
-    {
-      "content": "\n",
-      "isEmpty": false,
-      "excerpt": "",
-      "title": "Updates",
-      "meta": {
-        "description": "Desc",
-        "title": "Test Updates Title"
-      },
-      "name": "updates",
-      "body": "\n"
-    }
-  ],
   "posts": [
     {
-      "content": "\nThis is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.\n\nBe careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website. This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.\n",
+      "content": "Needed something to start with. Hi! Working with [NetlifyCMS](https://www.netlifycms.org/)! ❤️",
       "isEmpty": false,
-      "excerpt": "This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.",
-      "title": "Post Three",
-      "status": "Published",
-      "date": "2018-05-25",
-      "postFeaturedImage": "/images/uploads/isabella juskova.jpg",
-      "name": "2018-05-25-testing-1-8-2",
-      "body": "\nThis is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language.\n\nBe careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website. This paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.\n"
-    },
-    {
-      "content": "\nParagraphs are separated by a blank line.\n\nThe second paragraph. This is placeholder text that our web designers put here to make sure words appear properly on your website. _Italic_, **bold**, and `monospace`.\n\n### Unordered lists:\n\n* this one\n* that one\n* the other one\n\n### Ordered lists:\n\n1.  first item\n1.  second item\n1.  third item\n\n> Block quotes are written like so.\n>\n> They can span multiple paragraphs,\n> if you like.\n\n## Heading 2\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n\n###### Heading 6\n",
-      "isEmpty": false,
-      "excerpt": "Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac dui pellentesque, lacinia risus ut, imperdiet eros.",
-      "title": "Hello World!",
-      "status": "Featured / Published",
-      "date": "2018-03-27",
-      "postFeaturedImage": "/images/uploads/tim-marshall-155597.jpg",
-      "categories": [
-        {
-          "category": "News"
-        }
-      ],
-      "meta": {
-        "canonicalLink": "",
-        "description": "",
-        "noindex": false,
-        "title": ""
-      },
-      "name": "hello-world",
-      "body": "\nParagraphs are separated by a blank line.\n\nThe second paragraph. This is placeholder text that our web designers put here to make sure words appear properly on your website. _Italic_, **bold**, and `monospace`.\n\n### Unordered lists:\n\n* this one\n* that one\n* the other one\n\n### Ordered lists:\n\n1.  first item\n1.  second item\n1.  third item\n\n> Block quotes are written like so.\n>\n> They can span multiple paragraphs,\n> if you like.\n\n## Heading 2\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n\n###### Heading 6\n"
-    },
-    {
-      "content": "This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language. Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website.\n\nThis paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.\n",
-      "isEmpty": false,
-      "excerpt": "This is an excerpt of Post Two",
-      "title": "Post Two",
-      "status": "Published",
-      "date": "2018-03-28",
-      "postFeaturedImage": "/images/uploads/vyouw5byhlc.jpeg",
-      "categories": [
-        {
-          "category": "Updates"
-        }
-      ],
-      "name": "post-two",
-      "body": "This is placeholder text that our web designers put here to make sure words appear properly on your website. This text is going to be replaced once the website is completed. You are currently reading text that is written in English, not any other language. Be careful not to waste too much time reading placeholder text! This text isn’t going to remain here because it doesn't pertain to the website.\n\nThis paragraph has been copied from a program that automatically generates paragraphs like this. It is useful for web designers to use placeholder text so they can easily see what different fonts look like on a realistic paragraph.\n"
+      "excerpt": "",
+      "title": "Hello World",
+      "date": "2020-03-27T19:47:42.115Z",
+      "subtitle": "Classic",
+      "name": "2020-03-27-hello-world",
+      "body": "Needed something to start with. Hi! Working with [NetlifyCMS](https://www.netlifycms.org/)! ❤️"
     }
   ],
   "settings": [
     {
-      "siteTitle": "Barebones Netlify CMS + React Starter",
-      "siteUrl": "https://barebones-netlify-cms-react-starter.netlify.com/",
-      "siteDescription": "Barebone starter project for creating JAMstack sites with Netlify CMS. Ideal for someone who is accustomed to working with create-react-app and someone who is not interested in dealing with Gatsby or Preact",
+      "siteUrl": "https://kevinolsson.com",
+      "siteTitle": "Kevin Olsson",
+      "siteDescription": "Front-end developer & UX Designer.\nI finally built myself a blog. 😅",
       "socialMediaCard": {
         "image": "/images/uploads/card-og.png",
         "twitterCreatorAccount": "@Olssoneerz",
@@ -132,6 +23,12 @@
       },
       "headerScripts": "<!-- Add your analytics scripts / verification meta here -->",
       "enableServiceWorker": false,
+      "displayPhoto": "/images/uploads/profile.jpg",
+      "socialMedia": {
+        "image": "/images/uploads/49120977_10155788812506366_9207935284442824704_o.jpg",
+        "linkedIn": "https://www.linkedin.com/in/kevin-olsson-54bb21136/",
+        "twitter": "https://twitter.com/olssoneerz"
+      },
       "name": "global"
     }
   ]

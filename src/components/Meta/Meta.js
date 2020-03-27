@@ -11,11 +11,7 @@ const Meta = props => {
     url,
     description,
     absoluteImageUrl,
-    twitterSiteAccount,
-    twitterCreatorAccount,
     headerScripts,
-    noindex,
-    canonicalLink
     // overwrite { title, description } if in fields or fields.meta
   } = {
     ...props,
@@ -43,14 +39,6 @@ const Meta = props => {
       {absoluteImageUrl && (
         <meta property='og:image' content={absoluteImageUrl} />
       )}
-      {twitterSiteAccount && (
-        <meta name='twitter:site' content={twitterSiteAccount} />
-      )}
-      {twitterCreatorAccount && (
-        <meta name='twitter:creator' content={twitterCreatorAccount} />
-      )}
-      {noindex && <meta name='robots' content='noindex' />}
-      {canonicalLink && <link rel='canonical' href={canonicalLink} />}
     </Helmet>
   )
 }

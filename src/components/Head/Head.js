@@ -8,7 +8,7 @@ export const Head = () => {
   const {
     siteTitle,
     siteUrl,
-    socialMediaCard,
+    socialMedia,
     headerScripts
   } = settings[0]
 
@@ -21,15 +21,9 @@ export const Head = () => {
       <Meta
         headerScripts={headerScripts}
         absoluteImageUrl={
-          socialMediaCard &&
-          socialMediaCard.image &&
-          siteUrl + socialMediaCard.image
-        }
-        twitterCreatorAccount={
-          socialMediaCard && socialMediaCard.twitterCreatorAccount
-        }
-        twitterSiteAccount={
-          socialMediaCard && socialMediaCard.twitterSiteAccount
+          socialMedia &&
+          socialMedia.image &&
+          siteUrl + socialMedia.image
         }
       />
     </React.Fragment>

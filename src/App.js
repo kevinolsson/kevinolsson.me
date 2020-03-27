@@ -14,9 +14,15 @@ const useStyles = makeStyles((theme) => ({
 }), { name: 'app' });
 
 const App = () => {
+  const [hasMounted, setHasMounted] = React.useState(false);
   const classes = useStyles();
+
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
   return (
-    <div id="app" className={classes.root}>
+    <div id="app" className={hasMounted ? classes.root : undefined}>
       <MuiThemeProvider theme={theme}>
         <DataProvider value={data}>
           <Head />

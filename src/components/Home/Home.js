@@ -1,26 +1,29 @@
 import React from 'react';
-import ProjectPreview from 'components/ProjectPreview/ProjectPreview';
-import BlogBlock from 'components/BlogBlock/BlogBlock';
-import IgnoreLayoutWrapper from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
-import { blogs } from 'blogs';
-import { projects } from 'projects';
+import { Link } from 'react-router-dom'
+import DataContext from 'DataContext';
 
-const Home = () => (
-  <div>
-    <IgnoreLayoutWrapper>
-      <ProjectPreview projects={projects} />
-    </IgnoreLayoutWrapper>
-    {!!blogs.length && blogs.map((blog, index) => !!blog && (
-    <BlogBlock
-      key={index}
-      featured={index === 0}
-      title={blog.title}
-      url={`/blog/${blog.slug}`}
-      body={blog.subtitle}
-      date={blog.date}
-    />
-    ))}
-  </div>
-);
+export const Home = () => {
+  const { posts } = React.useContext(DataContext); 
 
-export default Home;
+  return (
+    <div>
+      <h1>This is the blog list page</h1>
+      <Link to="/">Back</Link>
+
+      {!!posts.length && (
+        <div>
+          <h3>Posts</h3>
+          <ul>
+            {posts.map((post,index) => 
+              (<li key={index}>
+                <Link to={`/blog/${post.name}`}>
+                  {post.title}
+                </Link>
+              </li>)
+            )}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }), { name: 'layout' });
 
-const Layout = (props) => {
+export const Layout = (props) => {
   const classes = useStyles();
   const { children } = props;
   return (
@@ -29,5 +29,3 @@ const Layout = (props) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

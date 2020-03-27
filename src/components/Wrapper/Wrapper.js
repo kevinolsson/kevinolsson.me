@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Layout } from 'components/Layout/Layout';
 
-export const Wrapper = ({ children }) => {
+export const Wrapper = (props) => {
+  const { children } = props;
   return (
-    <div>
-      {children}
-    </div>
+    <>
+      {/* <MobileNavigation /> */}
+      <Layout>
+        {/* <Header /> */}
+        {children}
+      </Layout>
+    </>
   );
 };
 
 Wrapper.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

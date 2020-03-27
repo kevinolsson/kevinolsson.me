@@ -23,6 +23,9 @@ export const ResumeOther = () => (
         ['Storybook.js', <FavoriteBorderIcon />],
         'MaterialUI',
         'HTML',
+        'Jest',
+        'Enzyme',
+        'i18n',
         ['CSS', <FavoriteBorderIcon />],
         ['Sass', <FavoriteBorderIcon />],
         'JSS',
@@ -35,6 +38,7 @@ export const ResumeOther = () => (
         'JIRA',
         'PHP',
         'WordPress',
+        'Advanced Custom Fields'
       ]}
       />
     </Box>
@@ -54,6 +58,7 @@ export const ResumeOther = () => (
         'Marvel',
         'inVision',
         'Zeplin',
+        'Figma',
         'UX Research',
         ['Typography', <FavoriteBorderIcon />],
       ]}

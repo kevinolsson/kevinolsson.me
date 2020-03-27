@@ -4,6 +4,7 @@ import { ResumeIntroduction } from 'components/Resume/ResumeIntroduction';
 import { ResumeExperience } from 'components/Resume/ResumeExperience';
 import { ResumeOther } from 'components/Resume/ResumeOther';
 import { ResumeEducation } from 'components/Resume/ResumeEducation';
+import Meta from 'components/Meta/Meta'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,17 +32,20 @@ const useStyles = makeStyles((theme) => ({
 export const Resume = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <div className={classes.introduction}>
-        <ResumeIntroduction />
+    <React.Fragment>
+      <Meta title={"Resume"} />
+      <div className={classes.root}>
+        <div className={classes.introduction}>
+          <ResumeIntroduction />
+        </div>
+        <div className={classes.experience}>
+          <ResumeExperience />
+        </div>
+        <div className={classes.other}>
+          <ResumeOther />
+          <ResumeEducation />
+        </div>
       </div>
-      <div className={classes.experience}>
-        <ResumeExperience />
-      </div>
-      <div className={classes.other}>
-        <ResumeOther />
-        <ResumeEducation />
-      </div>
-    </div>
+    </React.Fragment>
   );
 };

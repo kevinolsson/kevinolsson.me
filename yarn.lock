@@ -12293,6 +12293,11 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
+tornis@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/tornis/-/tornis-0.2.1.tgz#cd8de5e721f375a1184eb32af006ce3e0689507a"
+  integrity sha512-fYLAP+58AXN23MmQ+eSU+igcpKo/dSCHi3UyuAAxaW1wQZqcex9ucPGrGi/2r0w0btEzUFtq6zospd5c5W+OBw==
+
 tough-cookie@^2.3.2:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"

@@ -62,7 +62,8 @@ export const MobileNavigation = () => {
           </div>
         </Box>
       </div>
-      <ContextAwareHamburgerButton active={visible} handleClickCallback={toggleVisible} />
+      <button onClick={toggleVisible}>Testing</button>
+      {/* <ContextAwareHamburgerButton active={visible} handleClickCallback={toggleVisible} /> */}
     </>
   );
 };

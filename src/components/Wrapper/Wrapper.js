@@ -9,7 +9,7 @@ export const Wrapper = (props) => {
   const { children } = props;
   return (
     <>
-      <MobileNavigation />
+      {/* <MobileNavigation /> */}
       <Layout>
         {<Header />}
         {children}

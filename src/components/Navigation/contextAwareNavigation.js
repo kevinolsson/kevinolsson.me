@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import TwitterIcon from 'components/Icons/TwitterIcon';
 import LinkedInIcon from 'components/Icons/LinkedInIcon';
+import DataContext from 'DataContext';
 
 export const contextAwareNavigation = (Component) => ({ view, handleClickCallback }) => {
   const location = useLocation();
   const pathname = location.pathname.split('/');
   const active = `/${pathname[1]}`;
+  const { settings } = React.useContext(DataContext); 
+  const { twitter, linkedIn } = settings[0].socialMedia;
 
   const withEdgeCase = (a) => (a === '/blog' ? '/' : a);
 
@@ -16,8 +19,8 @@ export const contextAwareNavigation = (Component) => ({ view, handleClickCallbac
     { name: 'Projects', url: '/projects' },
     { name: 'Resume', url: '/resume' },
     { name: 'Contact', url: '/contact' },
-    { name: <TwitterIcon />, url: 'https://twitter.com/olssoneerz', external: true },
-    { name: <LinkedInIcon />, url: 'https://www.linkedin.com/in/kevin-olsson-54bb21136/', external: true },
+    { name: <TwitterIcon />, url: twitter, external: true },
+    { name: <LinkedInIcon />, url: linkedIn, external: true },
   ];
   return (
     <Component

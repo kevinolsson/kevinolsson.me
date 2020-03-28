@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import { HamburgerIcon } from 'components/HamburgerIcon/HamburgerIcon';
 
 const useStyles = makeStyles((theme) => ({
   root: ({ forceMobileView }) => ({
@@ -73,22 +74,22 @@ export const HamburgerButton = ({
         type="button"
         label="menu"
         onClick={handleClick}
-        className={[
-          classes.button,
-          active && classes.buttonActive,
-        ].filter(Boolean).join(' ')}
+        // className={[
+        //   classes.button,
+        //   active && classes.buttonActive,
+        // ].filter(Boolean).join(' ')}
       >
-        Hello World
+        <HamburgerIcon active={active} />
       </button>
       { back && (
         <Component
           to={typeof back === 'string' ? back : undefined}
           onClick={typeof back === 'function' ? (() => { back(); }) : undefined}
-          className={[
-            classes.button,
-            classes.buttonBack,
-            backActive && classes.buttonBackActive,
-          ].filter(Boolean).join(' ')}
+          // className={[
+          //   classes.button,
+          //   classes.buttonBack,
+          //   backActive && classes.buttonBackActive,
+          // ].filter(Boolean).join(' ')}
         >
           <ArrowBackIcon className={classes.backIcon} />
         </Component>

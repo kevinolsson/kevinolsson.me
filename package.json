@@ -29,9 +29,8 @@
     "react-markdown": "4.2.2",
     "react-router-dom": "^5.1.2",
     "react-snapshot": "^1.3.0",
-    "@material-ui/core": "^4.8.1",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/lab": "^4.0.0-alpha.45"
+    "@material-ui/core": "4.8.3",
+    "@material-ui/icons": "4.4.3"
   },
   "scripts": {
     "start": "npm-run-all prepare-content -p start:content start:app start:cms",

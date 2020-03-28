@@ -32,16 +32,19 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonBack: {
     position: 'absolute',
-    transition: '0.1s ease-out right',
+    transition: '0.1s ease-out all',
     width: theme.spacing(12),
     height: theme.spacing(12),
     backgroundColor: theme.palette.portfolio.grey,
     top: theme.spacing(2),
-    right: 0,
+    right: theme.spacing(2),
     zIndex: 5,
   },
   buttonBackActive: {
     right: theme.spacing(18),
+  },
+  buttonTopActive: {
+    top: -theme.spacing(14)
   },
   backIcon: {
     margin: theme.spacing(3),
@@ -92,7 +95,8 @@ export const HamburgerButton = ({
           className={[
             classes.button,
             classes.buttonBack,
-            backActive && classes.buttonBackActive,
+            backActive && typeof back !== 'function' && classes.buttonBackActive,
+            backActive && typeof back === 'function' && classes.buttonTopActive
           ].filter(Boolean).join(' ')}
         >
           <ArrowBackIcon className={[classes.backIcon, typeof back === 'function' && classes.topIcon].filter(Boolean).join(' ')} />

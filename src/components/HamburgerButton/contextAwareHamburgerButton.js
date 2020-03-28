@@ -5,7 +5,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 export const contextAwareHamburgerButton = (Component) => ({ active, handleClickCallback }) => {
   const hasScrolled = useScrollTrigger({
-    threshold: 164
+    threshold: 364
   })
   const location = useLocation();
   const pathname = location.pathname.split('/');

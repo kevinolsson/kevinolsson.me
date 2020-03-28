@@ -16,7 +16,7 @@ export const BlogPost = () => {
   return post ? (
     <React.Fragment>
       <Meta title={title} />
-      <div>
+      <div style={{height: '3000px'}}>
         <Link to='/blog'>Back to blog</Link>
         <h1>{title}</h1>
         <Content src={body} />

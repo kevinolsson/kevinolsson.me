@@ -1,26 +1,34 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { useLocation, Link } from 'react-router-dom';
+import { Button } from 'components/Button/Button';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import DataContext from 'DataContext';
-import { useHistory, Link } from 'react-router-dom';
 import Content from 'components/Content/Content';
-import Meta from 'components/Meta/Meta';
+import { dateFormatted } from 'util/date';
 
 export const BlogPost = () => {
-  const history = useHistory();
+  const location = useLocation();
   const { posts } = React.useContext(DataContext); 
 
-  const slug = history.location.pathname.split('/')[2];
+  const slug = location.pathname.split('/')[2];
   const post = posts.find((post) => post.name === slug);
 
-  const { title, body } = post;
-
   return post ? (
-    <React.Fragment>
-      <Meta title={title} />
-      <div style={{height: '3000px'}}>
-        <Link to='/blog'>Back to blog</Link>
-        <h1>{title}</h1>
-        <Content src={body} />
+    <div>
+      <Button
+        component={Link}
+        to="/"
+        startIcon={<ArrowBackIcon />}
+      >
+        Back to blog
+      </Button>
+      {post.title && <Typography gutterBottom variant="h1">{post.title}</Typography>}
+      <div style={{ maxWidth: '540px' }}>
+        {post.date && <Typography paragraph variant="body1"><strong>{dateFormatted(post.date)}</strong></Typography>}
+        {post.subtitle && <Typography gutterBottom variant="h5">{post.subtitle}</Typography>}
+        <Content src={post.body} />
       </div>
-    </React.Fragment>
-  ) : <div>404 not found</div>;
+    </div>
+  ) : '404 not found';
 };

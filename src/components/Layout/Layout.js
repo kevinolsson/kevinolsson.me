@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.2s ease-out all',
     [theme.breakpoints.up('md')]: {
       maxWidth: '1024px',
-    },
+    }
   },
 }), { name: 'layout' });
 

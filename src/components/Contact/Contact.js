@@ -39,7 +39,7 @@ export const Contact = () => {
           </Link>
           {' '}
           as a Front-end developer.
-          However, don’t let that stop you from reaching out! I love building things
+          However, don’t let that stop you from reaching out!I love building things
           so I am always open for small side projects. Alternatively,
           my friends at
           {' '}

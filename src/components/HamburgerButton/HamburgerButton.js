@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 5,
   },
   buttonBackActive: {
-    right: theme.spacing(14),
+    right: theme.spacing(18),
   },
   backIcon: {
     margin: theme.spacing(3),

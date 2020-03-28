@@ -10,11 +10,11 @@ export const contextAwareHamburgerButton = (Component) => ({ active, handleClick
   const isNestedPage = !!pathname[2];
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', event => {  console.log(event)})
   }, []);
 
-  const handleScroll = (event) => {}
+
+
  
 
   return (

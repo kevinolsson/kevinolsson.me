@@ -18,8 +18,6 @@
   "dependencies": {
     "@researchgate/react-intersection-observer": "^1.0.1",
     "date-fns": "^2.2.1",
-    "dom-form-serializer": "^1.0.7",
-    "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "netlify-identity-widget": "^1.5.5",
     "react": "^16.9.0",

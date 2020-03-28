@@ -46,7 +46,11 @@ const useStyles = makeStyles((theme) => ({
   backIcon: {
     margin: theme.spacing(3),
     fill: theme.palette.common.white,
+    transition: 'transform 0.2s ease-out'
   },
+  topIcon: {
+    transform: 'rotate(90deg)'
+  }
 }), { name: 'hamburgerButton' });
 
 
@@ -91,7 +95,7 @@ export const HamburgerButton = ({
             backActive && classes.buttonBackActive,
           ].filter(Boolean).join(' ')}
         >
-          <ArrowBackIcon className={classes.backIcon} />
+          <ArrowBackIcon className={[classes.backIcon, typeof back === 'function' && classes.topIcon].filter(Boolean).join(' ')} />
         </Component>
       )}
     </div>

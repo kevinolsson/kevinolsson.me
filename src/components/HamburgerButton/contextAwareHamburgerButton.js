@@ -10,10 +10,10 @@ export const contextAwareHamburgerButton = (Component) => ({ active, handleClick
   const location = useLocation();
   const pathname = location.pathname.split('/');
   const isNestedPage = !!pathname[2];
-  const back = isNestedPage ? `/${pathname[0]}` : '/'
+  const back = isNestedPage ? `/${pathname[0]}` : () => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth'}) }
   return (
     <Component
-      showBack={isNestedPage && !active && hasScrolled}
+      showBack={!active && hasScrolled}
       back={back}
       handleClickCallback={handleClickCallback}
       active={active}

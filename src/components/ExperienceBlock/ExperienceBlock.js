@@ -50,7 +50,7 @@ export const ExperienceBlock = ({
           ))}
         </Typography>
         )}
-        { children && <Typography variant="body1">{children}</Typography>}
+        { children && <Typography component="div" variant="body1">{children}</Typography>}
       </Box>
     </div>
   );

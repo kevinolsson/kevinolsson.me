@@ -9,6 +9,14 @@ export const contextAwareHamburgerButton = (Component) => ({ active, handleClick
   const pathname = history.location.pathname.split('/');
   const isNestedPage = !!pathname[2];
 
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = (event) => {}
+ 
+
   return (
     <Component
       showBack={isNestedPage && !active}

@@ -1,31 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+
+
 
 
 export const contextAwareHamburgerButton = (Component) => ({ active, handleClickCallback }) => {
-  // const [hasScrolled, setHasScrolled] = React.useState(false);
-  const history = useHistory();
-  const back = history.location.key ? history.goBack : '/';
-  const pathname = history.location.pathname.split('/');
+  const hasScrolled = useScrollTrigger({
+    threshold: 164
+  })
+  const location = useLocation();
+  const pathname = location.pathname.split('/');
   const isNestedPage = !!pathname[2];
-
-  // React.useEffect(() => {
-  //   window.addEventListener('scroll', () => {  
-  //     const { scrollY } = window;
-      
-  //     if(scrollY > 164 && !hasScrolled ) 
-  //       setHasScrolled(true)
-      
-  //       if(scrollY < 164 && hasScrolled) 
-  //       setHasScrolled(false)
-  //     })
-  // }, [hasScrolled]);
-
+  const back = isNestedPage ? `/${pathname[0]}` : '/'
   return (
     <Component
-      // showBack={isNestedPage && !active && hasScrolled}
-      showBack={isNestedPage && !active}
+      showBack={isNestedPage && !active && hasScrolled}
       back={back}
       handleClickCallback={handleClickCallback}
       active={active}

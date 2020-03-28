@@ -4,6 +4,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Content from 'components/Content/Content';
 import Meta from 'components/Meta/Meta'
 import { Link } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 
 export const ProjectPost = ({title, body}) => (
     <div>
@@ -15,8 +16,7 @@ export const ProjectPost = ({title, body}) => (
       >
         Back to projects
       </Button>
-      <div style={{ maxWidth: '540px' }}>
-        <Content src={body} />
-      </div>
+      <Typography gutterBottom variant="h1">{title}</Typography>
+      <Content src={body} />
     </div>
   )

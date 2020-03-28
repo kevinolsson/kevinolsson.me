@@ -2,6 +2,7 @@ import React from 'react'
 import Marked from 'react-markdown'
 import PropTypes from 'prop-types'
 import { getImageSrc, getImageSrcset } from 'util/getImageUrl'
+import { makeStyles } from '@material-ui/core/styles';
 
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(?:\[[^\]]*\]|[^[\]])*\]\([ \t]*<?((?:\([^)]*\)|[^()])*?)>?[ \t]*(['"].*?\6[ \t]*)?\)/g
@@ -37,16 +38,26 @@ const HtmlBlock = ({ value }) => {
   )
 }
 
-const Content = ({ source, src, className = '' }) => (
-  <Marked
-    className={`Content ${className}`}
-    source={encodeMarkdownURIs(source || src)}
-    renderers={{
-      image: ImageWithSrcset,
-      html: HtmlBlock
-    }}
-  />
-)
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& img': {
+      width: '100%'
+    }
+  }
+}), { name: 'Content' });
+
+const Content = ({ source, src, className = '' }) => {
+  const classes = useStyles();
+  return (
+    <Marked
+      className={classes.root}
+      source={encodeMarkdownURIs(source || src)}
+      renderers={{
+        image: ImageWithSrcset,
+        html: HtmlBlock
+      }}
+    />
+  )}
 
 Content.propTypes = {
   source: PropTypes.string,

@@ -14,7 +14,7 @@ export const Contact = () => {
       <Typography gutterBottom variant="h1">
         Say
         {' '}
-        <Box href="mailto:hi@kevinolsson.com" underline="always" component={Link}>hello</Box>
+        <Box href="mailto:hi@kevinolsson.com" underline="always" component={Link}> hej, kamusta!</Box>
       </Typography>
       <Box maxWidth={640}>
         <Typography gutterBottom variant="h5">
@@ -39,7 +39,7 @@ export const Contact = () => {
           </Link>
           {' '}
           as a Front-end developer.
-          However, don’t let that stop you from reaching out!I love building things
+          However, don’t let that stop you from reaching out! I love building things
           so I am always open for small side projects. Alternatively,
           my friends at
           {' '}

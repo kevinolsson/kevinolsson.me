@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
-
-
-
 export const contextAwareHamburgerButton = (Component) => ({ active, handleClickCallback }) => {
   const hasScrolled = useScrollTrigger({
     threshold: 164

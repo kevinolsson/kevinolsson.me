@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
-import { HamburgerIcon } from 'components/HamburgerIcon/HamburgerIcon';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
@@ -79,7 +78,7 @@ export const HamburgerButton = ({
           active && classes.buttonActive,
         ].filter(Boolean).join(' ')}
       >
-        <HamburgerIcon active={active} />
+        Hello World
       </button>
       { back && (
         <Component

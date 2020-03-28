@@ -14,11 +14,11 @@ export const Contact = () => {
       <Typography gutterBottom variant="h1">
         Say
         {' '}
-        <Box href="mailto:hi@kevinolsson.com" underline="always" component={Link}>hi@kevinolsson.com</Box>
+        <Box href="mailto:hi@kevinolsson.com" underline="always" component={Link}>hello</Box>
       </Typography>
       <Box maxWidth={640}>
         <Typography gutterBottom variant="h5">
-          You can also reach out to me on social media via
+          You can get in touch with me at <Box href="mailto:hi@kevinolsson.com" fontWeight="fontWeightBold" color="portfolio.dark" component={Link}>hi@kevinolsson.com</Box>. You can also reach out to me on social media via
           {' '}
           <Box href={linkedIn} component={Link} fontWeight="fontWeightBold" color="portfolio.dark">LinkedIn</Box>
           {' '}

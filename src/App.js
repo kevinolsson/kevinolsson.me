@@ -11,6 +11,7 @@ const App = () => {
 
   React.useEffect(() => {
     setHasMounted(true)
+    window.addEventListener('scroll', () => {  console.log('scroll') } );
   }, [])
 
   return (

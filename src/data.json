@@ -13,15 +13,15 @@
   ],
   "projects": [
     {
-      "content": "",
+      "content": "\n\n![LiveCard - Preview Thumbnail](/images/uploads/50dfca45091549.582624689ab79.png)\n\n![LiveCard - Screens](/images/uploads/61846745091549.582624689b439.png)",
       "isEmpty": false,
       "excerpt": "",
       "title": "LiveCard - a Yelp/Groupon like service.",
       "thumbnail": "/images/uploads/50dfca45091549.582624689ab79.png",
-      "type": "external",
+      "type": "standard",
       "value": "hello world",
       "name": "2020-03-28-livecard-a-yelp-groupon-like-service",
-      "body": ""
+      "body": "\n\n![LiveCard - Preview Thumbnail](/images/uploads/50dfca45091549.582624689ab79.png)\n\n![LiveCard - Screens](/images/uploads/61846745091549.582624689b439.png)"
     }
   ],
   "settings": [

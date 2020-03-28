@@ -6,6 +6,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import DataContext from 'DataContext';
 import Content from 'components/Content/Content';
 import { dateFormatted } from 'util/date';
+import Meta from 'components/Meta/Meta'
 
 export const BlogPost = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ export const BlogPost = () => {
 
   return post ? (
     <div>
+      <Meta title={post.title} />
       <Button
         component={Link}
         to="/"

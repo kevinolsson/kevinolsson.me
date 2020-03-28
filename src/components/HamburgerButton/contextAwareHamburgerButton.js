@@ -4,21 +4,27 @@ import { useHistory } from 'react-router-dom';
 
 
 export const contextAwareHamburgerButton = (Component) => ({ active, handleClickCallback }) => {
+  // const [hasScrolled, setHasScrolled] = React.useState(false);
   const history = useHistory();
   const back = history.location.key ? history.goBack : '/';
   const pathname = history.location.pathname.split('/');
   const isNestedPage = !!pathname[2];
 
-  React.useEffect(() => {
-    window.addEventListener('scroll', event => {  console.log(event)})
-  }, []);
-
-
-
- 
+  // React.useEffect(() => {
+  //   window.addEventListener('scroll', () => {  
+  //     const { scrollY } = window;
+      
+  //     if(scrollY > 164 && !hasScrolled ) 
+  //       setHasScrolled(true)
+      
+  //       if(scrollY < 164 && hasScrolled) 
+  //       setHasScrolled(false)
+  //     })
+  // }, [hasScrolled]);
 
   return (
     <Component
+      // showBack={isNestedPage && !active && hasScrolled}
       showBack={isNestedPage && !active}
       back={back}
       handleClickCallback={handleClickCallback}

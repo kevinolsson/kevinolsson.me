@@ -11,6 +11,19 @@
       "body": "Needed something to start with. Hi! Working with [NetlifyCMS](https://www.netlifycms.org/)! ❤️"
     }
   ],
+  "projects": [
+    {
+      "content": "",
+      "isEmpty": false,
+      "excerpt": "",
+      "title": "LiveCard - a Yelp/Groupon like service.",
+      "thumbnail": "/images/uploads/50dfca45091549.582624689ab79.png",
+      "type": "external",
+      "value": "hello world",
+      "name": "2020-03-28-livecard-a-yelp-groupon-like-service",
+      "body": ""
+    }
+  ],
   "settings": [
     {
       "siteUrl": "https://kevinolsson.com",

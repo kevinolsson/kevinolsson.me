@@ -10,7 +10,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections: # A list of collections the CMS should be able to edit
 
   - name: posts
-    label: Post
+    label: Posts
     editor:
       preview: true
     folder: content/posts
@@ -34,7 +34,7 @@ collections: # A list of collections the CMS should be able to edit
             valueField: "title"
 
   - name: projects
-    label: Project
+    label: Projects
     editor:
       preview: true
     folder: content/projects
@@ -43,8 +43,9 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Thumbail, name: thumbnail, widget: image, required: false}
-      - {label: Type, name: type, widget: select, options: ["component", "external"]}
-      - {label: URL / Component, name: value, widget: string}
+      - {label: Type, name: type, widget: select, options: ["standard", "component", "external"]}
+      - {label: Component or External URL, name: value, widget: string}
+      - {label: Content, name: body, widget: markdown}
 
   - name: "settings"
     label: "Settings"

@@ -10,12 +10,22 @@ export const Home = () => {
   const { posts, settings, projects } = React.useContext(DataContext); 
   const { siteDescription } = settings[0];
 
+  let thumbnails = [];
+  projects.map(({thumbnail, type, value, name}, index) => {
+    const url = type === 'external' ? value : `/projects/${name}`;
+    return thumbnails[index] = {
+      thumbnail,
+      type,
+      url
+    }
+  })
+
   return (
     <React.Fragment>
       <Meta title={siteDescription} />
-      { Array.isArray(projects) && !!projects.length && (
+      { Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
-          <ProjectPreview projects={projects} />
+          <ProjectPreview projects={thumbnails} />
         </IgnoreLayoutWrapper>
       )}
       <div>

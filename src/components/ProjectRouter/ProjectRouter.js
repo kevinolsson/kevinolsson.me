@@ -2,7 +2,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 import { ProjectPost } from 'components/ProjectPost/ProjectPost'
+import Meta from 'components/Meta/Meta'
 import DataContext from 'DataContext';
+
+const determineComponent = component => {
+  switch(component) {
+    // add components here
+    default:
+      return <ErrorMessage code={404} />
+  }
+}
 
 export const ProjectRouter = () => {
   const { projectSlug } = useParams();
@@ -11,17 +20,22 @@ export const ProjectRouter = () => {
 
   if(!project) return <ErrorMessage code={404} />
   switch(project.type) {
-    default: 
-      return <ProjectPost title={project.title} body={project.body} />
+    case 'component': {
+      const Component = determineComponent(project.value)
+      return (
+      <React.Fragment>
+        <Meta title={project.title} />
+        <Component />
+      </React.Fragment>
+      )
+    }
+    default: {
+      return (
+        <React.Fragment>
+          <Meta title={project.title} />
+          <ProjectPost title={project.title} body={project.body} />
+          </React.Fragment>
+      )
+    }
   }
-
-  // // eslint-disable-next-line array-callback-return
-  // projects.map((project) => {
-  //   const slug = project.url.split('/')[2];
-  //   if (slug === projectSlug && !!project.component) {
-  //     const ProjectComponent = project.component;
-  //     // eslint-disable-next-line react/jsx-props-no-spreading
-  //     Component = <ProjectComponent/>;
-  //   }
-  // });
 };

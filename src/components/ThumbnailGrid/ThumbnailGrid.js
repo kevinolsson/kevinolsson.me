@@ -1,51 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import { Thumbnail } from 'components/Thumbnail/Thumbnail';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: '1fr',
     gridGap: `${theme.spacing()}px`,
+    gridAutoRows: theme.spacing(75),
+    [theme.breakpoints.up('sm')]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridTemplateRows: theme.spacing(60),
+    },
+    [theme.breakpoints.up('md')]: {
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateRows: theme.spacing(75),
+    },
   },
   gridItem: {
     backgroundColor: theme.palette.portfolio.grey,
     display: 'inline-block',
-    paddingBottom: '100%',
   },
 
 }), { name: 'ThumbnailGrid' });
 
-const ThumbnailGrid = ({ playground }) => {
+export const ThumbnailGrid = ({ thumbnails }) => {
   const classes = useStyles();
-  return !!playground.length && (
+  
+  return !!thumbnails.length && (
     <div className={classes.root}>
       <div className={classes.grid}>
-        { playground.map(({ to, src, name }) => (
-          <Link to={to} className={classes.gridItem}>
-            <img src={src} alt={name} />
-            <span>{name}</span>
-          </Link>
-        )) }
+        { thumbnails.map(({ type, thumbnail, url }, index) => (
+            <Thumbnail key={index} type={type} thumbnail={thumbnail} url={url} />
+          )
+        )}
       </div>
     </div>
   );
 };
 
 ThumbnailGrid.defaultProps = {
-  playground: [],
+  thumbnails: [],
 };
 
 ThumbnailGrid.propTypes = {
-  playground: PropTypes.arrayOf(
+  thumbnails: PropTypes.arrayOf(
     PropTypes.shape({
-      to: PropTypes.string,
-      src: PropTypes.string,
-      name: PropTypes.string,
+      type: PropTypes.oneOf(['component', 'external', 'standard']),
+      thumbnail: PropTypes.string.isRequired,
+      url: PropTypes.string,
     }),
   ),
 };
 
-export default ThumbnailGrid;

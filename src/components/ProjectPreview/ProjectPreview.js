@@ -15,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     transition: 'all 0.2s ease-out',
     display: 'grid',
-    minHeight: theme.spacing(48),
     gridGap: theme.spacing(4),
     gridTemplateColumns: 'repeat(3, 240px)',
+    gridTemplateRows: theme.spacing(60),
     overflowX: 'scroll',
     scrollSnapType: 'x mandatory',
     scrollbarWidth: 'none',
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateRows: theme.spacing(75),
     },
   },
   thumbnailWrapper: {
@@ -51,9 +52,9 @@ export const ProjectPreview = ({ projects }) => {
   return (
     <div className={classes.root}>
       <div className={classes.grid}>
-        { projects.slice(0, 3).map((project, index) => (
+        { projects.slice(0, 3).map(({thumbnail, type, url}, index) => (
           <div key={index} className={[classes.thumbnailWrapper, index === 0 ? classes.thumbnailWrapperFirst : undefined, (projects.length > 3 && index + 1 === 3) || (projects.length <= 3 && index + 1 === projects.length) ? classes.thumbnailWrapperLast : undefined].join(' ')}>
-            <Thumbnail thumbnail={project.thumbnail} url={`/projects/${project.name}`} />
+            <Thumbnail key={index} type={type} thumbnail={thumbnail} url={url} />
           </div>
         ))}
       </div>

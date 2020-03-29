@@ -16,7 +16,6 @@
     "sw-precache": "^5.2.0"
   },
   "dependencies": {
-    "@researchgate/react-intersection-observer": "^1.0.1",
     "date-fns": "^2.2.1",
     "lodash": "^4.17.15",
     "netlify-identity-widget": "^1.5.5",

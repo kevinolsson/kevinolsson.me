@@ -37,7 +37,7 @@ export const Thumbnail = ({ type, thumbnail: thumbnailProp, url }) => {
   const Component = type === 'external' ? MuiLink : url ? Link : Box;
 
   return hasLoaded && !error ? (
-    <Component className={classes.root} to={url} href={type === 'external' ? url : undefined} />
+    <Component className={classes.root} to={url} href={type === 'external' ? url : undefined} target={type === 'external' ? '_blank' : undefined} />
   ) : <Skeleton variant="rect" height="100%" />;
 };
 
@@ -47,7 +47,7 @@ Thumbnail.defaultProps = {
 };
 
 Thumbnail.propTypes = {
-  type: PropTypes.oneOf(['component', 'external', 'default']),
+  type: PropTypes.oneOf(['component', 'external', 'standard']),
   thumbnail: PropTypes.string.isRequired,
   url: PropTypes.string,
 };

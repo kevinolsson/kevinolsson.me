@@ -1,6 +1,6 @@
 ---
 title: 'Ragnarok Online - Once upon a time: I made these.'
-thumbnail: /images/uploads/72b4e545104427.5826d53dea207.png
+thumbnail: /images/uploads/thumbnail.png
 type: standard
 value: This should not be required
 ---

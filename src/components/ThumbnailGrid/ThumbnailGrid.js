@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridItem: {
-    backgroundColor: theme.palette.portfolio.grey,
+    marginBottom: theme.spacing(18),
     display: 'inline-block',
   },
 
@@ -30,7 +30,9 @@ export const ThumbnailGrid = ({ thumbnails }) => {
     <div className={classes.root}>
       <div className={classes.grid}>
         { thumbnails.map(({ type, thumbnail, url, title }, index) => (
-            <Thumbnail key={index} title={title} type={type} thumbnail={thumbnail} url={url} />
+            <div className={classes.gridItem}>
+              <Thumbnail key={index} title={title} type={type} thumbnail={thumbnail} url={url} />
+            </div>
           )
         )}
       </div>

@@ -10,7 +10,10 @@ const useStyles = makeStyles(
   (theme) => ({
     wrapper: {
       textDecoration: 'none',
-      color: theme.palette.portfolio.dark
+      color: theme.palette.portfolio.dark,
+      '&:hover': {
+        textDecoration: 'none'
+      },
     },
     thumbnail: {
       display: 'block',
@@ -19,14 +22,14 @@ const useStyles = makeStyles(
       backgroundSize: 'cover',
       backgroundImage: ({ src }) => `url(${src})`,
       backgroundPosition: 'top',
-      paddingTop: theme.spacing(75),
+      paddingTop: theme.spacing(60),
       marginBottom: theme.spacing(4),
-      [theme.breakpoints.up('sm')]: {
-        paddingTop: theme.spacing(60),
-      },
       [theme.breakpoints.up('md')]: {
         paddingTop: theme.spacing(75),
       },
+    },
+    text: {
+      marginBottom: theme.spacing(4)
     },
     externalIcon: {
       marginRight: theme.spacing(),
@@ -57,7 +60,7 @@ export const Thumbnail = ({ type, thumbnail: thumbnailProp, url, title }) => {
     <div>
       <Component className={classes.wrapper}  to={url} href={type === 'external' ? url : undefined} target={type === 'external' ? '_blank' : undefined}>
         <div className={classes.thumbnail} />
-        <Typography component="div">
+        <Typography className={classes.text} component="div">
           <Box marginBottom={-1} fontWeight="fontWeightBold">{title}</Box>
           {type === 'external' && (<Typography variant="body2"><LinkIcon className={classes.externalIcon} /> Opens in a new tab</Typography>)}        
         </Typography>

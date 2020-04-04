@@ -12,13 +12,10 @@ export const Home = () => {
   const { siteDescription } = settings[0];
 
   let thumbnails = [];
-  projects.map(({title, thumbnail, type, value, name}, index) => {
+  projects.map(({type, value, name, ...everythingElse}, index) => {
     const url = type === 'external' ? value : `/projects/${name}`;
     return thumbnails[index] = {
-      title,
-      thumbnail,
-      type,
-      url
+      url, type, value, name, ...everythingElse
     }
   })
 
@@ -28,7 +25,9 @@ export const Home = () => {
       { Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
           <Box marginBottom={16}>
-            <ProjectPreview projects={thumbnails.reverse()} />
+            <ProjectPreview projects={thumbnails.sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            })} />
           </Box>
         </IgnoreLayoutWrapper>
       )}

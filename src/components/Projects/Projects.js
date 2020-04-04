@@ -6,9 +6,10 @@ import { ThumbnailGrid } from 'components/ThumbnailGrid/ThumbnailGrid';
 export const Projects = () => {
   const { projects } = React.useContext(DataContext);
   let thumbnails = [];
-  projects.map(({thumbnail, type, value, name}, index) => {
+  projects.map(({thumbnail, type, value, name, title}, index) => {
     const url = type === 'external' ? value : `/projects/${name}`;
     return thumbnails[index] = {
+      title,
       thumbnail,
       type,
       url
@@ -18,7 +19,7 @@ export const Projects = () => {
     <React.Fragment>
       <Meta title={"Projects"} />
       <div>
-        <ThumbnailGrid thumbnails={thumbnails} />
+        <ThumbnailGrid thumbnails={thumbnails.reverse()} />
       </div>
     </React.Fragment>
 

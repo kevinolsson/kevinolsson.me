@@ -42,8 +42,9 @@ collections: # A list of collections the CMS should be able to edit
     create: true 
     fields:
       - {label: Title, name: title, widget: string}
+      - {label: Date, name: date, widget: date}
       - {label: Thumbail, name: thumbnail, widget: image, required: false}
-      - {label: Type, name: type, widget: select, options: ["standard", "component", "external"]}
+      - {label: Type, name: type, widget: select, options: ["standard", "component", "external"], required: false}
       - {label: Component or External URL, name: value, widget: string}
       - {label: Content, name: body, widget: markdown}
 

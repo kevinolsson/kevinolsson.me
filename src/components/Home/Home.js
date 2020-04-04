@@ -5,15 +5,17 @@ import { BlogBlock } from 'components/BlogBlock/BlogBlock'
 import { dateFormatted } from 'util/date';
 import { ProjectPreview } from 'components/ProjectPreview/ProjectPreview';
 import { IgnoreLayoutWrapper } from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
+import { Box } from '@material-ui/core'
 
 export const Home = () => {
   const { posts, settings, projects } = React.useContext(DataContext); 
   const { siteDescription } = settings[0];
 
   let thumbnails = [];
-  projects.map(({thumbnail, type, value, name}, index) => {
+  projects.map(({title, thumbnail, type, value, name}, index) => {
     const url = type === 'external' ? value : `/projects/${name}`;
     return thumbnails[index] = {
+      title,
       thumbnail,
       type,
       url
@@ -25,7 +27,9 @@ export const Home = () => {
       <Meta title={siteDescription} />
       { Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
-          <ProjectPreview projects={thumbnails} />
+          <Box marginBottom={16}>
+            <ProjectPreview projects={thumbnails.reverse()} />
+          </Box>
         </IgnoreLayoutWrapper>
       )}
       <div>

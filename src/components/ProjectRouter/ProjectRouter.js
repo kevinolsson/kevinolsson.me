@@ -1,9 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 import { ProjectPost } from 'components/ProjectPost/ProjectPost'
+import { Button } from 'components/Button/Button';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Meta from 'components/Meta/Meta'
 import DataContext from 'DataContext';
+import { Link, useParams, useLocation } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 
 const determineComponent = component => {
   switch(component) {
@@ -11,6 +15,32 @@ const determineComponent = component => {
     default:
       return <ErrorMessage code={404} />
   }
+}
+
+const Wrapper = ({ children, title }) => {
+  const location = useLocation()
+  const { search: fromHomepage } = location;
+
+  return (
+  <React.Fragment>
+    <Meta title={title} />
+    <Button
+      component={Link}
+      to={fromHomepage ? "/" : "/projects"}
+      startIcon={<ArrowBackIcon />}
+    >
+      {`Back to ${fromHomepage ? 'blog' : 'projects'}`}
+    </Button>
+    <Typography gutterBottom variant="h1">{title}</Typography>
+    <div>
+      { children}
+    </div>
+  </React.Fragment>
+)}
+
+Wrapper.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
 }
 
 export const ProjectRouter = () => {
@@ -23,18 +53,16 @@ export const ProjectRouter = () => {
     case 'component': {
       const Component = determineComponent(project.value)
       return (
-      <React.Fragment>
-        <Meta title={project.title} />
+      <Wrapper title={project.title}>
         <Component />
-      </React.Fragment>
+      </Wrapper>
       )
     }
     default: {
       return (
-        <React.Fragment>
-          <Meta title={project.title} />
-          <ProjectPost title={project.title} body={project.body} />
-          </React.Fragment>
+        <Wrapper title={project.title}>
+          <ProjectPost body={project.body} />
+        </Wrapper>
       )
     }
   }

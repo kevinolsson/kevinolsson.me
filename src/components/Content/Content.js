@@ -40,9 +40,17 @@ const HtmlBlock = ({ value }) => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    color: theme.palette.portfolio.dark,
     '& img': {
       width: '100%'
-    }
+    },
+    '& a':{ color: theme.palette.portfolio.primary },
+    '& h1': { ...theme.typography.h1 },
+    '& h2': { ...theme.typography.h2 },
+    '& h3': { ...theme.typography.h3 },
+    '& h4': { ...theme.typography.h4 },
+    '& h5': { ...theme.typography.h5 },
+    '& p': { ...theme.typography.body1 },
   }
 }), { name: 'Content' });
 

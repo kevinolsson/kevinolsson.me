@@ -9,16 +9,15 @@ import { Button } from 'components/Button/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    position: 'relative',
-    marginBottom: theme.spacing(8),
+    position: 'relative'
   },
   grid: {
     transition: 'all 0.2s ease-out',
     display: 'grid',
     gridGap: theme.spacing(4),
     gridTemplateColumns: 'repeat(3, 240px)',
-    gridTemplateRows: theme.spacing(60),
     overflowX: 'scroll',
+    overflowY: 'hidden',
     scrollSnapType: 'x mandatory',
     scrollbarWidth: 'none',
     scrollPadding: '0 16px',
@@ -28,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: 'repeat(3, 1fr)',
-      gridTemplateRows: theme.spacing(75),
     },
   },
   thumbnailWrapper: {
@@ -52,9 +50,9 @@ export const ProjectPreview = ({ projects }) => {
   return (
     <div className={classes.root}>
       <div className={classes.grid}>
-        { projects.slice(0, 3).map(({thumbnail, type, url}, index) => (
+        { projects.slice(0, 3).map(({thumbnail, type, url, title}, index) => (
           <div key={index} className={[classes.thumbnailWrapper, index === 0 ? classes.thumbnailWrapperFirst : undefined, (projects.length > 3 && index + 1 === 3) || (projects.length <= 3 && index + 1 === projects.length) ? classes.thumbnailWrapperLast : undefined].join(' ')}>
-            <Thumbnail key={index} type={type} thumbnail={thumbnail} url={url} />
+            <Thumbnail key={index} title={title} type={type} thumbnail={thumbnail} url={url + '?homepage=true'} />
           </div>
         ))}
       </div>
@@ -79,9 +77,10 @@ ProjectPreview.defaultProps = {
 ProjectPreview.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
-      thumbnail: PropTypes.string,
-      value: PropTypes.string,
       title: PropTypes.string,
+      thumbnail: PropTypes.string,
+      type: PropTypes.string,
+      url: PropTypes.string,
     }),
   ),
 };

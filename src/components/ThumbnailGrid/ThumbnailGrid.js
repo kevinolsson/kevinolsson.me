@@ -9,14 +9,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridGap: `${theme.spacing()}px`,
-    gridAutoRows: theme.spacing(75),
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: 'repeat(2, 1fr)',
-      gridTemplateRows: theme.spacing(60),
     },
     [theme.breakpoints.up('md')]: {
       gridTemplateColumns: 'repeat(3, 1fr)',
-      gridTemplateRows: theme.spacing(75),
     },
   },
   gridItem: {
@@ -32,8 +29,8 @@ export const ThumbnailGrid = ({ thumbnails }) => {
   return !!thumbnails.length && (
     <div className={classes.root}>
       <div className={classes.grid}>
-        { thumbnails.map(({ type, thumbnail, url }, index) => (
-            <Thumbnail key={index} type={type} thumbnail={thumbnail} url={url} />
+        { thumbnails.map(({ type, thumbnail, url, title }, index) => (
+            <Thumbnail key={index} title={title} type={type} thumbnail={thumbnail} url={url} />
           )
         )}
       </div>
@@ -51,6 +48,7 @@ ThumbnailGrid.propTypes = {
       type: PropTypes.oneOf(['component', 'external', 'standard']),
       thumbnail: PropTypes.string.isRequired,
       url: PropTypes.string,
+      title: PropTypes.string,
     }),
   ),
 };

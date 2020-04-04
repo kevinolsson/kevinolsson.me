@@ -46,7 +46,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Thumbail, name: thumbnail, widget: image, required: false}
       - {label: Type, name: type, widget: select, options: ["standard", "component", "external"], required: false}
       - {label: Component or External URL, name: value, widget: string}
-      - {label: Content, name: body, widget: markdown}
+      - {label: Content, name: body, widget: markdown, required: false}
 
   - name: "settings"
     label: "Settings"

@@ -13,37 +13,37 @@
   ],
   "projects": [
     {
-      "content": "\n\n![LiveCard - Preview Thumbnail](/images/uploads/50dfca45091549.582624689ab79.png)\n\n![LiveCard - Screens](/images/uploads/61846745091549.582624689b439.png)",
+      "content": "Not required",
       "isEmpty": false,
       "excerpt": "",
       "title": "LiveCard - a Yelp/Groupon like service.",
-      "thumbnail": "/images/uploads/50dfca45091549.582624689ab79.png",
-      "type": "standard",
-      "value": "hello world",
+      "thumbnail": "/images/uploads/artboard.png",
+      "type": "external",
+      "value": "https://www.behance.net/gallery/45091549/LiveCard-a-YelpGroupon-like-service",
       "name": "2020-03-28-livecard-a-yelp-groupon-like-service",
-      "body": "\n\n![LiveCard - Preview Thumbnail](/images/uploads/50dfca45091549.582624689ab79.png)\n\n![LiveCard - Screens](/images/uploads/61846745091549.582624689b439.png)"
+      "body": "Not required"
     },
     {
-      "content": "![](/images/uploads/aa318045090503.58261e6375248.png)\n\n![](/images/uploads/9ab3e945090503.58261e6375841.png)\n\n> ![](/images/uploads/aed26045090503.58261e6375f18.png)\n>\n> ![](/images/uploads/a8a21f45090503.58261e6376878.png)",
+      "content": ".",
       "isEmpty": false,
       "excerpt": "",
       "title": "A Collection of Landing Pages",
-      "thumbnail": "/images/uploads/aa318045090503.58261e6375248.png",
-      "type": "standard",
-      "value": "Should not matter",
+      "thumbnail": "/images/uploads/artboard-copy.jpg",
+      "type": "external",
+      "value": "https://www.behance.net/gallery/45090503/A-Collection-of-Landing-Pages",
       "name": "2020-04-04-a-collection-of-landing-pages",
-      "body": "![](/images/uploads/aa318045090503.58261e6375248.png)\n\n![](/images/uploads/9ab3e945090503.58261e6375841.png)\n\n> ![](/images/uploads/aed26045090503.58261e6375f18.png)\n>\n> ![](/images/uploads/a8a21f45090503.58261e6376878.png)"
+      "body": "."
     },
     {
-      "content": "![MitsuRO](/images/uploads/8fa6d445104427.5826d53de9afc.png)\n\n![HydRO](/images/uploads/72b4e545104427.5826d53dea207.png)\n\n![Ragnarok4U](/images/uploads/37b33c45104427.5826d53dea911.png)",
+      "content": ".",
       "isEmpty": false,
       "excerpt": "",
       "title": "Ragnarok Online - Once upon a time: I made these.",
       "thumbnail": "/images/uploads/thumbnail.png",
-      "type": "standard",
-      "value": "This should not be required",
+      "type": "external",
+      "value": "https://www.behance.net/gallery/45104427/Ragnarok-Online-Once-upon-a-time-I-made-these",
       "name": "2020-04-04-ragnarok-online-once-upon-a-time-i-made-these",
-      "body": "![MitsuRO](/images/uploads/8fa6d445104427.5826d53de9afc.png)\n\n![HydRO](/images/uploads/72b4e545104427.5826d53dea207.png)\n\n![Ragnarok4U](/images/uploads/37b33c45104427.5826d53dea911.png)"
+      "body": "."
     }
   ],
   "settings": [

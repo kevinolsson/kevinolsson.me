@@ -1,11 +1,7 @@
 ---
 title: LiveCard - a Yelp/Groupon like service.
-thumbnail: /images/uploads/50dfca45091549.582624689ab79.png
-type: standard
-value: hello world
+thumbnail: /images/uploads/artboard.png
+type: external
+value: 'https://www.behance.net/gallery/45091549/LiveCard-a-YelpGroupon-like-service'
 ---
-
-
-![LiveCard - Preview Thumbnail](/images/uploads/50dfca45091549.582624689ab79.png)
-
-![LiveCard - Screens](/images/uploads/61846745091549.582624689b439.png)
+Not required

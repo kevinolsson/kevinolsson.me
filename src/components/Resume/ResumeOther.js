@@ -12,89 +12,89 @@ export const ResumeOther = () => (
     <Box marginBottom={8}>
       <Typography paragraph component="div" variant="body1">
         <Box display="block" fontWeight="fontWeightBold">
-        Technical:
+          Technical:
         </Box>
       </Typography>
-      <ChipArray label={[
-        ['React', <FavoriteBorderIcon />],
-        'Redux',
-        'JavaScript (ES6)',
-        'Webpack',
-        ['Storybook.js', <FavoriteBorderIcon />],
-        'MaterialUI',
-        'HTML',
-        'Jest',
-        'Enzyme',
-        'i18n',
-        ['CSS', <FavoriteBorderIcon />],
-        ['Sass', <FavoriteBorderIcon />],
-        'JSS',
-        'Design Systems',
-        'Next.js',
-        'Git',
-        'Netlify CMS',
-        'SQL',
-        'Agile Methodology',
-        'JIRA',
-        'PHP',
-        'WordPress',
-        'Advanced Custom Fields'
-      ]}
+      <ChipArray
+        label={[
+          ['React', <FavoriteBorderIcon />],
+          'Redux',
+          'JavaScript (ES6)',
+          'Webpack',
+          ['Storybook.js', <FavoriteBorderIcon />],
+          'MaterialUI',
+          'HTML',
+          'Jest',
+          'Enzyme',
+          'i18n',
+          ['CSS', <FavoriteBorderIcon />],
+          ['Sass', <FavoriteBorderIcon />],
+          'JSS',
+          'Design Systems',
+          'Next.js',
+          'Git',
+          'Netlify CMS',
+          'SQL',
+          'Agile Methodology',
+          'JIRA',
+          'PHP',
+          'WordPress',
+          'Advanced Custom Fields'
+        ]}
       />
     </Box>
     <Box marginBottom={8}>
       <Typography paragraph component="div" variant="body1">
         <Box display="block" fontWeight="fontWeightBold">
-        Design:
+          Design:
         </Box>
       </Typography>
-      <ChipArray label={[
-        'User Interface (UI)',
-        ['User Experience (UX)', <FavoriteBorderIcon />],
-        ['Sketch', <FavoriteBorderIcon />],
-        'Design Systems',
-        'Abstract',
-        'Proto.io',
-        'Marvel',
-        'inVision',
-        'Zeplin',
-        'Figma',
-        'UX Research',
-        ['Typography', <FavoriteBorderIcon />],
-      ]}
+      <ChipArray
+        label={[
+          'User Interface (UI)',
+          ['User Experience (UX)', <FavoriteBorderIcon />],
+          ['Sketch', <FavoriteBorderIcon />],
+          'Design Systems',
+          'Abstract',
+          'Proto.io',
+          'Marvel',
+          'inVision',
+          'Zeplin',
+          'Figma',
+          'UX Research',
+          ['Typography', <FavoriteBorderIcon />]
+        ]}
       />
     </Box>
     <Box marginBottom={8}>
       <Typography paragraph component="div" variant="body1">
         <Box display="block" fontWeight="fontWeightBold">
-        Language:
+          Language:
         </Box>
         (Spoken natively)
       </Typography>
-      <ChipArray label={[
-        'English', 'Swedish', 'Tagalog',
-      ]}
-      />
+      <ChipArray label={['English', 'Swedish', 'Tagalog']} />
     </Box>
     <Box marginBottom={8}>
       <Typography paragraph component="div" variant="body1">
         <Box display="block" fontWeight="fontWeightBold">
-        Interests:
+          Interests:
         </Box>
       </Typography>
-      <ChipArray label={[
-        'Programming',
-        'Designing',
-        'Building things',
-        ['Eating', <FavoriteBorderIcon />],
-        'Cooking',
-        'Baking',
-        'Travelling',
-        ['Meeting new people', <FavoriteBorderIcon />],
-        'Playing video games',
-        'F1 Motosport',
-        'Esports',
-      ]}
+      <ChipArray
+        label={[
+          'Programming',
+          'Designing',
+          'Building things',
+          ['Eating', <FavoriteBorderIcon />],
+          'Cooking',
+          'Baking',
+          'Travelling',
+          ['Meeting new people', <FavoriteBorderIcon />],
+          'Playing video games',
+          'F1 Motosport',
+          'Esports'
+        ]}
       />
     </Box>
   </Box>

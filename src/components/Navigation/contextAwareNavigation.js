@@ -5,14 +5,17 @@ import TwitterIcon from 'components/Icons/TwitterIcon';
 import LinkedInIcon from 'components/Icons/LinkedInIcon';
 import DataContext from 'DataContext';
 
-export const contextAwareNavigation = (Component) => ({ view, handleClickCallback }) => {
+export const contextAwareNavigation = Component => ({
+  view,
+  handleClickCallback
+}) => {
   const location = useLocation();
   const pathname = location.pathname.split('/');
   const active = `/${pathname[1]}`;
-  const { settings } = React.useContext(DataContext); 
+  const { settings } = React.useContext(DataContext);
   const { twitter, linkedIn } = settings[0].socialMedia;
 
-  const withEdgeCase = (a) => (a === '/blog' ? '/' : a);
+  const withEdgeCase = a => (a === '/blog' ? '/' : a);
 
   const menu = [
     { name: 'Blog', url: '/' },
@@ -20,7 +23,7 @@ export const contextAwareNavigation = (Component) => ({ view, handleClickCallbac
     { name: 'Resume', url: '/resume' },
     { name: 'Contact', url: '/contact' },
     { name: <TwitterIcon />, url: twitter, external: true },
-    { name: <LinkedInIcon />, url: linkedIn, external: true },
+    { name: <LinkedInIcon />, url: linkedIn, external: true }
   ];
   return (
     <Component
@@ -34,10 +37,10 @@ export const contextAwareNavigation = (Component) => ({ view, handleClickCallbac
 
 contextAwareNavigation.defaultProps = {
   view: 'desktop',
-  handleClickCallback: undefined,
+  handleClickCallback: undefined
 };
 
 contextAwareNavigation.propTypes = {
   view: PropTypes.oneOf(['desktop', 'mobile']),
-  handleClickCallback: PropTypes.func,
+  handleClickCallback: PropTypes.func
 };

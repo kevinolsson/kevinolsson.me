@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-import { GoogleAnalytics } from 'components/GoogleAnalytics/GoogleAnalytics'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { GoogleAnalytics } from 'components/GoogleAnalytics/GoogleAnalytics';
 import { Wrapper } from 'components/Wrapper/Wrapper';
 import { Home } from 'components/Home/Home';
 import { BlogPost } from 'components/BlogPost/BlogPost';
@@ -9,9 +9,8 @@ import { ProjectRouter } from 'components/ProjectRouter/ProjectRouter';
 import { Resume } from 'components/Resume/Resume';
 import { Contact } from 'components/Contact/Contact';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
- 
-export const Router = props => {
 
+export const Router = props => {
   return (
     <BrowserRouter>
       <GoogleAnalytics />
@@ -47,6 +46,4 @@ export const Router = props => {
   );
 };
 
-Router.propTypes = {
-  
-};
+Router.propTypes = {};

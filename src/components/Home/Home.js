@@ -1,47 +1,58 @@
 import React from 'react';
-import Meta from 'components/Meta/Meta'
+import Meta from 'components/Meta/Meta';
 import DataContext from 'DataContext';
-import { BlogBlock } from 'components/BlogBlock/BlogBlock'
+import { BlogBlock } from 'components/BlogBlock/BlogBlock';
 import { dateFormatted } from 'util/date';
 import { ProjectPreview } from 'components/ProjectPreview/ProjectPreview';
 import { IgnoreLayoutWrapper } from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
-import { Box } from '@material-ui/core'
+import { Box } from '@material-ui/core';
 
 export const Home = () => {
-  const { posts, settings, projects } = React.useContext(DataContext); 
+  const { posts, settings, projects } = React.useContext(DataContext);
   const { siteDescription } = settings[0];
 
   let thumbnails = [];
-  projects.map(({type, value, name, ...everythingElse}, index) => {
+  projects.map(({ type, value, name, ...everythingElse }, index) => {
     const url = type === 'external' ? value : `/projects/${name}`;
-    return thumbnails[index] = {
-      url, type, value, name, ...everythingElse
-    }
-  })
+    return (thumbnails[index] = {
+      url,
+      type,
+      value,
+      name,
+      ...everythingElse
+    });
+  });
 
   return (
     <React.Fragment>
       <Meta title={siteDescription} />
-      { Array.isArray(thumbnails) && !!thumbnails.length && (
+      {Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
           <Box marginBottom={16}>
-            <ProjectPreview projects={thumbnails.sort((a, b) => {
-              return new Date(b.date) - new Date(a.date);
-            })} />
+            <ProjectPreview
+              projects={thumbnails.sort((a, b) => {
+                return new Date(b.date) - new Date(a.date);
+              })}
+            />
           </Box>
         </IgnoreLayoutWrapper>
       )}
       <div>
-        { Array.isArray(posts) && !!posts.length && posts.map((post, index) => !!post && (
-          <BlogBlock
-            key={index}
-            featured={index === 0}
-            title={post.title}
-            url={`/blog/${post.name}`}
-            body={post.subtitle}
-            date={dateFormatted(post.date)}
-          />
-        ))}
+        {Array.isArray(posts) &&
+          !!posts.length &&
+          posts.map(
+            (post, index) =>
+              !!post && (
+                <BlogBlock
+                  key={index}
+                  featured={index === 0}
+                  title={post.title}
+                  url={`/blog/${post.name}`}
+                  body={post.subtitle}
+                  date={dateFormatted(post.date)}
+                />
+              )
+          )}
       </div>
     </React.Fragment>
   );

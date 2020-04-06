@@ -7,39 +7,43 @@ import { contextAwareNavigation } from 'components/Navigation/contextAwareNaviga
 import { contextAwareHamburgerButton } from 'components/HamburgerButton/contextAwareHamburgerButton';
 
 const ContextAwareNavigation = contextAwareNavigation(Navigation);
-const ContextAwareHamburgerButton = contextAwareHamburgerButton(HamburgerButton);
+const ContextAwareHamburgerButton = contextAwareHamburgerButton(
+  HamburgerButton
+);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    zIndex: 100,
-    opacity: 0,
-    pointerEvents: 'none',
-    transition: '0.1s ease-out all',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+const useStyles = makeStyles(
+  theme => ({
+    root: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 100,
+      opacity: 0,
+      pointerEvents: 'none',
+      transition: '0.1s ease-out all',
+      [theme.breakpoints.up('md')]: {
+        display: 'none'
+      }
     },
-  },
-  rootVisible: {
-    opacity: 1,
-    pointerEvents: 'auto',
-  },
-  background: {
-    backgroundColor: theme.palette.common.transparentWhite,
-    height: '100%',
-    width: '100%',
-  },
-  mobileNavigation: {
-    position: 'absolute',
-    right: theme.spacing(4),
-    bottom: theme.spacing(24),
-  },
-}), { name: 'mobileNavigation' });
-
+    rootVisible: {
+      opacity: 1,
+      pointerEvents: 'auto'
+    },
+    background: {
+      backgroundColor: theme.palette.common.transparentWhite,
+      height: '100%',
+      width: '100%'
+    },
+    mobileNavigation: {
+      position: 'absolute',
+      right: theme.spacing(4),
+      bottom: theme.spacing(24)
+    }
+  }),
+  { name: 'mobileNavigation' }
+);
 
 export const MobileNavigation = () => {
   const [visible, setVisible] = React.useState(false);
@@ -50,19 +54,25 @@ export const MobileNavigation = () => {
   };
 
   return (
-    <>
-      <div className={[
-        classes.root,
-        visible && classes.rootVisible,
-      ].filter(Boolean).join(' ')}
+    <React.Fragment>
+      <div
+        className={[classes.root, visible && classes.rootVisible]
+          .filter(Boolean)
+          .join(' ')}
       >
         <Box onClick={toggleVisible} className={classes.background}>
           <div className={classes.mobileNavigation}>
-            <ContextAwareNavigation handleClickCallback={toggleVisible} view="mobile" />
+            <ContextAwareNavigation
+              handleClickCallback={toggleVisible}
+              view="mobile"
+            />
           </div>
         </Box>
       </div>
-      <ContextAwareHamburgerButton active={visible} handleClickCallback={toggleVisible} />
-    </>
+      <ContextAwareHamburgerButton
+        active={visible}
+        handleClickCallback={toggleVisible}
+      />
+    </React.Fragment>
   );
 };

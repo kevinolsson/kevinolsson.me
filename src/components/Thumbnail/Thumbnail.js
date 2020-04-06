@@ -7,13 +7,13 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import LinkIcon from '@material-ui/icons/Link';
 
 const useStyles = makeStyles(
-  (theme) => ({
+  theme => ({
     wrapper: {
       textDecoration: 'none',
       color: theme.palette.portfolio.dark,
       '&:hover': {
         textDecoration: 'none'
-      },
+      }
     },
     thumbnail: {
       display: 'block',
@@ -25,8 +25,8 @@ const useStyles = makeStyles(
       paddingTop: theme.spacing(60),
       marginBottom: theme.spacing(4),
       [theme.breakpoints.up('md')]: {
-        paddingTop: theme.spacing(75),
-      },
+        paddingTop: theme.spacing(75)
+      }
     },
     text: {
       marginBottom: theme.spacing(4)
@@ -36,7 +36,7 @@ const useStyles = makeStyles(
       transform: 'translateY(6px)'
     }
   }),
-  { name: 'Thumbnail' },
+  { name: 'Thumbnail' }
 );
 
 export const Thumbnail = ({ type, thumbnail: thumbnailProp, url, title }) => {
@@ -44,9 +44,13 @@ export const Thumbnail = ({ type, thumbnail: thumbnailProp, url, title }) => {
   const [error, setError] = React.useState(false);
 
   const thumbnail = new Image();
-  thumbnail.addEventListener('load', () => {
-    setHasLoaded(true);
-  }, false);
+  thumbnail.addEventListener(
+    'load',
+    () => {
+      setHasLoaded(true);
+    },
+    false
+  );
   thumbnail.addEventListener('error', () => {
     setError(true);
   });
@@ -58,25 +62,38 @@ export const Thumbnail = ({ type, thumbnail: thumbnailProp, url, title }) => {
 
   return hasLoaded && !error ? (
     <div>
-      <Component className={classes.wrapper}  to={url} href={type === 'external' ? url : undefined} target={type === 'external' ? '_blank' : undefined}>
+      <Component
+        className={classes.wrapper}
+        to={url}
+        href={type === 'external' ? url : undefined}
+        target={type === 'external' ? '_blank' : undefined}
+      >
         <div className={classes.thumbnail} />
         <Typography className={classes.text} component="div">
-          <Box marginBottom={-1} fontWeight="fontWeightBold">{title}</Box>
-          {type === 'external' && (<Typography variant="body2"><LinkIcon className={classes.externalIcon} /> Opens in a new tab</Typography>)}        
+          <Box marginBottom={-1} fontWeight="fontWeightBold">
+            {title}
+          </Box>
+          {type === 'external' && (
+            <Typography variant="body2">
+              <LinkIcon className={classes.externalIcon} /> Opens in a new tab
+            </Typography>
+          )}
         </Typography>
       </Component>
     </div>
-  ) : <Skeleton variant="rect" height="100%" />;
+  ) : (
+    <Skeleton variant="rect" height="100%" />
+  );
 };
 
 Thumbnail.defaultProps = {
   type: 'default',
-  url: undefined,
+  url: undefined
 };
 
 Thumbnail.propTypes = {
   type: PropTypes.oneOf(['component', 'external', 'standard']),
   thumbnail: PropTypes.string.isRequired,
   url: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Meta from 'components/Meta/Meta';
 import DataContext from 'DataContext';
 import { BlogBlock } from 'components/BlogBlock/BlogBlock';
@@ -7,7 +8,7 @@ import { ProjectPreview } from 'components/ProjectPreview/ProjectPreview';
 import { IgnoreLayoutWrapper } from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
 import { Box } from '@material-ui/core';
 
-export const Home = () => {
+export const Home = ({preview}) => {
   const { posts, settings, projects } = React.useContext(DataContext);
   const { siteDescription } = settings[0];
 
@@ -26,7 +27,7 @@ export const Home = () => {
   return (
     <React.Fragment>
       <Meta title={siteDescription} />
-      {Array.isArray(thumbnails) && !!thumbnails.length && (
+      {preview && Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
           <Box marginBottom={16}>
             <ProjectPreview
@@ -56,4 +57,12 @@ export const Home = () => {
       </div>
     </React.Fragment>
   );
+};
+
+Home.defaultProps = {
+  preview: true
+};
+
+Home.propTypes = {
+  preview: PropTypes.bool
 };

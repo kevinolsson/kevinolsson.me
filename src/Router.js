@@ -20,7 +20,7 @@ export const Router = props => {
             <Home />
           </Route>
           <Route path="/blog" exact>
-            <Redirect to="/" />
+            <Home preview={false} />
           </Route>
           <Route path="/blog/:blogSlug">
             <BlogPost />

@@ -8,7 +8,7 @@ import { ProjectPreview } from 'components/ProjectPreview/ProjectPreview';
 import { IgnoreLayoutWrapper } from 'components/IgnoreLayoutWrapper/IgnoreLayoutWrapper';
 import { Box } from '@material-ui/core';
 
-export const Home = ({preview}) => {
+export const Home = ({ showProjectPreview }) => {
   const { posts, settings, projects } = React.useContext(DataContext);
   const { siteDescription } = settings[0];
 
@@ -27,7 +27,7 @@ export const Home = ({preview}) => {
   return (
     <React.Fragment>
       <Meta title={siteDescription} />
-      {preview && Array.isArray(thumbnails) && !!thumbnails.length && (
+      {showProjectPreview && Array.isArray(thumbnails) && !!thumbnails.length && (
         <IgnoreLayoutWrapper>
           <Box marginBottom={16}>
             <ProjectPreview
@@ -60,9 +60,9 @@ export const Home = ({preview}) => {
 };
 
 Home.defaultProps = {
-  preview: true
+  showProjectPreview: true
 };
 
 Home.propTypes = {
-  preview: PropTypes.bool
+  showProjectPreview: PropTypes.bool
 };

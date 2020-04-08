@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <base href="/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_ID%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '%REACT_APP_GA_ID%');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
 

@@ -97,10 +97,6 @@
     ]
   },
   "resolutions": {
-    "axios": "^0.18.1",
-    "extend": "^3.0.2",
-    "http-proxy-middleware": "^0.20.0",
-    "js-yaml": "^3.13.0",
-    "request": "^2.88.0"
+    "js-yaml": "^3.13.0"
   }
 }

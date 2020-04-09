@@ -10,7 +10,7 @@ import { Resume } from 'components/Resume/Resume';
 import { Contact } from 'components/Contact/Contact';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 
-export const Router = props => {
+export const Router = () => {
   return (
     <BrowserRouter>
       <GoogleAnalytics />
@@ -45,5 +45,3 @@ export const Router = props => {
     </BrowserRouter>
   );
 };
-
-Router.propTypes = {};

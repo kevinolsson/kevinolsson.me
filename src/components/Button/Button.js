@@ -31,12 +31,10 @@ export const Button = props => {
 };
 
 Button.defaultProps = {
-  otherProps: {},
   className: undefined
 };
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  otherProps: PropTypes.object
+  className: PropTypes.string
 };

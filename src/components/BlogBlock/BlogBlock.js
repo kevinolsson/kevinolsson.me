@@ -23,7 +23,7 @@ export const BlogBlock = ({ title, date, body, url, featured }) => {
       {title && (
         <Typography
           paragraph
-          color={featured ? 'primary' : 'black'}
+          color={featured ? 'primary' : 'textPrimary'}
           variant="h2"
         >
           {title}

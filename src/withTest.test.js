@@ -10,27 +10,27 @@ describe('withTest', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    const TestApp = withTest(Component);
-    ReactDOM.render(<TestApp />, div);
+    const TestComponent = withTest(Component);
+    ReactDOM.render(<TestComponent />, div);
   });
 
   it('should be able to mount render', () => {
-    const TestApp = withTest(Component);
-    const wrapper = mount(<TestApp />);
+    const TestComponent = withTest(Component);
+    const wrapper = mount(<TestComponent />);
     expect(wrapper.exists()).toBe(true);
   });
 
   it('should wrap the component inside the MemoryRouter, MuiThemeProvider components', () => {
-    const TestApp = withTest(Component);
-    const wrapper = mount(<TestApp />);
+    const TestComponent = withTest(Component);
+    const wrapper = mount(<TestComponent />);
 
     expect(wrapper.find(MemoryRouter)).toHaveLength(1);
     expect(wrapper.find(MuiThemeProvider)).toHaveLength(1);
   });
 
   it('should forward component related props to the component itself', () => {
-    const TestApp = withTest(Component);
-    const wrapper = mount(<TestApp hello="world" />);
+    const TestComponent = withTest(Component);
+    const wrapper = mount(<TestComponent hello="world" />);
     expect(wrapper.find(Component).props().hello).toEqual('world');
   });
 });

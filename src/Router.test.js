@@ -11,55 +11,52 @@ import { Resume } from 'components/Resume/Resume';
 import { Contact } from 'components/Contact/Contact';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 
+const TestRouter = withTest(Router);
+
 describe('Router', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    const Test = withTest(Router);
-    ReactDOM.render(<Test />, div);
+    ReactDOM.render(<TestRouter />, div);
   });
 
   it('should be able to mount render', () => {
-    const Test = withTest(Router);
-    const wrapper = mount(<Test />);
+    const wrapper = mount(<TestRouter />);
     expect(wrapper.exists()).toBe(true);
   });
 
   it('should render the Home component if path is /', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/'] }} />
     );
     expect(wrapper.find(Home)).toHaveLength(1);
   });
 
   it('should render the Home component if path is /blog', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/'] }} />
     );
     expect(wrapper.find(Home)).toHaveLength(1);
   });
 
   it('should render the BlogPost component if path is /blog/<blogSlug>', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/blog/mock-blog-url'] }} />
+      <TestRouter
+        MemoryRouterProps={{ initialEntries: ['/blog/mock-blog-url'] }}
+      />
     );
     expect(wrapper.find(BlogPost)).toHaveLength(1);
   });
 
   it('should render the Projects component if path is /projects', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/projects'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/projects'] }} />
     );
     expect(wrapper.find(Projects)).toHaveLength(1);
   });
 
   it('should render the ProjectRouter component if path is /projects/<projectSlug>', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test
+      <TestRouter
         MemoryRouterProps={{ initialEntries: ['/projects/mock-projects-url'] }}
       />
     );
@@ -67,33 +64,29 @@ describe('Router', () => {
   });
 
   it('should render the Resume component if path is /resume', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/resume'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/resume'] }} />
     );
     expect(wrapper.find(Resume)).toHaveLength(1);
   });
 
   it('should render the Contact component if path is /contact', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/contact'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/contact'] }} />
     );
     expect(wrapper.find(Contact)).toHaveLength(1);
   });
 
   it('should render the Contact component if path is /contact', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test MemoryRouterProps={{ initialEntries: ['/contact'] }} />
+      <TestRouter MemoryRouterProps={{ initialEntries: ['/contact'] }} />
     );
     expect(wrapper.find(Contact)).toHaveLength(1);
   });
 
   it('should render the ErrorMessage component with a 404 code if path does not fit the router', () => {
-    const Test = withTest(Router);
     const wrapper = mount(
-      <Test
+      <TestRouter
         MemoryRouterProps={{ initialEntries: ['/this-is-any-random-url'] }}
       />
     );

@@ -32,10 +32,10 @@ export const ChipArray = ({ label, ChipProps }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {label.map((l, index) => {
-        const isArray = Array.isArray(l);
-        const text = isArray ? l[0] : l;
-        const icon = isArray ? l[1] : undefined;
+      {label.map((arrayItem, index) => {
+        const isArray = Array.isArray(arrayItem);
+        const text = isArray ? arrayItem[0] : arrayItem;
+        const icon = isArray ? arrayItem[1] : undefined;
         return (
           <Chip
             classes={{

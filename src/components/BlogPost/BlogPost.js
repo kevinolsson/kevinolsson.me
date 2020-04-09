@@ -6,6 +6,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import DataContext from 'DataContext';
 import Content from 'components/Content/Content';
 import { dateFormatted } from 'util/date';
+import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 import Meta from 'components/Meta/Meta';
 
 export const BlogPost = () => {
@@ -41,6 +42,6 @@ export const BlogPost = () => {
       </div>
     </div>
   ) : (
-    '404 not found'
+    <ErrorMessage code={404} />
   );
 };

@@ -19,9 +19,9 @@ export const ErrorMessage = ({ code }) => {
       </Typography>
       <Box maxWidth={640}>
         <Typography variant="body1" paragraph>
-          Hi! You arrived at the page which I was not really expecting to show
-          you. Hehe. If you feel something should be here / I broke something
-          (highly possible), please do reach out!
+          Hi! You have arrived at a page which I wasn't really planning on
+          showing anyone. Hehe. If you feel passionate that something should be
+          here, do reach out!
         </Typography>
       </Box>
     </React.Fragment>

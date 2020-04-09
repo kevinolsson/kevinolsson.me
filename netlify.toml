@@ -5,4 +5,4 @@
 
 [build]
   publish = "build/"
-  command = "yarn test --forceExit --ci --watchAll && yarn build"
+  command = "yarn test -- --watchAll=false && yarn build"

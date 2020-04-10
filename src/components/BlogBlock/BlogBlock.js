@@ -10,7 +10,7 @@ const useStyles = makeStyles(
       marginBottom: theme.spacing(8),
       textDecoration: 'none',
       maxWidth: '540px',
-      display: 'inline-block'
+      display: 'block'
     }
   }),
   { name: 'BlogBlock' }

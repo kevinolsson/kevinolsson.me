@@ -1,7 +1,7 @@
 ---
-title: I finally built myself a blog.
+title: I finally built myself a blog 😅.
 date: 2020-04-10T18:39:57.559Z
-subtitle: Hi. New blog who this? 😅
+subtitle: Hi. New blog who this?
 categories: []
 ---
 So I finally got around to building myself website. It's funny since I build websites for a living.

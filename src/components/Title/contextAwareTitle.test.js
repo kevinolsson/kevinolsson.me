@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { withTest } from 'withTest';
-import { contextAwareHamburgerButton } from 'components/HamburgerButton/contextAwareHamburgerButton';
+import { contextAwareTitle } from 'components/Title/contextAwareTitle';
 
 const Component = () => <button>Hello World</button>;
-const ContextAwareComponent = contextAwareHamburgerButton(Component);
+const ContextAwareComponent = contextAwareTitle(Component);
 const TestContextAwareComponent = withTest(ContextAwareComponent);
 
-describe('contextAwareHamburgerButton', () => {
+describe('contextAwareTitle', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<TestContextAwareComponent />, div);

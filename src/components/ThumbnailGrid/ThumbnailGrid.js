@@ -33,9 +33,8 @@ export const ThumbnailGrid = ({ thumbnails }) => {
       <div className={classes.root}>
         <div className={classes.grid}>
           {thumbnails.map(({ type, thumbnail, url, title }, index) => (
-            <div className={classes.gridItem}>
+            <div key={index} className={classes.gridItem}>
               <Thumbnail
-                key={index}
                 title={title}
                 type={type}
                 thumbnail={thumbnail}

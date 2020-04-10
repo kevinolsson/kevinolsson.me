@@ -42,7 +42,9 @@ export const Home = ({ showProjectPreview }) => {
         {Array.isArray(posts) &&
           !!posts.length &&
           posts
-            .reverse()
+            .sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            })
             .map(
               (post, index) =>
                 !!post && (

@@ -60,7 +60,8 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Site Url, name: siteUrl, widget: string, required: false}
           - {label: Site Title, name: siteTitle, widget: string}
-          - {label: Site Description, name: siteDescription, widget: text, required: false}
+          - {label: Site Description (on social cards), name: siteDescription, widget: text, required: false}
+          - {label: Site Description (on site), name: introduction, widget: text, required: false}
           - {label: Display Photo, name: displayPhoto, widget: image, required: false}
           - label: Social Media Fields
             name: socialMedia

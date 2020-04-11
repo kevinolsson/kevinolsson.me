@@ -4,7 +4,7 @@ import DataContext from 'DataContext';
 
 export const contextAwareTitle = Component => () => {
   const { settings } = React.useContext(DataContext);
-  const { siteTitle, siteDescription, displayPhoto } = settings[0];
+  const { siteTitle, introduction, displayPhoto } = settings[0];
   const location = useLocation();
 
   return (
@@ -12,7 +12,7 @@ export const contextAwareTitle = Component => () => {
       prominent={location.pathname === '/'}
       avatar={displayPhoto}
       name={siteTitle}
-      introduction={siteDescription}
+      introduction={introduction}
     />
   );
 };

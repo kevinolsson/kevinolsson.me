@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useLocation } from 'react-router-dom';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
 export const contextAwareHamburgerButton = Component => ({
@@ -8,20 +7,15 @@ export const contextAwareHamburgerButton = Component => ({
   handleClickCallback
 }) => {
   const hasScrolled = useScrollTrigger({
-    threshold: 364
+    threshold: 364,
+    disableHysteresis: true
   });
-  const location = useLocation();
-  const pathname = location.pathname.split('/');
-  const isNestedPage = !!pathname[2];
-  const back = isNestedPage
-    ? `/${pathname[0]}`
-    : () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      };
   return (
     <Component
       showBack={!active && hasScrolled}
-      back={back}
+      back={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }}
       handleClickCallback={handleClickCallback}
       active={active}
     />

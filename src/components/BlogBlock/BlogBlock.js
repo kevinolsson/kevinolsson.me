@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles(
   theme => ({
     root: {
-      marginBottom: theme.spacing(8),
+      marginBottom: theme.spacing(12),
       textDecoration: 'none',
       maxWidth: '540px',
       display: 'block'
@@ -22,7 +22,7 @@ export const BlogBlock = ({ title, date, body, url, featured }) => {
     <Link to={url} className={classes.root}>
       {title && (
         <Typography
-          paragraph
+          component="h2"
           color={featured ? 'primary' : 'textPrimary'}
           variant="h2"
         >

@@ -1,6 +1,7 @@
 siteUrl: 'https://kevinolsson.com'
 siteTitle: Kevin Olsson
 siteDescription: "Front-end developer & UX Designer.\nI finally built myself a blog. \U0001F605"
+introduction: "Front-end developer & UX Designer\nI finally built myself a blog. \U0001F605"
 socialMediaCard:
   image: /images/uploads/card-og.png
   twitterCreatorAccount: '@Olssoneerz'

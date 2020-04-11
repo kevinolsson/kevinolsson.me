@@ -9,7 +9,7 @@ const useStyles = makeStyles(
       maxWidth: '640px',
       margin: `${theme.spacing(4)}px auto`,
       padding: theme.spacing(4),
-      paddingBottom: theme.spacing(24),
+      paddingBottom: theme.spacing(48),
       transition: '0.2s ease-out all',
       [theme.breakpoints.up('md')]: {
         maxWidth: '1024px'

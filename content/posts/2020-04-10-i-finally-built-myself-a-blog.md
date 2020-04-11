@@ -1,5 +1,5 @@
 ---
-title: I finally built myself a blog 😅.
+title: I finally built myself a blog 😅
 date: 2020-04-10T18:39:57.559Z
 subtitle: Hi. New blog who this?
 categories: []
@@ -12,7 +12,7 @@ Same friend also always encouraged me to write a bit more. I figured it was fina
 
 
 
-## Why now? Why decide to build a blog now?
+## Why decide to build a blog now?
 
 I guess the first and most important reason is that **I just need to write more**. Specifically write more about what I dabble with. Writing (and to some extent, expressing myself) is something I am **not** particularly good at and the only way to not suck is to just write more. 
 

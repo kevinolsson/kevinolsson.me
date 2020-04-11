@@ -103,6 +103,7 @@ Object.keys(typography).map(key => {
 export const theme = createMuiTheme({
   spacing: 4,
   palette: {
+    type: 'light',
     portfolio: palette.portfolio,
     common: {
       ...scaffolding.palette.common,
@@ -113,6 +114,9 @@ export const theme = createMuiTheme({
       main: palette.portfolio.pink,
       dark: palette.portfolio.pink,
       contrastText: palette.portfolio.dark
+    },
+    text: {
+      primary: palette.portfolio.dark
     }
   },
   typography: {

@@ -8,6 +8,7 @@ import Content from 'components/Content/Content';
 import { dateFormatted } from 'util/date';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
 import Meta from 'components/Meta/Meta';
+import { Box } from '@material-ui/core';
 
 export const BlogPost = () => {
   const location = useLocation();
@@ -22,24 +23,22 @@ export const BlogPost = () => {
       <Button component={Link} to="/" startIcon={<ArrowBackIcon />}>
         Back to blog
       </Button>
-      {post.title && (
-        <Typography gutterBottom variant="h1">
-          {post.title}
-        </Typography>
-      )}
-      <div style={{ maxWidth: '540px' }}>
-        {post.date && (
-          <Typography paragraph variant="body1">
-            <strong>{dateFormatted(post.date)}</strong>
-          </Typography>
-        )}
-        {post.subtitle && (
-          <Typography gutterBottom variant="h5">
-            {post.subtitle}
-          </Typography>
-        )}
+      {post.title && <Typography variant="h1">{post.title}</Typography>}
+      <Box maxWidth={540}>
+        <Box marginBottom={12}>
+          {post.date && (
+            <Typography paragraph variant="body1">
+              <strong>{dateFormatted(post.date)}</strong>
+            </Typography>
+          )}
+          {post.subtitle && (
+            <Typography gutterBottom variant="h5">
+              {post.subtitle}
+            </Typography>
+          )}
+        </Box>
         <Content src={post.body} />
-      </div>
+      </Box>
     </div>
   ) : (
     <ErrorMessage code={404} />

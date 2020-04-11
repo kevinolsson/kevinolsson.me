@@ -9,10 +9,12 @@ import { ProjectRouter } from 'components/ProjectRouter/ProjectRouter';
 import { Resume } from 'components/Resume/Resume';
 import { Contact } from 'components/Contact/Contact';
 import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
+import { ScrollToTop } from 'components/ScrollToTop/ScrollToTop';
 
 export const Router = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <GoogleAnalytics />
       <Wrapper>
         <Switch>

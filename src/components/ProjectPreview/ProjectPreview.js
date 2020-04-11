@@ -13,6 +13,7 @@ const useStyles = makeStyles(
       position: 'relative'
     },
     grid: {
+      minHeight: '300px',
       transition: 'all 0.2s ease-out',
       display: 'grid',
       gridGap: theme.spacing(4),

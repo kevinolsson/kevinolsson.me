@@ -10,7 +10,7 @@ Hi! The last half year has been rough not just for me but for everyone. I’ve j
 
 This carousel makes the most out of `css-snap` to give the swipe that native feel. It came with a lot of headaches, as I had to rebuild it 3 times!
 
-![GIPHY of the Carousel](https://media.giphy.com/media/c1EsfSq68Zxv1J3SK9/giphy.gif "Carousel")
+\---
 
 The carousel seems very straightforward at first, but there’s actually a lot happening:
 
@@ -31,7 +31,7 @@ CSS transitions are expensive if you’re not careful. They get expensive fast. 
 
 I am proud of this one. I took a lot of learnings from the carousel project and applied it here. I also implemented my own virtual list! Existing solutions exist but I needed something that was more tailored for our onboarding.
 
-![GIPHY of the onboarding flow](https://media.giphy.com/media/bZ6wQHwAogaRybqFtM/giphy.gif "Onboarding")
+\---
 
 I chose to build my own virtual lists because the circumstances in which our onboarding was to be used was very specific. It's a key part of our customer onboarding experience and I wanted to reduce the amount of “unknowns” that exists in our codebase. (Though you can say this for pretty much all of the things I build). Also, I had never built my own virtual list before so it was a fun undertaking!
 
@@ -41,13 +41,13 @@ Not going to go through any more detail as the graphic illustrates it all! I am 
 
 A simple one. I was given a day to play with any library I desired. I chose [react-spring.](https://www.react-spring.io/)I haven’t tinkered with vectors since my last stint as a designer but I was pretty happy with what I came up with!
 
-![React Spring GIPHY](https://media.giphy.com/media/xVfNqZJRPKzYY0S2d1/giphy.gif "react-spring")
+\---
+
+
 
 ## Bungalow.ph
 
 This is the only project I’ve put time into outside of my dayjob. It’s for a good friend back home! The idea started out with a simple brochure site to act as a menu, but one thing led to another and now you can order directly from the site!
-
-
 
 ![Screenshot of Bungalowcafe.ph](/images/uploads/screenshot-2020-09-16-at-20.08.23.png "Bungalowcafe.ph")
 

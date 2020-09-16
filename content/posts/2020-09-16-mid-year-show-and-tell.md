@@ -12,7 +12,9 @@ Hi! The last half year has been rough not just for me but for everyone. I’ve j
 
 This carousel makes the most out of css-snap to give the swipe that native feel. It came with a lot of headaches, as I had to rebuild it 3 times!
 
-\----
+
+
+![](/images/uploads/carousel.gif)
 
 The carousel seems very straightforward at first, but there’s actually a lot happening.
 

@@ -6,11 +6,13 @@ categories: []
 ---
 Hi! The last half year has been rough not just for me but for everyone. I’ve just had my head down and have been busy building things (both at work and at home). Here are a few things that I’ve built:
 
+
+
 ## Carousel with a lot of moving parts.
 
 This carousel makes the most out of css-snap to give the swipe that native feel. It came with a lot of headaches, as I had to rebuild it 3 times!
 
-![Carousel](https://media.giphy.com/media/c1EsfSq68Zxv1J3SK9/giphy.gif)
+![GIPHY of Carousel](https://media.giphy.com/media/c1EsfSq68Zxv1J3SK9/giphy.gif)
 
 The carousel seems very straightforward at first, but there’s actually a lot happening.
 
@@ -21,11 +23,13 @@ The carousel seems very straightforward at first, but there’s actually a lot h
 
 CSS transitions are expensive if you’re not careful. They get expensive fast. Building this carousel that contains a lot of moving parts while minimizing expensive computations (ie preventing reflows and relayouts) was a real challenge. I enjoyed it very much!
 
-### **Notable tricks I’ve cooked up:**
+#### **Notable tricks I’ve cooked up:**
 
 * The white contract card is absolutely positioned. It relies on transform: translateY(x) to move up and down at will all while not causing any reflows.
 * Instead of adjusting the height of the “non-active” status cards, I am using clip-path. The height css property is very expensive to transition compared to clip-path. This allows me to animate the transition without expensive computations.
 * Given that the white contract card is no longer part of the layout. The overall height of the carousel continually needed to be recomputed. While I’ve mentioned that the height css property is expensive to transition, all elements before and after a carousel is out of view of our customers. This allows us to just let the “out of sigh elements” jitter up and down without any smoothness all while not lessening the experience of our customers!
+
+
 
 ## Onboarding flow that smoothly throws multiple virtual lists at your face.
 
@@ -37,3 +41,36 @@ I chose to build my own virtual lists because the circumstances in which our onb
 
 Not going to go through any more detail as the graphic illustrates it all! I am very pleased to be able to virtually render multiple infinite lists of providers. The experience can be better, since I feel having a search function on each list will greatly increase user experience. I’ll have to talk to our designer about that.
 
+
+
+## A day with react-spring
+
+A simple one. I was given a day to play with any library I desired. I chose [](https://www.react-spring.io/)[react-spring](https://www.react-spring.io/) haven’t tinkered with vectors since my last stint as a designer but I was pretty happy with what I came up with!
+
+![GIPHY of react spring](https://media.giphy.com/media/xVfNqZJRPKzYY0S2d1/giphy.gif)
+
+
+
+## Bungalow.ph
+
+This is the only project I’ve put time into outside of my dayjob. It’s for a good friend back home! The idea started out with a simple brochure site to act as a menu, but one thing led to another and now you can order directly from the site!
+
+![Screenshot of Bungalowcafe.ph](/images/uploads/screenshot-2020-09-16-at-20.08.23.png)
+
+[Visit the website here.](https://bungalowcafe.ph)
+
+The backend is powered by a barebones wordpress theme, with intentions of moving the entire thing into Shopify in the coming months. The front end uses the [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) and orders are handled by sendgrid sending receipts left and right. The entire thing is hosted on DigitalOcean and I had set up everything from the servers, continuous integration, all the to signing the SSL certificates myself.
+
+It's the first time in a long time that I’ve built a full website! I miss that feeling! It’s also my first time trying a completely new architecture for the front-end via the react-boilerplate. Always nice to try different stuff!
+
+
+
+## What’s cooking
+
+While the last few months have been rough, I’ve started getting back at it. I’m currently watching [Testing JavaScript with Kent C Dodds](https://testingjavascript.com/), and [Ryan Chenkie’s course on React Security](https://courses.reactsecurity.io/react-security-fundamentals) I haven’t really been learning much recently so these are pretty good courses to watch to get back into the groove of things.
+
+I’m delving into Shopify theming since that's something I want to be doing a bit down the road. I'm trying to make a full move into TypeScript and I figure the best way to get the ball rolling with that is to rewrite this entire blog into TypeScript!
+
+Lastly, I’d like to be writing more. Writing is hard, hence I should write more. I have a few topics in mind that I would like to write about. They revolve around CSS and design but nothing is really set in stone at this point!
+
+## Thanks for reading! Stay safe everybody!

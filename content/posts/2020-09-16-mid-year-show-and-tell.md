@@ -14,6 +14,8 @@ This carousel makes the most out of css-snap to give the swipe that native feel.
 
 ![GIPHY of Carousel](https://media.giphy.com/media/c1EsfSq68Zxv1J3SK9/giphy.gif)
 
+
+
 The carousel seems very straightforward at first, but there’s actually a lot happening.
 
 * The white card is attached to its row of colored status cards.
@@ -57,7 +59,7 @@ This is the only project I’ve put time into outside of my dayjob. It’s for a
 
 ![Screenshot of Bungalowcafe.ph](/images/uploads/screenshot-2020-09-16-at-20.08.23.png)
 
-[Visit the website here.](https://bungalowcafe.ph)
+**[Visit the website here.](https://bungalowcafe.ph)**
 
 The backend is powered by a barebones wordpress theme, with intentions of moving the entire thing into Shopify in the coming months. The front end uses the [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) and orders are handled by sendgrid sending receipts left and right. The entire thing is hosted on DigitalOcean and I had set up everything from the servers, continuous integration, all the to signing the SSL certificates myself.
 

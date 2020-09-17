@@ -14,8 +14,6 @@ This carousel makes the most out of css-snap to give the swipe that native feel.
 
 ![GIPHY of Carousel](https://media.giphy.com/media/c1EsfSq68Zxv1J3SK9/giphy.gif)
 
-
-
 The carousel seems very straightforward at first, but there’s actually a lot happening.
 
 * The white card is attached to its row of colored status cards.
@@ -74,5 +72,6 @@ While the last few months have been rough, I’ve started getting back at it. I�
 I’m delving into Shopify theming since that's something I want to be doing a bit down the road. I'm trying to make a full move into TypeScript and I figure the best way to get the ball rolling with that is to rewrite this entire blog into TypeScript!
 
 Lastly, I’d like to be writing more. Writing is hard, hence I should write more. I have a few topics in mind that I would like to write about. They revolve around CSS and design but nothing is really set in stone at this point!
+
 
 ## Thanks for reading! Stay safe everybody!

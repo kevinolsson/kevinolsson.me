@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "logo.svg";
-import { Counter } from "components/Counter/Counter";
 import classes from "./Home.module.scss";
 import HelloWorld from "!babel-loader!@mdx-js/loader!content/HelloWorld.mdx";
 
@@ -10,7 +9,6 @@ export const Home = () => {
       <HelloWorld />
       <header className={classes.HomeHeader}>
         <img src={logo} className={classes.HomeLogo} alt="logo" />
-        <Counter />
         <p>
           Edit <code>src/components/Home/Home.js</code> and save to reload.
         </p>

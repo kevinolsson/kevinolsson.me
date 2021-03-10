@@ -1,10 +1,9 @@
 import React from "react";
 import { Router } from "Router";
-import { Provider } from "react-redux";
+import { ContextProvider } from "components/Context/Context";
 
-type AppProps = { store: any };
-export const App = ({ store }: AppProps) => (
-  <Provider store={store}>
+export const App = () => (
+  <ContextProvider value={true}>
     <Router />
-  </Provider>
+  </ContextProvider>
 );

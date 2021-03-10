@@ -1,0 +1,107 @@
+{
+  "name": "kevinolsson.com",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "chokidar-cli": "^2.0.0",
+    "glob": "^7.1.4",
+    "gray-matter": "^4.0.2",
+    "heml": "^1.1.3",
+    "js-yaml": "^3.13.1",
+    "npm-run-all": "^4.1.5",
+    "prop-types": "^15.7.2",
+    "react-scripts": "^3.3.1",
+    "sharp": "^0.23.0",
+    "sitemap-static": "^0.4.4",
+    "sw-precache": "^5.2.0",
+    "eslint": "6.6.0",
+    "eslint-plugin-react-app": "6.1.0",
+    "eslint-config-react-app":"5.2.0",
+    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-prettier": "2.7.0",
+    "eslint-plugin-react": "7.18.0",
+    "prettier": "1.17.1",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "jest-each": "24.8.0",
+    "jest-junit": "6.4.0"
+  },
+  "dependencies": {
+    "date-fns": "^2.2.1",
+    "lodash": "^4.17.15",
+    "netlify-identity-widget": "^1.5.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-feather": "^2.0.3",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "4.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-snapshot": "^1.3.0",
+    "@material-ui/core": "4.8.3",
+    "@material-ui/icons": "4.4.3",
+    "@material-ui/lab": "^4.0.0-alpha.45",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
+  },
+  "scripts": {
+    "start": "npm-run-all prepare-content -p start:content start:app start:cms",
+    "start:app": "react-scripts start",
+    "start:content": "chokidar 'content/**/**' -c 'npm run prepare-content'",
+    "start:cms": "chokidar 'cms/cms.js' -c 'cd cms && npm run build'",
+    "build": "npm-run-all -s prepare-content build:cms build:app build:react-snapshot build:sitemap build:sw build:sha",
+    "build:app": "react-scripts build",
+    "build:cms": "cd cms && NODE_ENV=production npm run build",
+    "build:react-snapshot": "react-snapshot",
+    "build:sw": "sw-precache --config='sw-precache-config.js'",
+    "build:sitemap": "node ./functions/generate-sitemap.js",
+    "build:sha": "git rev-parse HEAD > build/sha",
+    "parse-content": "node ./functions/parse-content.js",
+    "prepare": "npm run install:cms",
+    "install:cms": "cd cms && npm i",
+    "resize-images": "node ./functions/resize-images.js",
+    "prepare-content": "npm-run-all -s parse-content resize-images",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "reactSnapshot": {
+    "include": [
+      "/404"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": [
+      "prettier",
+      "jest",
+      "eslint-plugin-react"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/prop-types": "error",
+      "no-console": "error",
+      "no-var": "error",
+      "camelcase": ["error", { "properties": "never" }],
+      "jest/no-focused-tests": "error",
+      "jest/consistent-test-it": ["error", { "fn": "it" }],
+      "jest/no-test-prefixes": "error",
+      "jest/no-jest-import": "error",
+      "jest/valid-expect-in-promise": "error",
+      "react/jsx-fragments": ["error", "element"]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "js-yaml": "^3.13.0"
+  }
+}

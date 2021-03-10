@@ -1,31 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { mount } from 'enzyme';
-import { withTest } from './withTest';
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
+import store from "./state/store";
+import App from "./App";
 
-const TestApp = withTest(App);
+test("renders learn react link", () => {
+  const { getByText } = render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<TestApp />, div);
-  });
-
-  it('should be able to mount render', () => {
-    const wrapper = mount(<TestApp />);
-    expect(wrapper.exists()).toBe(true);
-  });
-
-  it('should set render with a style opacity set to 1', () => {
-    const wrapper = mount(<TestApp />);
-    expect(
-      wrapper
-        .find('div')
-        .first()
-        .props().style
-    ).toEqual({
-      opacity: 1
-    });
-  });
+  expect(getByText(/learn/i)).toBeInTheDocument();
 });

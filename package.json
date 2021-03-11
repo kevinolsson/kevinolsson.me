@@ -1,6 +1,6 @@
 {
-  "name": "bungalow-react",
-  "version": "0.1.0",
+  "name": "kevinolsson.com",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "4.2.4",

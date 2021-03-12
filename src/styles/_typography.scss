@@ -1,0 +1,62 @@
+h1 {
+    font-family: var(--typography-h1-font-family);
+    line-height: var(--typography-h1-line-height);
+    font-size: var(--typography-h1-font-size);
+    font-weight: var(--typography-h1-font-weight);
+    transition: var(--typography-transition);
+}
+  
+h2 {
+    font-family: var(--typography-h2-font-family);
+    line-height: var(--typography-h2-line-height);
+    font-size: var(--typography-h2-font-size);
+    font-weight: var(--typography-h2-font-weight);
+    transition: var(--typography-transition);
+}
+  
+h3 {
+    font-family: var(--typography-h3-font-family);
+    line-height: var(--typography-h3-line-height);
+    font-size: var(--typography-h3-font-size);
+    font-weight: var(--typography-h3-font-weight);
+    transition: var(--typography-transition);
+}
+  
+h4 {
+    font-family: var(--typography-h4-font-family);
+    line-height: var(--typography-h4-line-height);
+    font-size: var(--typography-h4-font-size);
+    font-weight: var(--typography-h4-font-weight);
+    transition: var(--typography-transition);
+}
+  
+h5 {
+    font-family: var(--typography-h5-font-family);
+    line-height: var(--typography-h5-line-height);
+    font-size: var(--typography-h5-font-size);
+    font-weight: var(--typography-h5-font-weight);
+    transition: var(--typography-transition);
+}
+
+p {
+    font-family: var(--typography-body-font-family);
+    font-size: var(--typography-body-font-size);
+    font-weight: var(--typography-body-font-weight);
+    line-height: var(--typography-body-line-height);
+    transition: var(--typography-transition);
+}
+  
+small {
+    font-family: var(--typography-small-font-family);
+    line-height: var(--typography-small-line-height);
+    font-size: var(--typography-small-font-size);
+    font-weight: var(--typography-small-font-weight);
+    transition: var(--typography-transition);
+}
+
+@supports (font-size-adjust: 1) {
+    html, body {
+      font-size-adjust: 0.5;
+    }
+}
+  

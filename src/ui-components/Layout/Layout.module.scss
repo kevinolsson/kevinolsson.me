@@ -1,8 +1,9 @@
+@import "~styles/functions";
+
 .root {
     box-sizing: border-box;
     max-width: var(--component-layout-max-width);
-    margin: 16px auto;
-    padding: 16px;
+    margin: spacing(4) auto;
+    padding: spacing(4);
     padding-bottom: 192px;
-    transition: '0.2s ease-out all',
 }

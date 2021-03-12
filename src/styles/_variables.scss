@@ -1,0 +1,95 @@
+:root {
+    // spacing and shape
+    --spacing: 4px;
+    --shape-border-radius: 3px;
+  
+    // typography
+    --typography-font-family-serif: 'Lora', serif;
+    --typography-font-family-sans-serif: 'Open Sans', sans-serif;
+    --typography-font-weight-bold: 700;
+    --typography-font-weight-regular: 400;
+    --typography-transition: 0.2s ease-out font-size;
+  
+    --typography-h1-font-weight: var(--typography-font-weight-bold);
+    --typography-h1-font-family: var(--typography-font-family-serif);
+    --typography-h1-font-size: 43.94px;
+    --typography-h1-line-height: 52px;
+  
+    --typography-h2-font-weight: var(--typography-font-weight-bold);
+    --typography-h2-font-family: var(--typography-font-family-serif);
+    --typography-h2-font-size: 35.16px;
+    --typography-h2-line-height: 44px;
+  
+    --typography-h3-font-weight: var(--typography-font-weight-bold);
+    --typography-h3-font-family: var(--typography-font-family-sans-serif);
+    --typography-h3-font-size: 28.12px;
+    --typography-h3-line-height: 32px;
+  
+    --typography-h4-font-weight: var(--typography-font-weight-bold);
+    --typography-h4-font-family: var(--typography-font-family-sans-serif);
+    --typography-h4-font-size: 22.5px;
+    --typography-h4-line-height: 28px;
+  
+    --typography-h5-font-weight: var(--typography-font-weight-regular);
+    --typography-h5-font-family: var(--typography-font-family-sans-serif);
+    --typography-h5-font-size: 22.5px;
+    --typography-h5-line-height: 28px;
+  
+    --typography-body-font-weight: var(--typography-font-weight-regular);
+    --typography-body-font-family: var(--typography-font-family-sans-serif);
+    --typography-body-font-size: 14.4px;
+    --typography-body-line-height: 24px;
+  
+    --typography-small-font-weight: var(--typography-font-weight-regular);
+    --typography-small-font-family: var(--typography-font-family-sans-serif);
+    --typography-small-font-size: 14.4px;
+    --typography-small-line-height: 24px;
+  
+    // palette
+    --palette-white: #FFFFFF;
+    --palette-transparent-white: rgba(var(--palette-white), 0.95);
+  
+    --palette-light-bg: var(--palette-white);
+    --palette-light-pink: #E556A2;
+    --palette-light-green: #48EC95;
+    --palette-light-grey: #A9A2AF;
+    --palette-light-dark: #453751;
+  
+    --palette-dark-bg: #3E3249;
+    --palette-dark-pink: #FF82C3;
+    --palette-dark-green: #48EC95;
+    --palette-dark-grey: #F0E5F7;
+    --palette-dark-dark: #2C2435;
+  
+    // component
+    --component-layout-max-width: 640px; 
+  }
+  
+  @media (min-width: 960px) {
+    :root {
+      // typography
+      --typography-h1-font-size: 68.66px;
+      --typography-h1-line-height: 80px;
+  
+      --typography-h2-font-size: 43.94px;
+      --typography-h2-line-height: 52px;
+  
+      --typography-h3-font-size: 35.16px;
+      --typography-h3-line-height: 44px;
+  
+      --typography-h4-font-size: 28.12px;
+      --typography-h4-line-height: 32px;
+  
+      --typography-h5-font-size: 28.12px;
+      --typography-h5-line-height: 32px;
+  
+      --typography-body-font-size: 18px;
+      --typography-body-line-height: 32px;
+  
+      --typography-small-font-size: 14.4px;
+      --typography-small-line-height: 24px;
+  
+      // component
+      --component-layout-max-width: 1024px;
+    }
+  }

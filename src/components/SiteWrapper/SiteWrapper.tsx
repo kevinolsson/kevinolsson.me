@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollToTop } from "components/ScrollToTop/ScrollToTop";
-import { Layout } from "ui-components/Layout/Layout";
+import { Layout } from "ui/Layout/Layout";
 
 type Props = {
   children: JSX.Element;

@@ -62,6 +62,9 @@
     --palette-dark-dark: #2C2435;
   
     // component
+    --component-html-background-color: var(--palette-light-bg);
+    --component-html-transition: 0.2s ease-out background-color;
+    
     --component-layout-max-width: 640px; 
   }
   

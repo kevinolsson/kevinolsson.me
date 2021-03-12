@@ -1,9 +1,15 @@
 import React from "react";
 import logo from "logo.svg";
 import classes from "./Home.module.scss";
+import Context from "components/Context/Context";
 import HelloWorld from "!babel-loader!@mdx-js/loader!content/HelloWorld.mdx";
 
 export const Home = () => {
+  const helloWorld = React.useContext(Context);
+  // eslint-disable-next-line no-console
+  console.log({ helloWorld });
+
+  helloWorld.theme.setLightTheme(false);
   return (
     <div className={classes.Home}>
       <HelloWorld />

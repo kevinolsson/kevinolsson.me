@@ -11,4 +11,6 @@ body, html {
   font-size: var(--typography-body-font-size);
   font-weight: var(--typography-body-font-weight);
   line-height: var(--typography-body-line-height);
+  background-color: var(--component-html-background-color);
+  transition: var(--component--html-transition);
 }

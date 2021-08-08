@@ -2,6 +2,7 @@ import React from "react";
 import logo from "logo.svg";
 import { Counter } from "components/Counter/Counter";
 import classes from "./Home.module.scss";
+import { Button } from "components/Button/Button";
 
 export const Home = () => {
   return (
@@ -14,41 +15,37 @@ export const Home = () => {
         </p>
         <span>
           <span>Learn </span>
-          <a
-            className={classes.HomeLink}
+          <Button
             href="https:reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             React
-          </a>
+          </Button>
           <span>, </span>
-          <a
-            className={classes.HomeLink}
+          <Button
             href="https:redux.js.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Redux
-          </a>
+          </Button>
           <span>, </span>
-          <a
-            className={classes.HomeLink}
+          <Button
             href="https:redux-toolkit.js.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Redux Toolkit
-          </a>
+          </Button>
           ,<span> and </span>
-          <a
-            className={classes.HomeLink}
+          <Button
             href="https:react-redux.js.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             React Redux
-          </a>
+          </Button>
         </span>
       </header>
     </div>

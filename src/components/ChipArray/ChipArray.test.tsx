@@ -2,13 +2,13 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { theme } from "../../Theme";
-import { Button } from "./Button";
+import { ChipArray } from "./ChipArray";
 
-describe("Button", () => {
-  test("Renders Button", () => {
+describe("ChipArray", () => {
+  test("Renders ChipArray", () => {
     const { getByText } = render(
       <MuiThemeProvider theme={theme}>
-        <Button>Hello World</Button>
+        <ChipArray label={["Hello World"]} />
       </MuiThemeProvider>
     );
     expect(getByText(/Hello World/i)).toBeInTheDocument();

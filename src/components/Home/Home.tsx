@@ -10,8 +10,43 @@ export const Home = () => {
       <div className={classes.todo}>
         <h2>Todo:</h2>
         <ul>
-          <li>Setup storybook for isolated UI development</li>
-          <li>Setup existing portfolio layout (minus the articles)</li>
+          <li className={classes.done}>
+            Setup storybook for isolated UI development
+          </li>
+          <li>
+            Migrate existing components into TypeScript
+            <ul>
+              <li className={classes.done}>Button</li>
+              <li className={classes.pass}>BlogBlock</li>
+              <li className={classes.pass}>BlogPost</li>
+              <li className={classes.done}>ChipArray</li>
+              <li>Contact</li>
+              <li>Content</li>
+              <li>ErrorMessage</li>
+              <li>ExperienceBlock</li>
+              <li>GoogleAnalytics</li>
+              <li>HamburgerButton</li>
+              <li>HamburgerIcon</li>
+              <li>Head</li>
+              <li>Header</li>
+              <li>Home</li>
+              <li>Icons</li>
+              <li>IgnoreLayoutWrapper</li>
+              <li>Layout</li>
+              <li>Meta</li>
+              <li>MobileNavigation</li>
+              <li>Playground</li>
+              <li>ProjectPost</li>
+              <li>ProjectRreview</li>
+              <li>ProjectRouter</li>
+              <li>Projects</li>
+              <li>Resume</li>
+              <li>Thumbnail</li>
+              <li>ThumbnailGrid</li>
+              <li>Title</li>
+              <li>Wrapper</li>
+            </ul>
+          </li>
           <li>
             Find a way to provision articles via MDX (or just hard code them)
             <ul>
@@ -20,6 +55,7 @@ export const Home = () => {
               <li>Probably a lot of other stuff will apear here</li>
             </ul>
           </li>
+          <li>Move to Enzyme and add more extensive test coverage</li>
         </ul>
       </div>
       <header className={classes.HomeHeader}>

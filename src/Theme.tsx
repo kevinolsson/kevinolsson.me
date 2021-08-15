@@ -19,6 +19,7 @@ declare module "@material-ui/core/styles/createPalette" {
 
 export const theme = createTheme({
   themeName: "kevin-portfolio-theme-light",
+  spacing: 4,
   palette: {
     portfolio: {
       pink: "#E556A2",

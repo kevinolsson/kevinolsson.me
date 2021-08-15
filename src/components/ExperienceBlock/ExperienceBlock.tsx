@@ -23,7 +23,10 @@ const useStyles = makeStyles(
     },
     details: {
       whiteSpace: "pre-line",
-      maxWidth: "540px"
+      maxWidth: "540px",
+      "& li": {
+        marginBottom: 0
+      }
     }
   }),
   { name: "experienceBlock" }

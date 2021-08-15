@@ -28,7 +28,7 @@ const useStyles = makeStyles(
 );
 
 export const ChipArray: React.FC<{
-  label: Array<string | [string, React.FC<any>]>;
+  label: Array<string | [string, JSX.Element]>;
   [x: string]: any;
 }> = ({ label, ChipProps }) => {
   const classes = useStyles();

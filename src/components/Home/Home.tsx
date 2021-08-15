@@ -23,7 +23,7 @@ export const Home = () => {
               <li>Contact</li>
               <li>Content</li>
               <li>ErrorMessage</li>
-              <li>ExperienceBlock</li>
+              <li className={classes.done}>ExperienceBlock</li>
               <li>GoogleAnalytics</li>
               <li>HamburgerButton</li>
               <li>HamburgerIcon</li>

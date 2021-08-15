@@ -7,6 +7,21 @@ import { Button } from "components/Button/Button";
 export const Home = () => {
   return (
     <div className={classes.Home}>
+      <div className={classes.todo}>
+        <h2>Todo:</h2>
+        <ul>
+          <li>Setup storybook for isolated UI development</li>
+          <li>Setup existing portfolio layout (minus the articles)</li>
+          <li>
+            Find a way to provision articles via MDX (or just hard code them)
+            <ul>
+              <li>Need solution for routing</li>
+              <li>Need solution for "Next article"</li>
+              <li>Probably a lot of other stuff will apear here</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <header className={classes.HomeHeader}>
         <img src={logo} className={classes.HomeLogo} alt="logo" />
         <Counter />

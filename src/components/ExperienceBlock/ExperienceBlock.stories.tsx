@@ -19,17 +19,16 @@ Default.args = {
   details: ["Stockhom, Sweden", "May 2019 - August 2021"],
   children: (
     <ul>
-      <li>Developing Påmind's front-end using React, Redux, and Redux Saga.</li>
+      <li>
+        Developing Påmind's front-end applications using React, Redux, and Redux
+        Saga.
+      </li>
       <li>Writing tests using Jest and Enzyme</li>
       <li>
         Crafting UI components and molding the design system using Storybook.js
+        &amp; Material UI
       </li>
-      <li>
-        A bunch of other cool stuff. I'm learning new things day by day!{" "}
-        <span role="img" aria-label="emojis to show appreciation">
-          💯🙌🏻
-        </span>
-      </li>
+      <li>Architected Påmind's new "Supplier Web" application</li>
     </ul>
   )
 };

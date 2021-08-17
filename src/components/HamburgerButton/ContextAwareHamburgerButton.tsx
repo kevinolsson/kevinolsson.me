@@ -1,22 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import { HamburgerButton } from "./HamburgerButton";
 
-export const contextAwareHamburgerButton = (
-  Component: React.ComponentType<any>
-) => ({
+const contextAwareHamburgerButton = (Component: React.ComponentType<any>) => ({
   active,
+  forceMobileView,
   handleClickCallback
 }: {
   active: boolean;
+  forceMobileView?: boolean;
   handleClickCallback: () => void;
 }) => {
   const hasScrolled = useScrollTrigger({
     threshold: 364
   });
-  const location = useLocation();
-  const pathname = location.pathname.split("/");
+
+  const pathname = forceMobileView ? "/" : useLocation().pathname.split("/");
   const isNestedPage = !!pathname[2];
   const back = isNestedPage
     ? `/${pathname[0]}`
@@ -29,16 +29,11 @@ export const contextAwareHamburgerButton = (
       back={back}
       handleClickCallback={handleClickCallback}
       active={active}
+      forceMobileView={forceMobileView}
     />
   );
 };
 
-contextAwareHamburgerButton.defaultProps = {
-  active: false,
-  handleClickCallback: undefined
-};
-
-contextAwareHamburgerButton.propTypes = {
-  active: PropTypes.bool,
-  handleClickCallback: PropTypes.func
-};
+export const ContextAwareHamburgerButton = contextAwareHamburgerButton(
+  HamburgerButton
+);

@@ -7,15 +7,17 @@ import { HamburgerIcon } from "./HamburgerIcon";
 
 const useStyles = makeStyles(
   (theme?: any) => ({
-    root: ({ forceMobileView }: { forceMobileView: boolean }) => ({
+    root: {
       position: "fixed",
       zIndex: 150,
       bottom: theme.spacing(4),
-      right: theme.spacing(4),
+      right: theme.spacing(4)
+    },
+    forceMobileView: {
       [theme.breakpoints.up("md")]: {
-        display: !forceMobileView && "none"
+        display: "none"
       }
-    }),
+    },
     button: {
       width: theme.spacing(16),
       height: theme.spacing(16),
@@ -74,7 +76,7 @@ export const HamburgerButton = ({
   showBack
 }: IHamburgerButton) => {
   const [backActive, setBackActive] = React.useState(false);
-  const classes = useStyles({ forceMobileView });
+  const classes = useStyles();
 
   const handleClick = () => {
     if (handleClickCallback) {
@@ -85,11 +87,18 @@ export const HamburgerButton = ({
   const Component = typeof back === "string" ? Link : Box;
 
   React.useEffect(() => {
-    setBackActive(back && showBack);
+    setBackActive(!!back && showBack);
   }, [back, showBack]);
 
   return (
-    <div className={classes.root}>
+    <div
+      className={[
+        classes.root,
+        forceMobileView ? classes.forceMobileView : undefined
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <button
         type="button"
         onClick={handleClick}
@@ -101,7 +110,7 @@ export const HamburgerButton = ({
       </button>
       {back && (
         <Component
-          to={typeof back === "string" ? back : undefined}
+          to={typeof back === "string" ? back : ""}
           onClick={
             typeof back === "function"
               ? () => {

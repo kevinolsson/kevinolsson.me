@@ -1,6 +1,7 @@
 import React from "react";
-import { mdxMapping } from "./mdxMapping";
+import { data } from "mdx/";
 import { makeStyles } from "@material-ui/core/styles";
+import { EnumData } from "mdx/index";
 
 const useStyles = makeStyles(
   (theme?: any) => ({
@@ -16,10 +17,10 @@ const useStyles = makeStyles(
   { name: "layout" }
 );
 
-export const MDX = ({ file }: { file: String }): any => {
+export const MDX = ({ file }: { file: EnumData }): any => {
   const classes = useStyles();
 
-  const mdx = mdxMapping.find(mdx => mdx.file === file);
+  const mdx = data.find(mdx => mdx.file === file);
 
   if (!mdx) return null;
 

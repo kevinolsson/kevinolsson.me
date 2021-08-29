@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { mdxMapping } from "./mdxMapping";
+import { data } from "mdx/";
 import { MDX } from "./MDX";
 
 export default {
@@ -11,7 +11,7 @@ export default {
 const Template: ComponentStory<typeof MDX> = args => <MDX {...args} />;
 
 export const Post0 = Template.bind({});
-Post0.storyName = mdxMapping[0].file;
+Post0.storyName = data[0].file;
 Post0.args = {
-  file: mdxMapping[0].file
+  file: "2021-08-29-Test-MDX"
 };

@@ -19,14 +19,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "baseUrl": "./src",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true
   },
   "include": [
-    "src"
+    "src",
+    "react-app-env.ds.ts",
+    "mdx.d.ts"
   ]
 }
-

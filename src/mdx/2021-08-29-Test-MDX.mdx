@@ -1,0 +1,35 @@
+import { ExperienceBlock } from 'components/ExperienceBlock/ExperienceBlock'
+import { theme } from 'Theme';
+
+# Hello World
+## I created this using a .mdx file
+
+This allows me to to blend markup with and JSX:
+
+<div style={{ 
+    border: `1px solid ${theme.palette.portfolio.altGrey}`,
+    padding: theme.spacing(8),
+    borderRadius: theme.shape.borderRadius
+  }}>
+  <ExperienceBlock 
+    avatar={`${process.env.PUBLIC_URL}/images/pamind.jpg`}
+    company="Påmind AB"
+    position="Front-end developer"
+    details={["Stockhom, Sweden", "May 2019 - August 2021"]}
+  >
+    <ul>
+      <li>
+        Developing Påmind's front-end applications using React, Redux, and Redux
+        Saga.
+      </li>
+      <li>Writing tests using Jest and Enzyme</li>
+      <li>
+        Crafting UI components and molding the design system using Storybook.js
+        &amp; Material UI
+      </li>
+      <li>Architected Påmind's new "Supplier Web" application</li>
+    </ul>
+  </ExperienceBlock>
+</div>
+
+As of writing (2021-08-30) I am currently mapping each MDX to a string (that matches their filename) and use that to load the component, but in the future I would ideally like to dynamically import the MDX files. Still haven't figured out how to do that as of writing.

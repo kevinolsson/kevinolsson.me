@@ -8,7 +8,7 @@ import { MDX } from "components/MDX/MDX";
 export const Home = () => {
   return (
     <React.Fragment>
-      <MDX file={"2021-08-29-Test-MDX"} />
+      <MDX filename={"2021-08-29-Test-MDX"} />
       <div className={classes.Home}>
         <div className={classes.todo}>
           <h2>Todo:</h2>
@@ -23,20 +23,20 @@ export const Home = () => {
                 <li className={classes.pass}>BlogBlock</li>
                 <li className={classes.pass}>BlogPost</li>
                 <li className={classes.done}>ChipArray</li>
-                <li>Contact</li>
-                <li>Content</li>
-                <li>ErrorMessage</li>
+                <li className={classes.done}>Contact</li>
+                <li className={classes.pass}>Content</li>
+                <li className={classes.done}>ErrorMessage</li>
                 <li className={classes.done}>ExperienceBlock</li>
                 <li>GoogleAnalytics</li>
                 <li>HamburgerButton</li>
-                <li>HamburgerIcon</li>
-                <li>Head</li>
+                <li className={classes.done}>HamburgerIcon</li>
+                <li className={classes.done}>Head</li>
                 <li>Header</li>
                 <li>Home</li>
-                <li>Icons</li>
+                <li className={classes.done}>Icons</li>
                 <li>IgnoreLayoutWrapper</li>
-                <li>Layout</li>
-                <li>Meta</li>
+                <li className={classes.done}>Layout</li>
+                <li className={classes.done}>Meta</li>
                 <li>MobileNavigation</li>
                 <li>Playground</li>
                 <li>ProjectPost</li>

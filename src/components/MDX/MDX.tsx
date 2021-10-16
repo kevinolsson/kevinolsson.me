@@ -1,7 +1,7 @@
 import React from "react";
 import { data } from "mdx/";
 import { makeStyles } from "@material-ui/core/styles";
-import { EnumData } from "mdx/index";
+import { EnumFilename } from "mdx/index";
 
 const useStyles = makeStyles(
   (theme?: any) => ({
@@ -17,10 +17,13 @@ const useStyles = makeStyles(
   { name: "layout" }
 );
 
-export const MDX = ({ file }: { file: EnumData }): any => {
-  const classes = useStyles();
+interface IMDX {
+  filename: EnumFilename;
+}
 
-  const mdx = data.find(mdx => mdx.file === file);
+export const MDX = ({ filename }: IMDX) => {
+  const classes = useStyles();
+  const mdx = data.find(mdx => mdx.filename === filename);
 
   if (!mdx) return null;
 

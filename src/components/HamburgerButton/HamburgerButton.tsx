@@ -11,11 +11,15 @@ const useStyles = makeStyles(
       position: "fixed",
       zIndex: 150,
       bottom: theme.spacing(4),
-      right: theme.spacing(4)
+      right: theme.spacing(4),
+      display: "block",
+      [theme.breakpoints.up("md")]: {
+        display: "none"
+      }
     },
     forceMobileView: {
       [theme.breakpoints.up("md")]: {
-        display: "none"
+        display: "block"
       }
     },
     button: {

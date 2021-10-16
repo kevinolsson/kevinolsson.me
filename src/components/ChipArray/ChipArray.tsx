@@ -27,10 +27,12 @@ const useStyles = makeStyles(
   { name: "chipArray" }
 );
 
-export const ChipArray: React.FC<{
-  label: Array<string | [string, JSX.Element]>;
+interface IChipArray {
+  label: [string | [string, JSX.Element]];
   [x: string]: any;
-}> = ({ label, ChipProps }) => {
+}
+
+export const ChipArray = ({ label, ChipProps }: IChipArray) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

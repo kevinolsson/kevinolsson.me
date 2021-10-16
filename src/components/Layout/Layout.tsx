@@ -18,11 +18,11 @@ const useStyles = makeStyles(
   { name: "layout" }
 );
 
-export const Layout = ({
-  children
-}: {
+interface ILayout {
   children: React.ReactNode;
-}): JSX.Element => {
+}
+
+export const Layout = ({ children }: ILayout) => {
   const classes = useStyles();
   return <div className={classes.root}>{children}</div>;
 };

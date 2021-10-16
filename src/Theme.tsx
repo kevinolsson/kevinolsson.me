@@ -13,6 +13,7 @@ declare module "@material-ui/core/styles/createPalette" {
       green: React.CSSProperties["color"];
       dark: React.CSSProperties["color"];
       altGrey: React.CSSProperties["color"];
+      transparentWhite: React.CSSProperties["color"];
     };
   }
 }
@@ -37,7 +38,8 @@ const portfolio = {
   pink: "#E556A2",
   green: "#48EC95",
   dark: "#453751",
-  altGrey: "#A9A2AF"
+  altGrey: "#A9A2AF",
+  transparentWhite: "rgba(255,255,255,0.95)"
 };
 
 const typography = {
@@ -145,7 +147,13 @@ export const theme = createTheme({
   themeName: "kevin-portfolio-theme-light",
   spacing: 4,
   palette: {
-    portfolio
+    portfolio,
+    primary: {
+      light: portfolio.pink,
+      main: portfolio.pink,
+      dark: portfolio.pink,
+      contrastText: portfolio.dark
+    }
   },
   typography: {
     ...scaffolding.typography,

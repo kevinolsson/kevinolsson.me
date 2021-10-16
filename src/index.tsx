@@ -7,7 +7,7 @@ import { reducer } from "state/reducers";
 import * as serviceWorker from "serviceWorker";
 import "index.scss";
 
-const store = configureStore({
+export const store = configureStore({
   reducer
 });
 

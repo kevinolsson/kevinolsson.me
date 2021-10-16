@@ -32,13 +32,21 @@ const useStyles = makeStyles(
   { name: "experienceBlock" }
 );
 
-export const ExperienceBlock: React.FC<{
+interface IExperienceBlock {
   children: React.ReactNode;
   avatar?: string;
   company: string;
   position: string;
   details?: Array<string>;
-}> = ({ avatar, company, position, details = [], children }) => {
+}
+
+export const ExperienceBlock = ({
+  avatar,
+  company,
+  position,
+  details = [],
+  children
+}: IExperienceBlock) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

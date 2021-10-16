@@ -18,10 +18,12 @@ const useStyles = makeStyles(
   { name: "Button" }
 );
 
-export const Button: React.FC<{
+interface IButton {
   children: React.ReactNode;
   [x: string]: any;
-}> = ({ children, className, ...otherProps }) => {
+}
+
+export const Button = ({ children, className, ...otherProps }: IButton) => {
   const classes = useStyles();
   return (
     <MuiButton

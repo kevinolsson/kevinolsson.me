@@ -1,12 +1,19 @@
 import React from "react";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { theme } from "Theme";
+import { Provider } from "react-redux";
+import { store } from "index";
+import { BrowserRouter } from 'react-router-dom'
 
 export const decorators = [
   (Story) => (
-    <MuiThemeProvider theme={theme}>
-      <Story />
-    </MuiThemeProvider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <MuiThemeProvider theme={theme}>
+          <Story />
+        </MuiThemeProvider>
+      </Provider>
+    </BrowserRouter>
   )
 ]
 

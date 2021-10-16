@@ -1,0 +1,18 @@
+{
+  "siteUrl": "https://kevinolsson.com",
+  "siteTitle": "Kevin Olsson",
+  "siteDescription": "Front-end developer & UX Designer.\nI finally built myself a blog. 😅",
+  "socialMediaCard": {
+    "image": "/images/uploads/card-og.png",
+    "twitterCreatorAccount": "@Olssoneerz",
+    "twitterSiteAccount": ""
+  },
+  "headerScripts": "<!-- Add your analytics scripts / verification meta here -->",
+  "enableServiceWorker": false,
+  "displayPhoto": "/images/uploads/profile.jpg",
+  "socialMedia": {
+    "image": "/images/uploads/49120977_10155788812506366_9207935284442824704_o.jpg",
+    "linkedIn": "https://www.linkedin.com/in/kevin-olsson-54bb21136/",
+    "twitter": "https://twitter.com/olssoneerz"
+  }
+}

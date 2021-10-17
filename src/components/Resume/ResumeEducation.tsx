@@ -22,6 +22,15 @@ const useStyles = makeStyles(
         width: "80px",
         height: "80px"
       }
+    },
+    educationHeader: {
+      marginBottom: theme.spacing(-1),
+      width: "90%",
+      ...theme.typography.h2,
+      [theme.breakpoints.up("md")]: {
+        ...theme.typography.body1,
+        fontWeight: theme.typography.fontWeightBold + "!important"
+      }
     }
   }),
   { name: "resumeEducation" }
@@ -42,15 +51,15 @@ export const ResumeEducation = () => {
         />
         <Typography variant="body1" component="div">
           <Box marginBottom={4}>
-            <Box marginBottom={-1} fontWeight="fontWeightBold">
+            <Typography variant="h2" className={classes.educationHeader}>
               De La Salle University
-            </Box>
+            </Typography>
             Manila, Philippines
           </Box>
-          <Box marginBottom={4}>
+          <Box component="p" marginBottom={4}>
             BS Computer Science. Majored in Network Engineering 2015
           </Box>
-          <Box marginBottom={4}>
+          <Box component="p" marginBottom={4}>
             <strong>Awards:</strong> Most outstanding thesis:{" "}
             <Link
               underline="always"

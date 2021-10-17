@@ -20,15 +20,15 @@ Default.args = {
   children: (
     <ul>
       <li>
-        Developing Påmind's front-end applications using React, Redux, and Redux
+        Developed Påmind's front-end web apps using React, Redux, and Redux
         Saga.
       </li>
-      <li>Writing tests using Jest and Enzyme</li>
+      <li>Wrote tests using Jest and Enzyme</li>
       <li>
-        Crafting UI components and molding the design system using Storybook.js
-        &amp; Material UI
+        Designed, documented, and maintained Påmind's design system which was
+        built on top of Material UI.
       </li>
-      <li>Architected Påmind's new "Supplier Web" application</li>
+      <li>Crafted UI components using Storybook.js</li>
     </ul>
   )
 };

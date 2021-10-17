@@ -12,6 +12,9 @@ const useStyles = makeStyles(
       gridGap: theme.spacing(4),
       marginBottom: theme.spacing(8)
     },
+    headerWrapper: {
+      maxWidth: "90%"
+    },
     avatar: {
       width: "48px",
       height: "48px",
@@ -52,7 +55,9 @@ export const ExperienceBlock = ({
     <div className={classes.root}>
       <Avatar src={avatar} alt={company} className={classes.avatar} />
       <Box className={classes.details}>
-        <Typography variant="h2">{company}</Typography>
+        <div className={classes.headerWrapper}>
+          <Typography variant="h2">{company}</Typography>
+        </div>
         <Typography component="div" variant="body1">
           <Box fontWeight="fontWeightBold" marginBottom={-1}>
             {position}

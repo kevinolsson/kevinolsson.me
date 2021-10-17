@@ -28,7 +28,7 @@ const useStyles = makeStyles(
 );
 
 interface IChipArray {
-  label: [string | [string, JSX.Element]];
+  label: Array<string | [string, JSX.Element]>;
   [x: string]: any;
 }
 

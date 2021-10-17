@@ -7,6 +7,6 @@ export default {
   component: Contact
 } as ComponentMeta<typeof Contact>;
 
-const Template: ComponentStory<typeof Contact> = args => <Contact {...args} />;
+const Template: ComponentStory<typeof Contact> = () => <Contact />;
 
 export const Default = Template.bind({});

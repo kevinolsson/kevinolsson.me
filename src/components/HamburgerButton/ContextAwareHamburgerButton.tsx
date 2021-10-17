@@ -3,15 +3,17 @@ import { useLocation } from "react-router-dom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { HamburgerButton } from "./HamburgerButton";
 
+interface IContextAwareHamburgerButton {
+  active: boolean;
+  forceMobileView?: boolean;
+  handleClickCallback: () => void;
+}
+
 const contextAwareHamburgerButton = (Component: React.ComponentType<any>) => ({
   active,
   forceMobileView,
   handleClickCallback
-}: {
-  active: boolean;
-  forceMobileView?: boolean;
-  handleClickCallback: () => void;
-}) => {
+}: IContextAwareHamburgerButton) => {
   const hasScrolled = useScrollTrigger({
     threshold: 364
   });

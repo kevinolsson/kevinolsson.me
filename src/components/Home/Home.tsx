@@ -4,10 +4,11 @@ import { Counter } from "components/Counter/Counter";
 import classes from "./Home.module.scss";
 import { Button } from "components/Button/Button";
 import { MDX } from "components/MDX/MDX";
+import { Layout } from "components/Layout/Layout";
 
 export const Home = () => {
   return (
-    <React.Fragment>
+    <Layout>
       <MDX filename={"2021-08-29-Test-MDX"} />
       <div className={classes.Home}>
         <div className={classes.todo}>
@@ -27,17 +28,18 @@ export const Home = () => {
                 <li className={classes.pass}>Content</li>
                 <li className={classes.done}>ErrorMessage</li>
                 <li className={classes.done}>ExperienceBlock</li>
-                <li>GoogleAnalytics</li>
-                <li>HamburgerButton</li>
+                <li className={classes.done}>GoogleAnalytics</li>
+                <li className={classes.done}>HamburgerButton</li>
                 <li className={classes.done}>HamburgerIcon</li>
                 <li className={classes.done}>Head</li>
-                <li>Header</li>
+                <li className={classes.done}>Header</li>
                 <li>Home</li>
                 <li className={classes.done}>Icons</li>
-                <li>IgnoreLayoutWrapper</li>
+                <li className={classes.done}>IgnoreLayoutWrapper</li>
                 <li className={classes.done}>Layout</li>
                 <li className={classes.done}>Meta</li>
-                <li>MobileNavigation</li>
+                <li className={classes.done}>MobileNavigation</li>
+                <li className={classes.done}>Navigation</li>
                 <li>Playground</li>
                 <li>ProjectPost</li>
                 <li>ProjectRreview</li>
@@ -46,7 +48,7 @@ export const Home = () => {
                 <li>Resume</li>
                 <li>Thumbnail</li>
                 <li>ThumbnailGrid</li>
-                <li>Title</li>
+                <li className={classes.done}>Title</li>
                 <li>Wrapper</li>
               </ul>
             </li>
@@ -103,6 +105,6 @@ export const Home = () => {
           </span>
         </header>
       </div>
-    </React.Fragment>
+    </Layout>
   );
 };

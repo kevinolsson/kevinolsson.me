@@ -17,8 +17,10 @@ Default.args = {
       <Typography variant="h1">Layout</Typography>
       <p>
         This component wraps all child elements into a centered 1-column layout.
-        It exists so that most components wrapped in it adheres to a consistent
-        width and it is designed with multiple devices in mind.
+        It is designed with multiple devices in mind and exists so that{" "}
+        <span style={{ fontStyle: "italic" }}>most</span> components wrapped in
+        it adheres to a consistent width. I say most because sometimes I like
+        ignoring this wrapper.
       </p>
       <p>
         It also takes care of all the necessary paddings and margins between its

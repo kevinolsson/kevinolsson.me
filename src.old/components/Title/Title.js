@@ -90,7 +90,7 @@ export const Title = (props) => {
 
 Title.defaultProps = {
   prominent: false,
-  avatar: `${process.env.PUBLIC_URL}/images/profile.jpg`,
+  avatar: `/images/profile.jpg`,
   name: 'Kevin Olsson',
   introduction: 'Front-end developer & UX Designer.\n I finally built myself a blog. 😅',
   url: '/',

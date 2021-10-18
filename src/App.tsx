@@ -6,11 +6,19 @@ import { theme } from "Theme";
 
 type AppProps = { store: any };
 export const App = ({ store }: AppProps) => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   return (
-    <Provider store={store}>
-      <MuiThemeProvider theme={theme}>
-        <Router />
-      </MuiThemeProvider>
-    </Provider>
+    <div id="app" style={hasMounted ? { opacity: 1 } : undefined}>
+      <Provider store={store}>
+        <MuiThemeProvider theme={theme}>
+          <Router />
+        </MuiThemeProvider>
+      </Provider>
+    </div>
   );
 };

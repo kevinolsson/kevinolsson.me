@@ -7,7 +7,8 @@ import { ProjectPreview } from "../ProjectPreview/ProjectPreview";
 import { IgnoreLayoutWrapper } from "../IgnoreLayoutWrapper/IgnoreLayoutWrapper";
 import { Box } from "@material-ui/core";
 import { useLegacyProjects } from "hooks/useLegacyProjects";
-
+import { data } from "../../mdx/index";
+import { BlogBlock } from "../BlogBlock/BlogBlock";
 interface IHome {
   showProjectPreview: boolean;
 }
@@ -19,6 +20,7 @@ export const Home = ({ showProjectPreview }: IHome) => {
   const { siteDescription } = settings;
 
   const projects = useLegacyProjects();
+  const posts = data;
 
   return (
     <React.Fragment>
@@ -34,12 +36,12 @@ export const Home = ({ showProjectPreview }: IHome) => {
           </Box>
         </IgnoreLayoutWrapper>
       )}
-      {/* <div>
+      <div>
         {Array.isArray(posts) &&
           !!posts.length &&
           posts
             .sort((a, b) => {
-              return new Date(b.date) - new Date(a.date);
+              return (new Date(b.date) as any) - (new Date(a.date) as any);
             })
             .map(
               (post, index) =>
@@ -48,13 +50,13 @@ export const Home = ({ showProjectPreview }: IHome) => {
                     key={index}
                     featured={index === 0}
                     title={post.title}
-                    url={`/blog/${post.name}`}
+                    url={`/blog/${post.url}`}
                     body={post.subtitle}
-                    date={dateFormatted(post.date)}
+                    date={post.date}
                   />
                 )
             )}
-      </div> */}
+      </div>
     </React.Fragment>
   );
 };

@@ -153,6 +153,9 @@ export const theme = createTheme({
       main: portfolio.pink,
       dark: portfolio.pink,
       contrastText: portfolio.dark
+    },
+    text: {
+      primary: portfolio.dark
     }
   },
   typography: {

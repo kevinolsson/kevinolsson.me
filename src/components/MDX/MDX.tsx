@@ -12,7 +12,7 @@ const useStyles = makeStyles(
       "& h3": { ...theme.typography.h3 },
       "& h4": { ...theme.typography.h4 },
       "& h5": { ...theme.typography.h5 },
-      "& p": { ...theme.typography.body1 }
+      "& p": { ...theme.typography.body1, maxWidth: "65ch" }
     }
   }),
   { name: "layout" }

@@ -2,10 +2,11 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { useSelector } from "react-redux";
+import { ISettings } from "../../data/interfaces";
 
 export const ResumeIntroduction = () => {
-  const { settings } = useSelector((state: { settings: any }) => state);
-  const { linkedIn } = settings.socialMedia;
+  const { settings } = useSelector((state: { settings: ISettings }) => state);
+  const { linkedIn } = settings.socialMedia || {};
   return (
     <div>
       <Typography variant="body1">

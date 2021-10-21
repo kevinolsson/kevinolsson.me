@@ -4,7 +4,7 @@ import { data } from "mdx/";
 import { MDX } from "./MDX";
 
 export default {
-  title: "Content/MDX",
+  title: "Components/MDX",
   component: MDX
 } as ComponentMeta<typeof MDX>;
 

@@ -31,24 +31,22 @@ interface IThumbnailGrid {
 export const ThumbnailGrid = ({ thumbnails }: IThumbnailGrid) => {
   const classes = useStyles();
 
-  return (
-    !!thumbnails.length && (
-      <div className={classes.root}>
-        <div className={classes.grid}>
-          {thumbnails.map(
-            ({ type, thumbnail, url, title }: IThumbnail, index) => (
-              <div key={index} className={classes.gridItem}>
-                <Thumbnail
-                  title={title}
-                  type={type}
-                  thumbnail={thumbnail}
-                  url={url}
-                />
-              </div>
-            )
-          )}
-        </div>
+  return !!thumbnails.length ? (
+    <div className={classes.root}>
+      <div className={classes.grid}>
+        {thumbnails.map(
+          ({ type, thumbnail, url, title }: IThumbnail, index) => (
+            <div key={index} className={classes.gridItem}>
+              <Thumbnail
+                title={title}
+                type={type}
+                thumbnail={thumbnail}
+                url={url}
+              />
+            </div>
+          )
+        )}
       </div>
-    )
-  );
+    </div>
+  ) : null;
 };

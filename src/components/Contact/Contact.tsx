@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import { Box, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Meta } from "../Meta/Meta";
+import { ISettings } from "../../data/interfaces";
 
 const useStyles = makeStyles(
   (theme?: any) => ({
@@ -17,8 +18,8 @@ const useStyles = makeStyles(
 
 export const Contact = () => {
   const classes = useStyles();
-  const { settings } = useSelector((state: { settings: any }) => state);
-  const { twitter, linkedIn } = settings.socialMedia;
+  const { settings } = useSelector((state: { settings: ISettings }) => state);
+  const { twitter, linkedIn } = settings.socialMedia || {};
 
   return (
     <React.Fragment>

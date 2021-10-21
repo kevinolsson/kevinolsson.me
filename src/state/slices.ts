@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import settings from "settings.json";
+import settings from "data/settings.json";
+import projects from "data/legacyProjects.json";
 
 type CounterSliceState = { value: number };
 export const counterSlice = createSlice({
@@ -22,5 +23,11 @@ export const counterSlice = createSlice({
 export const settingsSlice = createSlice({
   name: "settings",
   initialState: settings,
+  reducers: {}
+});
+
+export const projectsSlice = createSlice({
+  name: "projects",
+  initialState: projects,
   reducers: {}
 });

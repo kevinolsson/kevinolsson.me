@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Link } from "react-router-dom";
-import { Thumbnail, EnumType } from "../Thumbnail/Thumbnail";
+import { Thumbnail } from "../Thumbnail/Thumbnail";
 import { Button } from "../Button/Button";
 
 const useStyles = makeStyles(
@@ -50,7 +50,7 @@ const useStyles = makeStyles(
 export interface IProject {
   title?: string;
   thumbnail?: string;
-  type?: EnumType;
+  type?: string;
   url?: string;
   [x: string]: any;
 }

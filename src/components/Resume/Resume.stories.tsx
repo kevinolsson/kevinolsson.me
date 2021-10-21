@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Resume } from "./Resume";
 
 export default {
-  title: "Components/Resume",
+  title: "Content/Resume",
   component: Resume
 } as ComponentMeta<typeof Resume>;
 

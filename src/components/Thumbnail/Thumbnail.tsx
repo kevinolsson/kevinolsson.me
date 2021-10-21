@@ -40,11 +40,9 @@ const useStyles = makeStyles(
   }),
   { name: "Thumbnail" }
 );
-
-export type EnumType = "component" | "external" | "default";
 export interface IThumbnail {
-  type?: EnumType;
-  thumbnail: any;
+  type?: string;
+  thumbnail?: any;
   url?: string;
   title?: string;
   standalone?: boolean;

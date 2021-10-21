@@ -2,6 +2,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import TwitterIcon from "../Icons/TwitterIcon";
 import LinkedInIcon from "../Icons/LinkedInIcon";
+import StorybookIcon from "../Icons/StorybookIcon";
+import { ISettings } from "../../data/interfaces";
 import { Navigation, INavigation } from "./Navigation";
 import { useSelector } from "react-redux";
 
@@ -12,9 +14,10 @@ const contextAwareNavigation = (Component: any) => ({
   const location = useLocation();
   const pathname = location.pathname.split("/");
   const active = `/${pathname[1]}`;
-  const { settings } = useSelector((state: { settings: any }) => state);
-  const { twitter, linkedIn } = settings.socialMedia;
-
+  const { settings, storybook } = useSelector(
+    (state: { settings: ISettings; storybook: string }) => state
+  );
+  const { twitter, linkedIn } = settings?.socialMedia || {};
   const withEdgeCase = a => (a === "/blog" ? "/" : a);
 
   const menu = [
@@ -23,7 +26,12 @@ const contextAwareNavigation = (Component: any) => ({
     { name: "Resume", url: "/resume" },
     { name: "Contact", url: "/contact" },
     { name: <TwitterIcon />, url: twitter, external: true },
-    { name: <LinkedInIcon />, url: linkedIn, external: true }
+    { name: <LinkedInIcon />, url: linkedIn, external: true },
+    {
+      name: <StorybookIcon />,
+      url: process.env.NETLIFY ? storybook : "http://localhost:6006/",
+      external: true
+    }
   ];
   return (
     <Component

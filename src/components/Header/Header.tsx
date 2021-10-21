@@ -17,9 +17,9 @@ const useStyles = makeStyles(
       }
     },
     navigation: {
-      minWidth: "64px",
+      minWidth: "108px",
       position: "relative",
-      left: "-64px",
+      left: "-108px",
       [theme.breakpoints.up("md")]: {
         position: "unset",
         left: 0

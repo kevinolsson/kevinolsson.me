@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Title, ITitle } from "./Title";
+import { ISettings } from "../../data/interfaces";
 
 const contextAwareTitle = (Component: React.ComponentType<any>) => ({
   prominent,
@@ -10,7 +11,7 @@ const contextAwareTitle = (Component: React.ComponentType<any>) => ({
   introduction,
   url
 }: ITitle) => {
-  const { settings } = useSelector((state: { settings: any }) => state);
+  const { settings } = useSelector((state: { settings: ISettings }) => state);
   const { siteTitle, siteDescription, displayPhoto } = settings;
   const location = useLocation();
 

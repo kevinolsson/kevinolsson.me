@@ -1,7 +1,14 @@
 /* eslint-disable import/no-webpack-loader-syntax */
-import HelloWorldComponent from "!babel-loader!@mdx-js/loader!./2021-08-29-Test-MDX.mdx";
+import MdxComponent202003271 from "!babel-loader!@mdx-js/loader!./2020-03-27-hello-world.mdx";
+import MdxComponent202004101 from "!babel-loader!@mdx-js/loader!./2020-04-10-i-finally-built-myself-a-blog.mdx";
+import MdxComponent202009161 from "!babel-loader!@mdx-js/loader!./2020-09-16-mid-year-show-and-tell.mdx";
+import MdxComponent202108291 from "!babel-loader!@mdx-js/loader!./2021-08-29-test-mdx.mdx";
 
-export type EnumFilename = "2021-08-29-Test-MDX";
+export type EnumFilename =
+  | "2020-03-27-hello-world"
+  | "2020-04-10-i-finally-built-myself-a-blog"
+  | "2020-09-16-mid-year-show-and-tell"
+  | "2021-08-29-test-mdx";
 export type EnumType = "blog" | "project";
 
 /* 
@@ -31,8 +38,8 @@ export const data: IData[] = [
     url: "2020-03-27-hello-world",
     isExternal: false,
     date: "March 27, 2020",
-    filename: "2021-08-29-Test-MDX",
-    component: HelloWorldComponent
+    filename: "2020-03-27-hello-world",
+    component: MdxComponent202003271
   },
   {
     title: "I finally built myself a blog 😅",
@@ -42,8 +49,8 @@ export const data: IData[] = [
     url: "2020-04-10-i-finally-built-myself-a-blog",
     isExternal: false,
     date: "April 10, 2020",
-    filename: "2021-08-29-Test-MDX",
-    component: HelloWorldComponent
+    filename: "2020-04-10-i-finally-built-myself-a-blog",
+    component: MdxComponent202004101
   },
   {
     title: "Mid-year show and tell.",
@@ -53,8 +60,8 @@ export const data: IData[] = [
     url: "2020-09-16-mid-year-show-and-tell",
     isExternal: false,
     date: "September 16, 2020",
-    filename: "2021-08-29-Test-MDX",
-    component: HelloWorldComponent
+    filename: "2020-09-16-mid-year-show-and-tell",
+    component: MdxComponent202009161
   },
 
   /* Blog posts starts from here */
@@ -66,7 +73,7 @@ export const data: IData[] = [
     url: "2021-10-19-hello-world-again",
     isExternal: false,
     date: "August 29, 2021",
-    filename: "2021-08-29-Test-MDX",
-    component: HelloWorldComponent
+    filename: "2021-08-29-test-mdx",
+    component: MdxComponent202108291
   }
 ];

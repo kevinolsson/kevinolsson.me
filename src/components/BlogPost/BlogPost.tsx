@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useLocation, Link } from "react-router-dom";
 import { data } from "mdx/index";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
-import { Typography, Divider } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { Button } from "../Button/Button";
 import { Meta } from "../Meta/Meta";
 import { MDX } from "../MDX/MDX";

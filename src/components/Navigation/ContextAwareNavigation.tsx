@@ -14,9 +14,8 @@ const contextAwareNavigation = (Component: any) => ({
   const location = useLocation();
   const pathname = location.pathname.split("/");
   const active = `/${pathname[1]}`;
-  const { settings, storybook } = useSelector(
-    (state: { settings: ISettings; storybook: string }) => state
-  );
+  const { settings } = useSelector((state: { settings: ISettings }) => state);
+  const { storybook } = settings;
   const { twitter, linkedIn } = settings.socialMedia || {};
   const withEdgeCase = a => (a === "/blog" ? "/" : a);
 

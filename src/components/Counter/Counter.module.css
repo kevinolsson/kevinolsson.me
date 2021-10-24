@@ -40,6 +40,14 @@
   margin-right: 8px;
 }
 
+.button:hover, .button:focus {
+  border: 2px solid rgba(112, 76, 182, 0.4);
+}
+
+.button:active {
+  background-color: rgba(112, 76, 182, 0.2);
+}
+
 .asyncButton {
   position: relative;
   margin-left: 8px;

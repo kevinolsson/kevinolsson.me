@@ -20,6 +20,9 @@ const contextAwareNavigation = (Component: any) => ({
   const { twitter, linkedIn } = settings.socialMedia || {};
   const withEdgeCase = a => (a === "/blog" ? "/" : a);
 
+  // eslint-disable-next-line no-console
+  console.log({ process: process.env });
+
   const menu = [
     { name: "Blog", url: "/" },
     { name: "Projects", url: "/projects" },

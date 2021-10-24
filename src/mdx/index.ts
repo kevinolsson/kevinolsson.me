@@ -72,7 +72,7 @@ export const data: IData[] = [
     category: ["Blog"],
     url: "2021-10-24-rebuilt-blog-typescript-mdx-storybook",
     isExternal: false,
-    date: "August 29, 2021",
+    date: "October 24, 2021",
     filename: "2021-10-24-rebuilt-blog-typescript-mdx-storybook",
     component: MdxComponent202110241
   }

@@ -51,7 +51,7 @@ export const BlogPost = ({ slug: slugOverride }: IBlogPost): JSX.Element => {
           </Typography>
         )}
         {post.subtitle && (
-          <Typography gutterBottom variant="h5">
+          <Typography gutterBottom component="h2" variant="h5">
             {post.subtitle}
           </Typography>
         )}

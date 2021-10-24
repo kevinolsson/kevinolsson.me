@@ -113,6 +113,9 @@ const typography = {
       fontWeight: 400
     }
   },
+  h6: {
+    fontWeight: 700
+  },
   body1: {
     fontFamily: "Open Sans, sans-serif",
     fontSize: "14.4px",

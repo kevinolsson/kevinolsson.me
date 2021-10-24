@@ -2,13 +2,13 @@
 import MdxComponent202003271 from "!babel-loader!@mdx-js/loader!./2020-03-27-hello-world.mdx";
 import MdxComponent202004101 from "!babel-loader!@mdx-js/loader!./2020-04-10-i-finally-built-myself-a-blog.mdx";
 import MdxComponent202009161 from "!babel-loader!@mdx-js/loader!./2020-09-16-mid-year-show-and-tell.mdx";
-import MdxComponent202108291 from "!babel-loader!@mdx-js/loader!./2021-08-29-test-mdx.mdx";
+import MdxComponent202110241 from "!babel-loader!@mdx-js/loader!./2021-10-24-rebuilt-blog-typescript-mdx-storybook.mdx";
 
 export type EnumFilename =
   | "2020-03-27-hello-world"
   | "2020-04-10-i-finally-built-myself-a-blog"
   | "2020-09-16-mid-year-show-and-tell"
-  | "2021-08-29-test-mdx";
+  | "2021-10-24-rebuilt-blog-typescript-mdx-storybook";
 export type EnumType = "blog" | "project";
 
 /* 
@@ -66,14 +66,14 @@ export const data: IData[] = [
 
   /* Blog posts starts from here */
   {
-    title: "Hello World (again)",
-    subtitle: "I rewrote my blog using TypeScript and threw in MDX!",
+    title: "A long overdue update to this website!",
+    subtitle: "So I rebuilt my blog using TypeScript, MDX, and Storybook",
     type: "blog",
     category: ["Blog"],
-    url: "2021-10-19-hello-world-again",
+    url: "2021-10-24-rebuilt-blog-typescript-mdx-storybook",
     isExternal: false,
     date: "August 29, 2021",
-    filename: "2021-08-29-test-mdx",
-    component: MdxComponent202108291
+    filename: "2021-10-24-rebuilt-blog-typescript-mdx-storybook",
+    component: MdxComponent202110241
   }
 ];

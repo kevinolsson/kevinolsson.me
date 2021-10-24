@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import { TitleWrapper } from "./TitleWrapper";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(
   (theme: any) => ({
@@ -55,17 +56,19 @@ export const Title = ({
 
   return (
     <TitleWrapper url={url}>
-      <Avatar
-        src={avatar}
-        alt={name}
-        className={[
-          classes.avatar,
-          classes.transition,
-          prominent && classes.avatarProminent
-        ]
-          .filter(Boolean)
-          .join(" ")}
-      />
+      <Link to="/">
+        <Avatar
+          src={avatar}
+          alt={name}
+          className={[
+            classes.avatar,
+            classes.transition,
+            prominent && classes.avatarProminent
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        />
+      </Link>
       <div>
         <Typography
           className={[

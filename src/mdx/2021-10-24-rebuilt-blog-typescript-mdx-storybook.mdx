@@ -1,0 +1,108 @@
+import { Counter } from "components/Counter/Counter";
+import { theme } from "Theme";
+import logo from "logo.svg";
+import { Link } from "react-router-dom";
+import StorybookIcon from "components/Icons/StorybookIcon";
+
+<div>
+
+Hi! It's been over a year since I've last touched this website. A lot has happened since then and as much as I'd love to say that _ oh, I've been busy with work and other cool important sutff_, its really just me not wanting to program outside of work. I tribute the whole thing to just being tired from both work and the pandemic.
+
+<img
+  style={{
+    maxWidth: "460px"
+  }}
+  src={`${
+    process.env.PUBLIC_URL
+  }/images/blog/2021-08-29-typescript-rewrite/1.jpeg`}
+  alt="Oh no. Anyway"
+/>
+
+_I am not underplaying COVID. Get vaccinated friends_
+
+I've since gotten some well needed rest, vaccinated, and back into the rythm of coding outside of work. I hope to keep it up!
+
+The first thing I decided to do is to update this website. While I absolutely love Netlify CMS, I realized it wasn't for me. I didn't enjoy having to leave my VSCode to write content. I also want my content to be more _show and tell_ so I felt that I needed to move away from a CMS and something more fun for a frontend developer.
+
+With this rewrite I had one goal in mind. I want my website to make me want to tinker with it more often. I want this website to make me _want_ to work on it.
+
+<img
+  style={{
+    maxWidth: "460px"
+  }}
+  src={"https://media.giphy.com/media/gk3R16JhLP8RUka2nD/giphy.gif"}
+  alt="You so of a bitch... I'm in"
+/>
+
+### Lets start with TypeScript
+
+I've been using TypeScript exclusively since I started a new job at <Link to={'/resume'}>Svenska Handelsbanken AB</Link> and I'm really liking it. To be clear I don't think TypeScript is as hype as what dev Twitter makes it out to be. Like I don't think TypeScript _per-se_ makes me want to tinker with this site more, but I don't want to be taking a step back into JavaScript either.
+
+### MDX - A blend of markdown and JSX
+
+I guess this would be the biggest change with my rewrite. I've started using MDX to write my content. This allows me to write my posts and import components into it seamlessly. It's absolutely lovely.
+
+<div
+  style={{
+    border: `1px solid ${theme.palette.portfolio.altGrey}`,
+    padding: theme.spacing(8),
+    borderRadius: theme.shape.borderRadius,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }}
+>
+  <img
+    src={logo}
+    style={{
+      height: "40vmin",
+      pointerEvents: "none"
+    }}
+    alt="logo"
+  />
+  <Counter />
+</div>
+
+The section above is a component directly imported into the MDX file. IIRC its the example component that comes with [ReduxToolkit](https://redux-toolkit.js.org/).
+
+To be clear, I'm still under the impression that _if I really wanted to_, I could have simply treated all of my blog posts as components instead of using MDX. Like I wouldn't be able to tell you any clear benefit of using MDX over just straight up components other than _its cool_. Hopefully over time I'll be able to!
+
+As its stands however, being able to write content in markdown paired with the ability to import components into the same file makes me want to tinker with this site more. I now essentially have an outlet where I can _show and tell_ any random UI component, feature, and/or any cool new thing that I've been playing around with.
+
+### Storybook - develop UI components in isolation ❤️
+
+[I. Love. Storybook](https://storybook.js.org/). Its a tool that allows developers to create components in isolation and its my absolute favorite tool. There should be a Storybook Icon <div style={{ display: 'inline-block', transform: 'translateY(6px)'}}><StorybookIcon /></div> on the navigation that leads you to my Storybook.
+
+Now, I don't know if its frowned upon, but I wrapped my entire Storybook with my store provider lol so it has access to my global state. Ideally your UI components should be "dumb" but I also wanted to showcase some of my "smart" / state aware components there hence why I did this.
+
+I look forward to playing around with Storybook more in relation to testing.
+
+### MUI and ReduxToolkit
+
+Not as exciting as everything else but I figured I'd mention them too!
+
+I'm using [MUI](https://mui.com) because their solution to theme handling and CSS in JS is 💯. I think the biggest criticism towards UI frameworks such as MUI is that _oh but your website is going to look like every other website!1!_ It doesn't have to. This website is proof of that.
+
+I'm going to be working on dark mode for this website very soon and having MUI in place will make the whole project less cumbersome (and consequently more exciting to work with).
+
+[ReduxToolkit](https://redux-toolkit.js.org/) on the other hand might feel a bit overkill. It usually is. In this case I just wanted a global state in place for when I'll need it. I love me my `useSelector` &amp; `useDispatch`. I've also prior to this rewrite, have been working a lot with _old school_ Redux and thought ReduxToolkit looked really cool so I wanted to try it out.
+
+### Closing words
+
+There's still a laundry list of things to do for this site. I think the 2 biggest right now is dark mode (cause fun) and heavier focus on accessibility (may not sound fun, but inclusivity is important! _ - says the guy using emojis left and right_).
+
+The least exciting part of this whole rewrite was me writing this blog post. No really. I think writing is still something that I need to force myself into. I feel that writing and sharing your thoughts with the rest of community is a good way to get better and something that I'm trying really hard to get into.
+
+I'll also probably try less hard to be _LinkedIn friendly_ and be more casual since I just cant really be bothered lol. So I hope that a more casual approach to writing and making the coding side of things more exciting will not result in waiting another year+ to update this blog! 💩
+
+Stay safe!
+
+_PS. It feels super awkard that (as of writing this post) there is no end of page content. Done reading this post and want to read another one? Hindi pwede! The tech doesn't exist yet!_
+
+<img
+  style={{ maxWidth: "460px" }}
+  alt="Later nerds"
+  src={"https://media.giphy.com/media/ik8lXmHFpISPoPvZNS/giphy.gif"}
+/>
+
+</div>

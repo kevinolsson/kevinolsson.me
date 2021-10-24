@@ -4,5 +4,5 @@
 # “command” is your build command
 
 [build]
-  publish = "build/"
-  command = "yarn build"
+  publish = "storybook-static/"
+  command = "yarn build-storybook"

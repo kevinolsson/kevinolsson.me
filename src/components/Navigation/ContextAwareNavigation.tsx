@@ -17,7 +17,7 @@ const contextAwareNavigation = (Component: any) => ({
   const { settings, storybook } = useSelector(
     (state: { settings: ISettings; storybook: string }) => state
   );
-  const { twitter, linkedIn } = settings?.socialMedia || {};
+  const { twitter, linkedIn } = settings.socialMedia || {};
   const withEdgeCase = a => (a === "/blog" ? "/" : a);
 
   const menu = [

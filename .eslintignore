@@ -1,6 +1,2 @@
-/cms
-/content
-/functions
-/node_modules
-/public
-/src/util
+/build
+/src.old

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "state/actions";
-import styles from "./Counter.module.scss";
+import styles from "./Counter.module.css";
 
 interface RootState {
   counter: {

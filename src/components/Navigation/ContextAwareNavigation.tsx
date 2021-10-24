@@ -20,9 +20,6 @@ const contextAwareNavigation = (Component: any) => ({
   const { twitter, linkedIn } = settings.socialMedia || {};
   const withEdgeCase = a => (a === "/blog" ? "/" : a);
 
-  // eslint-disable-next-line no-console
-  console.log({ process: process.env });
-
   const menu = [
     { name: "Blog", url: "/" },
     { name: "Projects", url: "/projects" },
@@ -32,7 +29,10 @@ const contextAwareNavigation = (Component: any) => ({
     { name: <LinkedInIcon />, url: linkedIn, external: true },
     {
       name: <StorybookIcon />,
-      url: process.env.NETLIFY ? storybook : "http://localhost:6006/",
+      url:
+        process.env.NODE_ENV === "production"
+          ? storybook
+          : "http://localhost:6006/",
       external: true
     }
   ];

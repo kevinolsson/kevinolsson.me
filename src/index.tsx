@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { reducer } from "state/reducers";
 import * as serviceWorker from "serviceWorker";
-import "index.scss";
+import "index.css";
 
 export const store = configureStore({
   reducer

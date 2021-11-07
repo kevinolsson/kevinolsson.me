@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-
+import { useSelector } from "react-redux";
+import { ISettings } from "../../data/interfaces";
 interface IMeta {
   title?: string;
   url?: string;
@@ -21,6 +22,11 @@ export const Meta = ({
     headerScriptsElement.outerHTML = headerScripts;
   }
 
+  const { settings } = useSelector((state: { settings: ISettings }) => state);
+  const { siteTitle, siteUrl, socialMedia } = settings || {};
+
+  const ogImage = absoluteImageUrl || siteUrl + socialMedia?.image;
+
   return (
     <Helmet>
       {title && <title>{title}</title>}
@@ -32,9 +38,7 @@ export const Meta = ({
       {absoluteImageUrl && (
         <meta name="twitter:card" content="summary_large_image" />
       )}
-      {absoluteImageUrl && (
-        <meta property="og:image" content={absoluteImageUrl} />
-      )}
+      <meta property="og:image" content={ogImage} />
     </Helmet>
   );
 };

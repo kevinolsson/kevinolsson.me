@@ -35,7 +35,11 @@ export const BlogPost = ({ slug: slugOverride }: IBlogPost): JSX.Element => {
 
   return post ? (
     <div className={classes.root}>
-      <Meta title={post.title} />
+      <Meta
+        title={post.title}
+        description={post.subtitle}
+        absoluteImageUrl={post.thumbnail}
+      />
       {!slugOverride && (
         <div className={classes.backButton}>
           <Button component={Link} to="/" startIcon={<ArrowBackIcon />}>

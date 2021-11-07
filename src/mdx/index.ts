@@ -26,6 +26,7 @@ export interface IData {
   isExternal: boolean;
   filename?: EnumFilename;
   component?: any;
+  thumbnail?: string;
 }
 
 export const data: IData[] = [

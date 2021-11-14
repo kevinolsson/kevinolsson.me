@@ -3,7 +3,7 @@ import makeStyles from "@mui/styles/makeStyles";
 import { Thumbnail, IThumbnail } from "../Thumbnail/Thumbnail";
 
 const useStyles = makeStyles(
-  theme => ({
+  (theme: any) => ({
     root: {},
     grid: {
       display: "grid",

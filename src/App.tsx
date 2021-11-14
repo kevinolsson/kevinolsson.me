@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "Router";
 import { Provider } from "react-redux";
-import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import { theme } from "Theme";
 
 type AppProps = { store: any };

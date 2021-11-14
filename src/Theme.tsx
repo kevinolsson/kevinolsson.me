@@ -9,24 +9,24 @@ declare module "@mui/material/styles/createTheme" {
 declare module "@mui/material/styles/createPalette" {
   interface PaletteOptions {
     portfolio: {
-      pink: React.CSSProperties["color"];
-      green: React.CSSProperties["color"];
-      dark: React.CSSProperties["color"];
-      altGrey: React.CSSProperties["color"];
-      transparentWhite: React.CSSProperties["color"];
+      pink: string;
+      green: string;
+      dark: string;
+      altGrey: string;
+      transparentWhite: string;
     };
   }
 }
 
 declare module "@mui/material/styles/createTypography" {
   interface TypographyOptions {
-    h1: { transition: React.CSSProperties["transition"] };
-    h2: { transition: React.CSSProperties["transition"] };
-    h3: { transition: React.CSSProperties["transition"] };
-    h4: { transition: React.CSSProperties["transition"] };
-    h5: { transition: React.CSSProperties["transition"] };
-    body1: { transition: React.CSSProperties["transition"] };
-    body2: { transition: React.CSSProperties["transition"] };
+    h1: { transition: string };
+    h2: { transition: string };
+    h3: { transition: string };
+    h4: { transition: string };
+    h5: { transition: string };
+    body1: { transition: string };
+    body2: { transition: string };
   }
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { ResumeIntroduction } from "../Resume/ResumeIntroduction";
 import { ResumeExperience } from "../Resume/ResumeExperience";
 import { ResumeOther } from "../Resume/ResumeOther";

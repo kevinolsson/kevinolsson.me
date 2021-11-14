@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Typography from "@mui/material/Typography";
 import { Box, Link } from "@mui/material";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { Meta } from "../Meta/Meta";
 import { ISettings } from "../../data/interfaces";
 

@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { TitleWrapper } from "./TitleWrapper";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(

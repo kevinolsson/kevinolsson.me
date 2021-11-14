@@ -1,6 +1,6 @@
 import React from "react";
 import Chip from "@mui/material/Chip";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 
 const useStyles = makeStyles(
   (theme?: any) => ({

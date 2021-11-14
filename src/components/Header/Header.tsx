@@ -1,5 +1,5 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { ContextAwareNavigation } from "../Navigation/ContextAwareNavigation";
 import { ContextAwareTitle } from "../Title/ContextAwareTitle";
 import { ITitle } from "../Title/Title";

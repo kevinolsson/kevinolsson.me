@@ -1,8 +1,8 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { Link } from "react-router-dom";
 import { Box, Link as MuiLink, Typography } from "@mui/material";
-import Skeleton from '@mui/material/Skeleton';
+import Skeleton from "@mui/material/Skeleton";
 import LinkIcon from "@mui/icons-material/Link";
 
 const useStyles = makeStyles(

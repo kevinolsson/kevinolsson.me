@@ -1,7 +1,6 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "./HamburgerIcon";
 
@@ -88,8 +87,6 @@ export const HamburgerButton = ({
     }
   };
 
-  const Component = typeof back === "string" ? Link : Box;
-
   React.useEffect(() => {
     setBackActive(!!back && showBack);
   }, [back, showBack]);
@@ -113,7 +110,7 @@ export const HamburgerButton = ({
         <HamburgerIcon active={active} />
       </button>
       {back && (
-        <Component
+        <Link
           to={typeof back === "string" ? back : ""}
           onClick={
             typeof back === "function"
@@ -141,7 +138,7 @@ export const HamburgerButton = ({
               .filter(Boolean)
               .join(" ")}
           />
-        </Component>
+        </Link>
       )}
     </div>
   );

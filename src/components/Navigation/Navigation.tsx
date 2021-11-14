@@ -1,5 +1,5 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { Link } from "react-router-dom";
 import { Link as MuiLink } from "@mui/material";
 import Typography from "@mui/material/Typography";

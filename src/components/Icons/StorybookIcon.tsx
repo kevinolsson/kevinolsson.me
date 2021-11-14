@@ -1,6 +1,6 @@
 import React from "react";
 import SvgIcon from "@mui/material/SvgIcon";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 
 const useStyles = makeStyles(
   (theme: any) => ({

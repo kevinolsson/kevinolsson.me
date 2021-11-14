@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof ContextAwareNavigation>;
 
 const Template: ComponentStory<typeof ContextAwareNavigation> = () => (
-  <ContextAwareNavigation view="desktop" handleClickCallback={() => {}} />
+  <ContextAwareNavigation view="desktop" handleClickCallback={() => null} />
 );
 
 export const Default = Template.bind({});

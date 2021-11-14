@@ -1,5 +1,5 @@
 import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import makeStyles from "@mui/styles/makeStyles";
 import { useLocation, Link } from "react-router-dom";
 import { data } from "mdx/index";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";

@@ -36,7 +36,7 @@ const useStyles = makeStyles(
   { name: "resumeEducation" }
 );
 
-export const ResumeEducation = () => {
+export const ResumeEducation = (): JSX.Element => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

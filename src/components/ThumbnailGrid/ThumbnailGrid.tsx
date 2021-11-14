@@ -28,7 +28,9 @@ interface IThumbnailGrid {
   thumbnails: IThumbnail[];
 }
 
-export const ThumbnailGrid = ({ thumbnails }: IThumbnailGrid) => {
+export const ThumbnailGrid = ({
+  thumbnails
+}: IThumbnailGrid): JSX.Element | null => {
   const classes = useStyles();
 
   return !!thumbnails.length ? (

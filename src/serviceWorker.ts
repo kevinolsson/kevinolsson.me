@@ -21,7 +21,8 @@ const isLocalhost = Boolean(
     )
 );
 
-export function register(config: any) {
+// eslint-disable-next-line
+export function register(config: any): any {
   if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
@@ -129,7 +130,7 @@ function checkValidServiceWorker(swUrl: any, config: any) {
     });
 }
 
-export function unregister() {
+export function unregister(): any {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();

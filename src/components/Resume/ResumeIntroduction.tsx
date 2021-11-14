@@ -4,7 +4,7 @@ import Link from "@material-ui/core/Link";
 import { useSelector } from "react-redux";
 import { ISettings } from "../../data/interfaces";
 
-export const ResumeIntroduction = () => {
+export const ResumeIntroduction = (): JSX.Element => {
   const { settings } = useSelector((state: { settings: ISettings }) => state);
   const { linkedIn } = settings.socialMedia || {};
   return (

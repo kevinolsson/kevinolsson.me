@@ -32,7 +32,7 @@ const useStyles = makeStyles(
   { name: "resumeGrid" }
 );
 
-export const Resume = () => {
+export const Resume = (): JSX.Element => {
   const classes = useStyles();
   return (
     <React.Fragment>

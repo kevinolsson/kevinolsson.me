@@ -78,7 +78,7 @@ export const HamburgerButton = ({
   forceMobileView,
   back,
   showBack
-}: IHamburgerButton) => {
+}: IHamburgerButton): JSX.Element => {
   const [backActive, setBackActive] = React.useState(false);
   const classes = useStyles();
 

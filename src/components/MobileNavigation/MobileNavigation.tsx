@@ -46,7 +46,9 @@ interface IMobileNavigation {
   forceMobileView?: boolean;
 }
 
-export const MobileNavigation = ({ forceMobileView }: IMobileNavigation) => {
+export const MobileNavigation = ({
+  forceMobileView
+}: IMobileNavigation): JSX.Element => {
   const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
 

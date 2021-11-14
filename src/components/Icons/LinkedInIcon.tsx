@@ -1,7 +1,7 @@
 import React from "react";
 import SvgIcon from "@material-ui/core/SvgIcon";
 
-const LinkedInIcon = (props: { [x: string]: any }) => (
+const LinkedInIcon = (props: { [x: string]: any }): JSX.Element => (
   <SvgIcon {...props}>
     <g
       id="LinkedInIcon"

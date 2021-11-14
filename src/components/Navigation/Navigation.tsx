@@ -16,9 +16,9 @@ const useStyles = makeStyles(
       paddingTop: view === "mobile" && theme.spacing(2),
       paddingBottom: view === "mobile" && theme.spacing(2)
     }),
-    navItemLast: ({ view }: any) => ({
+    navItemLast: {
       marginRight: 0
-    }),
+    },
     navItemMobile: ({ view }: any) => ({
       display: view === "desktop" ? "none" : "block",
       [theme.breakpoints.up("md")]: {
@@ -38,9 +38,9 @@ const useStyles = makeStyles(
       color: theme.palette.portfolio.dark,
       textDecoration: "none"
     }),
-    linkActive: ({ view }: any) => ({
+    linkActive: {
       color: theme.palette.portfolio.green
-    }),
+    },
     icon: {
       position: "relative",
       top: theme.spacing(1.5)
@@ -66,7 +66,7 @@ export const Navigation = ({
   menu,
   view,
   handleClickCallback
-}: INavigation) => {
+}: INavigation): JSX.Element | false | undefined => {
   const classes = useStyles({ view });
 
   return (

@@ -4,7 +4,7 @@ import Box from "@material-ui/core/Box";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { ChipArray } from "../ChipArray/ChipArray";
 
-export const ResumeOther = () => (
+export const ResumeOther = (): JSX.Element => (
   <Box marginBottom={16}>
     <Typography gutterBottom variant="h4">
       Skills and Interests

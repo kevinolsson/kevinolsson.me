@@ -51,7 +51,7 @@ export const Title = ({
   name,
   introduction,
   url
-}: ITitle) => {
+}: ITitle): JSX.Element => {
   const classes = useStyles();
 
   return (

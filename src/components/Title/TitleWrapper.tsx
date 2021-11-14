@@ -23,7 +23,7 @@ interface ITitleWrapper {
   children: React.ReactNode;
 }
 
-export const TitleWrapper = ({ url, children }: ITitleWrapper) => {
+export const TitleWrapper = ({ url, children }: ITitleWrapper): JSX.Element => {
   const classes = useStyles();
   return url ? (
     <Link to={url} className={classes.root}>

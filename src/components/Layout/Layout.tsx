@@ -22,7 +22,7 @@ interface ILayout {
   children: React.ReactNode;
 }
 
-export const Layout = ({ children }: ILayout) => {
+export const Layout = ({ children }: ILayout): JSX.Element => {
   const classes = useStyles();
   return <div className={classes.root}>{children}</div>;
 };

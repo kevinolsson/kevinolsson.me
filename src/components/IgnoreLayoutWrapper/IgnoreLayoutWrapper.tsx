@@ -17,7 +17,9 @@ interface IIgnoreLayoutWrapper {
   children: React.ReactNode;
 }
 
-export const IgnoreLayoutWrapper = ({ children }: IIgnoreLayoutWrapper) => {
+export const IgnoreLayoutWrapper = ({
+  children
+}: IIgnoreLayoutWrapper): JSX.Element => {
   const classes = useStyles();
   return <div className={classes.root}>{children}</div>;
 };

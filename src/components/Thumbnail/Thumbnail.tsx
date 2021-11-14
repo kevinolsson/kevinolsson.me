@@ -54,7 +54,7 @@ export const Thumbnail = ({
   url,
   title,
   standalone
-}: IThumbnail) => {
+}: IThumbnail): JSX.Element => {
   const [hasLoaded, setHasLoaded] = React.useState(false);
   const [error, setError] = React.useState(false);
 

@@ -8,9 +8,8 @@ const contextAwareTitle = (Component: React.ComponentType<any>) => ({
   prominent,
   avatar,
   name,
-  introduction,
-  url
-}: ITitle) => {
+  introduction
+}: ITitle): JSX.Element => {
   const { settings } = useSelector((state: { settings: ISettings }) => state);
   const { siteTitle, siteDescription, displayPhoto } = settings;
   const location = useLocation();

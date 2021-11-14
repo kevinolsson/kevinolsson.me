@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { ExperienceBlock } from "../ExperienceBlock/ExperienceBlock";
 
-export const ResumeExperience = () => (
+export const ResumeExperience = (): JSX.Element => (
   <div>
     <Typography gutterBottom variant="h4">
       Experience

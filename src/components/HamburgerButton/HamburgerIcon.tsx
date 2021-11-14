@@ -38,7 +38,7 @@ const useStyles = makeStyles(
   { name: "hamburgerIcon" }
 );
 
-export const HamburgerIcon = ({ active }: { active: boolean }) => {
+export const HamburgerIcon = ({ active }: { active: boolean }): JSX.Element => {
   const classes = useStyles();
   return (
     <div

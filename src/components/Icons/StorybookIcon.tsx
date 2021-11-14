@@ -11,7 +11,7 @@ const useStyles = makeStyles(
   { name: "StorybookIcon" }
 );
 
-const StorybookIcon = (props: { [x: string]: any }) => {
+const StorybookIcon = (props: { [x: string]: any }): JSX.Element => {
   const classes = useStyles();
 
   return (

@@ -37,7 +37,7 @@ interface IHeader {
 export const Header = ({
   ContextAwareTitleProps,
   ContextAwareNavigationProps
-}: IHeader) => {
+}: IHeader): JSX.Element => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

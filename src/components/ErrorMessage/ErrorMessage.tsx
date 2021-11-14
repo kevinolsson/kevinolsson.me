@@ -10,7 +10,7 @@ interface IErrorMessage {
   code: number;
 }
 
-export const ErrorMessage = ({ code }: IErrorMessage) => {
+export const ErrorMessage = ({ code }: IErrorMessage): JSX.Element => {
   return (
     <React.Fragment>
       <Meta title={`Oops! - error ${code || "🤷‍♂️"}`} />

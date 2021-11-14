@@ -13,7 +13,7 @@ interface IHome {
   showProjectPreview: boolean;
 }
 
-export const Home = ({ showProjectPreview }: IHome) => {
+export const Home = ({ showProjectPreview }: IHome): JSX.Element => {
   const { settings } = useSelector(
     (state: { settings: ISettings; projects: TLegacyContent[] }) => state
   );

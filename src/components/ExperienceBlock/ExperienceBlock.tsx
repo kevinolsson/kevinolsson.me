@@ -49,7 +49,7 @@ export const ExperienceBlock = ({
   position,
   details = [],
   children
-}: IExperienceBlock) => {
+}: IExperienceBlock): JSX.Element => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

@@ -59,7 +59,7 @@ interface IProjectPreview {
   projects: IProject[];
 }
 
-export const ProjectPreview = ({ projects }: IProjectPreview) => {
+export const ProjectPreview = ({ projects }: IProjectPreview): JSX.Element => {
   const classes = useStyles();
   const showMore = projects.length > 3;
   return (

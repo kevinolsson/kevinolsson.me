@@ -3,7 +3,7 @@ import { Meta } from "../Meta/Meta";
 import { ThumbnailGrid } from "../ThumbnailGrid/ThumbnailGrid";
 import { useLegacyProjects } from "../../hooks/useLegacyProjects";
 
-export const Projects = () => {
+export const Projects = (): JSX.Element => {
   const projects = useLegacyProjects();
 
   return (

@@ -34,7 +34,7 @@ interface IMDX {
   filename: EnumFilename;
 }
 
-export const MDX = ({ filename }: IMDX) => {
+export const MDX = ({ filename }: IMDX): JSX.Element | null => {
   const classes = useStyles();
   const mdx = data.find(mdx => mdx.filename === filename);
 

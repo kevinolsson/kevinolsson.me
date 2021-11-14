@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { IgnoreLayoutWrapper } from "./IgnoreLayoutWrapper";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 
 export default {
   title: "Components/IgnoreLayoutWrapper",

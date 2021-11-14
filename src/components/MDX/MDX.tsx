@@ -1,6 +1,6 @@
 import React from "react";
 import { data } from "mdx/";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { EnumFilename } from "mdx/index";
 
 const useStyles = makeStyles(

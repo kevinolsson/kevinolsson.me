@@ -1,13 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { useLocation, Link } from "react-router-dom";
 import { data } from "mdx/index";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import { Button } from "../Button/Button";
 import { Meta } from "../Meta/Meta";
 import { MDX } from "../MDX/MDX";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const useStyles = makeStyles(
   (theme?: any) => ({

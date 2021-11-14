@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { Thumbnail, IThumbnail } from "../Thumbnail/Thumbnail";
 
 const useStyles = makeStyles(
@@ -8,7 +8,7 @@ const useStyles = makeStyles(
     grid: {
       display: "grid",
       gridTemplateColumns: "1fr",
-      gridGap: `${theme.spacing()}px`,
+      gridGap: theme.spacing(),
       [theme.breakpoints.up("sm")]: {
         gridTemplateColumns: "repeat(2, 1fr)"
       },

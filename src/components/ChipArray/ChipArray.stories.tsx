@@ -1,9 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ChipArray } from "./ChipArray";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 
 export default {
   title: "Components/ChipArray",

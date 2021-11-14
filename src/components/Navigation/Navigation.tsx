@@ -1,8 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from "react-router-dom";
-import { Link as MuiLink } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
+import { Link as MuiLink } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 const useStyles = makeStyles(
   (theme: any) => ({

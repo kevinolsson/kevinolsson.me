@@ -1,8 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import makeStyles from '@mui/styles/makeStyles';
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 const useStyles = makeStyles(
   (theme?: any) => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles(
     avatar: {
       width: "48px",
       height: "48px",
-      transform: `translateY(${theme.spacing(3)}px)`,
+      transform: `translateY(${theme.spacing(3)})`,
       [theme.breakpoints.up("md")]: {
         width: "80px",
         height: "80px"

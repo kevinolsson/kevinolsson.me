@@ -1,7 +1,7 @@
 import React from "react";
-import Box from "@material-ui/core/Box";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import { makeStyles } from "@material-ui/core/styles";
+import Box from "@mui/material/Box";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "./HamburgerIcon";
 

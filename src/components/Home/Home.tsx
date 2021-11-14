@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { ISettings, TLegacyContent } from "../../data/interfaces";
 import { ProjectPreview } from "../ProjectPreview/ProjectPreview";
 import { IgnoreLayoutWrapper } from "../IgnoreLayoutWrapper/IgnoreLayoutWrapper";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import { useLegacyProjects } from "hooks/useLegacyProjects";
 import { data } from "../../mdx/index";
 import { BlogBlock } from "../BlogBlock/BlogBlock";

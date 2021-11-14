@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(
   (theme: any) => ({
@@ -7,7 +7,7 @@ const useStyles = makeStyles(
       position: "relative",
       left: theme.spacing(-4),
       right: theme.spacing(-4),
-      width: `calc(100% + ${theme.spacing(8)}px)`
+      width: `calc(100% + ${theme.spacing(8)})`
     }
   }),
   { name: "IgnoreLayoutWrapper" }

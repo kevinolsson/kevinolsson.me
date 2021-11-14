@@ -1,11 +1,11 @@
 import React from "react";
-import SvgIcon from "@material-ui/core/SvgIcon";
-import { makeStyles } from "@material-ui/core/styles";
+import SvgIcon from "@mui/material/SvgIcon";
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(
   (theme: any) => ({
     root: {
-      transform: `scale(0.8) translateY(-${theme.spacing(0.25)}px)` // No hate, I got lazy to properly format the SVG icon 💩
+      transform: `scale(0.8) translateY(-${theme.spacing(0.25)})` // No hate, I got lazy to properly format the SVG icon 💩
     }
   }),
   { name: "StorybookIcon" }

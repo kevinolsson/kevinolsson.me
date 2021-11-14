@@ -1,8 +1,8 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 import { TitleWrapper } from "./TitleWrapper";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(

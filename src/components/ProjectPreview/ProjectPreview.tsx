@@ -1,6 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import makeStyles from '@mui/styles/makeStyles';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { Thumbnail } from "../Thumbnail/Thumbnail";
 import { Button } from "../Button/Button";

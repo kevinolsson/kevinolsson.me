@@ -1,9 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from "react-router-dom";
-import { Box, Link as MuiLink, Typography } from "@material-ui/core";
-import Skeleton from "@material-ui/lab/Skeleton";
-import LinkIcon from "@material-ui/icons/Link";
+import { Box, Link as MuiLink, Typography } from "@mui/material";
+import Skeleton from '@mui/material/Skeleton';
+import LinkIcon from "@mui/icons-material/Link";
 
 const useStyles = makeStyles(
   (theme: any) => ({
@@ -99,7 +99,7 @@ export const Thumbnail = ({
   };
 
   if (!hasLoaded || error) {
-    return <Skeleton variant="rect" height="100%" />;
+    return <Skeleton variant="rectangular" height="100%" />;
   }
 
   if (type === "external") {

@@ -1,12 +1,12 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme } from "@mui/material/styles";
 
-declare module "@material-ui/core/styles/createTheme" {
+declare module "@mui/material/styles/createTheme" {
   interface ThemeOptions {
     themeName?: string;
   }
 }
 
-declare module "@material-ui/core/styles/createPalette" {
+declare module "@mui/material/styles/createPalette" {
   interface PaletteOptions {
     portfolio: {
       pink: React.CSSProperties["color"];
@@ -18,7 +18,7 @@ declare module "@material-ui/core/styles/createPalette" {
   }
 }
 
-declare module "@material-ui/core/styles/createTypography" {
+declare module "@mui/material/styles/createTypography" {
   interface TypographyOptions {
     h1: { transition: React.CSSProperties["transition"] };
     h2: { transition: React.CSSProperties["transition"] };
@@ -30,9 +30,7 @@ declare module "@material-ui/core/styles/createTypography" {
   }
 }
 
-const scaffolding = createTheme({
-  spacing: 4
-});
+const scaffolding = createTheme({ spacing: 4 });
 
 const portfolio = {
   pink: "#E556A2",
@@ -166,13 +164,15 @@ export const theme = createTheme({
     ...typography,
     fontFamily: "Open Sans, sans-serif"
   },
-  overrides: {
+  components: {
     MuiTypography: {
-      root: {
-        color: portfolio.dark
-      },
-      gutterBottom: {
-        marginBottom: scaffolding.spacing(8)
+      styleOverrides: {
+        root: {
+          color: portfolio.dark
+        },
+        gutterBottom: {
+          marginBottom: scaffolding.spacing(8)
+        }
       }
     }
   }

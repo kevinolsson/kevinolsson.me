@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { HamburgerButton } from "./HamburgerButton";
 
 interface IContextAwareHamburgerButton {

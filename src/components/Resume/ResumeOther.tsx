@@ -1,7 +1,7 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { ChipArray } from "../ChipArray/ChipArray";
 
 export const ResumeOther = (): JSX.Element => (

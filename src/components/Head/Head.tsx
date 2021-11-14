@@ -6,17 +6,12 @@ import { ISettings } from "../../data/interfaces";
 
 export const Head = () => {
   const { settings } = useSelector((state: { settings: ISettings }) => state);
-  const { siteTitle, siteUrl, socialMedia, headerScripts } = settings;
+  const { siteTitle, headerScripts } = settings;
 
   return (
     <React.Fragment>
       <Helmet defaultTitle={siteTitle} titleTemplate={`${siteTitle} | %s`} />
-      <Meta
-        headerScripts={headerScripts}
-        absoluteImageUrl={
-          socialMedia && socialMedia.image && siteUrl + socialMedia.image
-        }
-      />
+      <Meta headerScripts={headerScripts} />
     </React.Fragment>
   );
 };

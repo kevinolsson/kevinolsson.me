@@ -23,7 +23,11 @@ interface IButton {
   [x: string]: any;
 }
 
-export const Button = ({ children, className, ...otherProps }: IButton) => {
+export const Button = ({
+  children,
+  className,
+  ...otherProps
+}: IButton): JSX.Element => {
   const classes = useStyles();
   return (
     <MuiButton

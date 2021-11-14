@@ -7,7 +7,7 @@ interface IAppWrapper {
   children: React.ReactNode;
 }
 
-export const AppWrapper = ({ children }: IAppWrapper) => (
+export const AppWrapper = ({ children }: IAppWrapper): JSX.Element => (
   <React.Fragment>
     <MobileNavigation />
     <Layout>

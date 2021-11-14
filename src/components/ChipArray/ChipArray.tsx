@@ -32,7 +32,7 @@ interface IChipArray {
   [x: string]: any;
 }
 
-export const ChipArray = ({ label, ChipProps }: IChipArray) => {
+export const ChipArray = ({ label, ChipProps }: IChipArray): JSX.Element => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

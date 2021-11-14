@@ -7,7 +7,7 @@ import { Button } from "../Button/Button";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 interface IErrorMessage {
-  code: Number;
+  code: number;
 }
 
 export const ErrorMessage = ({ code }: IErrorMessage) => {

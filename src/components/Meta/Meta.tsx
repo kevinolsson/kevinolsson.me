@@ -6,26 +6,23 @@ interface IMeta {
   title?: string;
   url?: string;
   description?: string;
-  absoluteImageUrl?: string;
-  headerScripts?: any;
+  thumbnail?: string;
+  headerScripts?: string;
 }
 
 export const Meta = ({
   title,
   url,
   description,
-  absoluteImageUrl,
+  thumbnail,
   headerScripts
-}: IMeta) => {
+}: IMeta): JSX.Element => {
   const headerScriptsElement = document.head.querySelector("#headerScripts");
   if (headerScripts && headerScriptsElement) {
     headerScriptsElement.outerHTML = headerScripts;
   }
 
   const { settings } = useSelector((state: { settings: ISettings }) => state);
-  const { siteTitle, siteUrl, socialMedia } = settings || {};
-
-  const ogImage = absoluteImageUrl || siteUrl + socialMedia?.image;
 
   return (
     <Helmet>
@@ -35,10 +32,14 @@ export const Meta = ({
       {description && <meta property="og:description" content={description} />}
       {url && <meta property="og:type" content="website" />}
       {url && <meta property="og:url" content={url} />}
-      {absoluteImageUrl && (
-        <meta name="twitter:card" content="summary_large_image" />
-      )}
-      <meta property="og:image" content={ogImage} />
+      {thumbnail && <meta name="twitter:card" content="summary_large_image" />}
+      <meta
+        property="og:image"
+        content={
+          process.env.PUBLIC_URL + thumbnail ||
+          process.env.PUBLIC_URL + settings.socialMedia.image
+        }
+      />
     </Helmet>
   );
 };

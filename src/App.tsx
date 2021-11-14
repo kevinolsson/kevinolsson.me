@@ -5,7 +5,7 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 import { theme } from "Theme";
 
 type AppProps = { store: any };
-export const App = ({ store }: AppProps) => {
+export const App = ({ store }: AppProps): JSX.Element => {
   const [hasMounted, setHasMounted] = React.useState(false);
 
   React.useEffect(() => {

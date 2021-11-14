@@ -54,7 +54,7 @@ export interface INavigation {
   active?: string;
   menu?: Array<{
     external: boolean;
-    name: string | {};
+    name: string | any;
     url: string;
   }>;
   view?: EnumView;

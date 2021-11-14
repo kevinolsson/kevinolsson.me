@@ -1,8 +1,8 @@
 export interface ISettings {
-  siteUrl?: string;
-  siteTitle?: string;
-  siteDescription?: string;
-  socialMediaCard?: {
+  siteUrl: string;
+  siteTitle: string;
+  siteDescription: string;
+  socialMediaCard: {
     image?: string;
     twitterCreatorAccount?: string;
     twitterSiteAccount?: string;
@@ -10,7 +10,7 @@ export interface ISettings {
   headerScripts?: string;
   enableServiceWorker?: boolean;
   displayPhoto?: string;
-  socialMedia?: {
+  socialMedia: {
     image?: string;
     linkedIn?: string;
     twitter?: string;

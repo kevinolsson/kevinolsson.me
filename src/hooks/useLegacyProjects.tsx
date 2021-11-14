@@ -6,7 +6,7 @@ export const useLegacyProjects = (): TLegacyContent[] => {
     (state: { projects: TLegacyContent[] }) => state
   );
 
-  let thumbnails: any[] = [];
+  const thumbnails: any[] = [];
   projects.forEach(({ type, value, name, ...everythingElse }, index) => {
     const url = type === "external" ? value : `/projects/${name}`;
     return (thumbnails[index] = {

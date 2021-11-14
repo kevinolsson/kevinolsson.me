@@ -38,7 +38,7 @@ export const BlogPost = ({ slug: slugOverride }: IBlogPost): JSX.Element => {
       <Meta
         title={post.title}
         description={post.subtitle}
-        absoluteImageUrl={post.thumbnail}
+        thumbnail={post.thumbnail}
       />
       {!slugOverride && (
         <div className={classes.backButton}>

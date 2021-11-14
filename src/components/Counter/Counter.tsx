@@ -9,7 +9,7 @@ interface RootState {
   };
 }
 
-export const Counter = () => {
+export const Counter = (): JSX.Element => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");

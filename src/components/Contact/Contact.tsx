@@ -16,7 +16,7 @@ const useStyles = makeStyles(
   { name: "hamburgerButton" }
 );
 
-export const Contact = () => {
+export const Contact = (): JSX.Element => {
   const classes = useStyles();
   const { settings } = useSelector((state: { settings: ISettings }) => state);
   const { twitter, linkedIn } = settings.socialMedia || {};

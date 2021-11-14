@@ -1,4 +1,3 @@
-/* eslint-disable import/no-webpack-loader-syntax */
 import MdxComponent202003271 from "!babel-loader!@mdx-js/loader!./2020-03-27-hello-world.mdx";
 import MdxComponent202004101 from "!babel-loader!@mdx-js/loader!./2020-04-10-i-finally-built-myself-a-blog.mdx";
 import MdxComponent202009161 from "!babel-loader!@mdx-js/loader!./2020-09-16-mid-year-show-and-tell.mdx";

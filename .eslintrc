@@ -7,6 +7,7 @@
     "no-console": "error",
     "no-var": "error",
     "camelcase": ["error", { "properties": "never" }],
-    "react/jsx-fragments": ["error", "element"]
+    "react/jsx-fragments": ["error", "element"],
+    "@typescript-eslint/no-explicit-any": "off"
     }
 }

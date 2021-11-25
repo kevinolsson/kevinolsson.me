@@ -3,7 +3,7 @@ import { Layout } from "../Layout/Layout";
 import { Header } from "../Header/Header";
 import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
 
-interface IAppWrapper {
+export interface IAppWrapper {
   children: React.ReactNode;
 }
 

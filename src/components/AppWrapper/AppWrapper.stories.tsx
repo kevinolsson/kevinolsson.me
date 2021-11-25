@@ -1,16 +1,14 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { Typography } from "@mui/material";
-import { AppWrapper } from "./AppWrapper";
+import { AppWrapper, IAppWrapper } from "./AppWrapper";
 
 export default {
   title: "Components/AppWrapper",
   component: AppWrapper
-} as ComponentMeta<typeof AppWrapper>;
+} as Meta;
 
-const Template: ComponentStory<typeof AppWrapper> = args => (
-  <AppWrapper {...args} />
-);
+const Template: Story<IAppWrapper> = args => <AppWrapper {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

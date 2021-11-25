@@ -1,5 +1,5 @@
 import React from "react";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import { theme } from "Theme";
 import { Provider } from "react-redux";
 import { store } from "index";
@@ -9,9 +9,11 @@ export const decorators = [
   (Story) => (
     <BrowserRouter>
       <Provider store={store}>
-        <MuiThemeProvider theme={theme}>
-          <Story />
-        </MuiThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <Story />
+          </ThemeProvider>
+        </StyledEngineProvider> 
       </Provider>
     </BrowserRouter>
   )

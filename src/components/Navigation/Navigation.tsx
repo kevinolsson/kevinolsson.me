@@ -38,9 +38,9 @@ const useStyles = makeStyles(
       color: theme.palette.portfolio.dark,
       textDecoration: "none"
     }),
-    linkActive: {
+    linkActive: () => ({
       color: theme.palette.portfolio.green
-    },
+    }),
     icon: {
       position: "relative",
       top: theme.spacing(1.5)
@@ -68,7 +68,8 @@ export const Navigation = ({
   handleClickCallback
 }: INavigation): JSX.Element | false | undefined => {
   const classes = useStyles({ view });
-
+  // eslint-disable-next-line no-console
+  console.log({ active, menu });
   return (
     menu &&
     !!menu.length && (

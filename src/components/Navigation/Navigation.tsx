@@ -35,11 +35,11 @@ const useStyles = makeStyles(
       ...(view === "mobile" ? theme.typography.h2 : undefined),
       fontFamily: theme.typography.fontFamily,
       fontWeight: 700,
-      color: theme.palette.portfolio.dark,
+      color: theme.palette.textColor,
       textDecoration: "none"
     }),
     linkActive: () => ({
-      color: theme.palette.portfolio.green
+      color: theme.palette.menuActiveLinkColor
     }),
     icon: {
       position: "relative",
@@ -68,8 +68,6 @@ export const Navigation = ({
   handleClickCallback
 }: INavigation): JSX.Element | false | undefined => {
   const classes = useStyles({ view });
-  // eslint-disable-next-line no-console
-  console.log({ active, menu });
   return (
     menu &&
     !!menu.length && (

@@ -1,9 +1,7 @@
 import React from "react";
 import { Router } from "Router";
 import { Provider } from "react-redux";
-import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import { theme } from "theme/Theme";
-import { StyleInit } from "components/StyleInit/StyleInit";
+import { ThemeProvider } from "components/ThemeProvider/ThemeProvider";
 
 type AppProps = { store: any };
 export const App = ({ store }: AppProps): JSX.Element => {
@@ -16,12 +14,9 @@ export const App = ({ store }: AppProps): JSX.Element => {
   return (
     <div id="app" style={hasMounted ? { opacity: 1 } : undefined}>
       <Provider store={store}>
-        <StyledEngineProvider injectFirst>
-          <ThemeProvider theme={theme}>
-            <StyleInit />
-            <Router />
-          </ThemeProvider>
-        </StyledEngineProvider>
+        <ThemeProvider>
+          <Router />
+        </ThemeProvider>
       </Provider>
     </div>
   );

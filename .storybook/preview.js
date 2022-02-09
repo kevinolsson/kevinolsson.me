@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import { theme } from "theme/Theme";
+import { lightTheme as theme } from "theme/Theme";
 import { Provider } from "react-redux";
 import { store } from "index";
 import { BrowserRouter } from "react-router-dom";

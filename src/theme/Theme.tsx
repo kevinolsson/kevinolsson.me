@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { baseTheme as scaffolding } from "./Base";
 import { typography } from "./Typography";
-import { globalPalette, lightPalette } from "./Palettes";
+import { globalPalette, lightPalette, darkPalette } from "./Palettes";
 
 declare module "@mui/material/styles/createTheme" {
   interface ThemeOptions {
@@ -21,9 +21,14 @@ declare module "@mui/material/styles/createPalette" {
     primaryColor: ColorType;
     secondaryColor: ColorType;
     textColor: ColorType;
+    borderColor: ColorType;
     buttonBackgroundColor: ColorType;
+    buttonTextColor: ColorType;
     placeholderBackgroundColor: ColorType;
+    backgroundColor: ColorType;
     menuBackgroundColor: ColorType;
+    menuActiveLinkColor: ColorType;
+    iconColor: ColorType;
   }
 }
 
@@ -48,20 +53,20 @@ const portfolio = {
   transparentWhite: "rgba(255,255,255,0.95)"
 };
 
-export const theme = createTheme({
+export const lightTheme = createTheme({
   themeName: "kevin-portfolio-theme-light",
   spacing: 4,
   palette: {
     global: globalPalette,
     portfolio, // the old way of accessing styles
     primary: {
-      light: portfolio.pink,
-      main: portfolio.pink,
-      dark: portfolio.pink,
-      contrastText: portfolio.dark
+      light: globalPalette.pink.dark,
+      main: globalPalette.pink.dark,
+      dark: globalPalette.pink.dark,
+      contrastText: globalPalette.grey[900]
     },
     text: {
-      primary: portfolio.dark
+      primary: globalPalette.grey[900]
     },
     ...lightPalette
   },
@@ -74,7 +79,43 @@ export const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          color: portfolio.dark
+          color: globalPalette.grey[900]
+        },
+        gutterBottom: {
+          marginBottom: scaffolding.spacing(8)
+        }
+      }
+    }
+  }
+});
+
+export const darkTheme = createTheme({
+  themeName: "kevin-portfolio-theme-dark",
+  spacing: 4,
+  palette: {
+    global: globalPalette,
+    portfolio, // the old way of accessing styles
+    primary: {
+      light: globalPalette.pink.light,
+      main: globalPalette.pink.light,
+      dark: globalPalette.pink.light,
+      contrastText: globalPalette.grey[100]
+    },
+    text: {
+      primary: globalPalette.grey[100]
+    },
+    ...darkPalette
+  },
+  typography: {
+    ...scaffolding.typography,
+    ...typography,
+    fontFamily: "Open Sans, sans-serif"
+  },
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: globalPalette.grey[100]
         },
         gutterBottom: {
           marginBottom: scaffolding.spacing(8)

@@ -4,8 +4,8 @@
 export const globalPalette = {
   pink: {
     main: "#E556A2",
-    light: "#3B3442",
-    dark: "#453751"
+    light: "#F27BBA",
+    dark: "#D7398D"
   },
   green: {
     main: "#48EC95",
@@ -13,7 +13,7 @@ export const globalPalette = {
     dark: "#30815A"
   },
   grey: {
-    900: "#242C22",
+    900: "#27222C",
     800: "#3B3442",
     700: "#453751",
     600: "#6A6172",
@@ -48,8 +48,26 @@ export const lightPalette = {
   primaryColor: globalPalette.pink.dark,
   secondaryColor: globalPalette.green.dark,
   textColor: globalPalette.grey[900],
+  borderColor: globalPalette.grey[300],
   buttonBackgroundColor: globalPalette.grey[500],
+  buttonTextColor: globalPalette.grey[100],
   placeholderBackgroundColor: globalPalette.grey[200],
   backgroundColor: globalPalette.grey[100],
-  menuBackgroundColor: hexToRgba(globalPalette.grey[100], 0.95)
+  menuBackgroundColor: hexToRgba(globalPalette.grey[100], 0.95),
+  menuActiveLinkColor: globalPalette.green.dark,
+  iconColor: globalPalette.grey[800]
+};
+
+export const darkPalette = {
+  primaryColor: globalPalette.pink.light,
+  secondaryColor: globalPalette.green.light,
+  textColor: globalPalette.grey[100],
+  borderColor: globalPalette.grey[600],
+  buttonBackgroundColor: globalPalette.grey[500],
+  buttonTextColor: globalPalette.grey[100],
+  placeholderBackgroundColor: globalPalette.grey[800],
+  backgroundColor: globalPalette.grey[900],
+  menuBackgroundColor: hexToRgba(globalPalette.grey[900], 0.95),
+  menuActiveLinkColor: globalPalette.green.main,
+  iconColor: globalPalette.grey[200]
 };

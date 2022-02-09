@@ -31,3 +31,15 @@ export const projectsSlice = createSlice({
   initialState: projects,
   reducers: {}
 });
+
+export const activeThemeSlice = createSlice({
+  name: "activeTheme",
+  initialState: window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "kevin-portfolio-theme-dark"
+    : "kevin-portfolio-theme-light",
+  reducers: {
+    setActiveTheme: (state: any, action: PayloadAction<string>) => {
+      return (state = action.payload);
+    }
+  }
+});

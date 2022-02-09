@@ -6,8 +6,8 @@ import { EnumFilename } from "mdx/index";
 const useStyles = makeStyles(
   (theme?: any) => ({
     root: {
-      color: theme.palette.portfolio.dark,
-      "& a": { color: theme.palette.portfolio.pink },
+      color: theme.palette.textColor,
+      "& a": { color: theme.palette.primaryColor },
       "& h1": { ...theme.typography.h4 },
       "& h2": { ...theme.typography.h5 },
       "& h3": { ...theme.typography.h5 },

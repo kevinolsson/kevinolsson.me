@@ -29,7 +29,7 @@ const useStyles = makeStyles(
       pointerEvents: "auto"
     },
     background: {
-      backgroundColor: theme.palette.portfolio.transparentWhite,
+      backgroundColor: theme.palette.menuBackgroundColor,
       height: "100%",
       width: "100%"
     },

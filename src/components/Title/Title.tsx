@@ -19,11 +19,13 @@ const useStyles = makeStyles(
     },
     title: {
       ...theme.typography.h2,
-      fontFamily: theme.typography.fontFamily
+      fontFamily: theme.typography.fontFamily,
+      letterSpacing: theme.spacing(-0.5)
     },
     titleProminent: {
       ...theme.typography.h1,
-      fontFamily: theme.typography.fontFamily
+      fontFamily: theme.typography.fontFamily,
+      letterSpacing: theme.spacing(-0.5)
     },
     subtitle: {
       display: "block",
@@ -78,7 +80,7 @@ export const Title = ({
           ]
             .filter(Boolean)
             .join(" ")}
-          component={prominent ? "h1" : "h2"}
+          component={"h1"}
         >
           {name}
         </Typography>

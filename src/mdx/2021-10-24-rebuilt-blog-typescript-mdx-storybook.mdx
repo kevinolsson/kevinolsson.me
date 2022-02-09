@@ -1,5 +1,5 @@
 import { Counter } from "components/Counter/Counter";
-import { theme } from "theme/Theme";
+import { lightTheme as theme } from "theme/Theme";
 import logo from "logo.svg";
 import { Link } from "react-router-dom";
 import StorybookIcon from "components/Icons/StorybookIcon";
@@ -10,7 +10,7 @@ Hi! It's been over a year since I've last touched this website. A lot has happen
 
 <img
   style={{
-    maxWidth: "460px"
+    maxWidth: "460px",
   }}
   src={`${
     process.env.PUBLIC_URL
@@ -28,7 +28,7 @@ With this rewrite I had one goal in mind. I want my website to make me want to t
 
 <img
   style={{
-    maxWidth: "460px"
+    maxWidth: "460px",
   }}
   src={"https://media.giphy.com/media/gk3R16JhLP8RUka2nD/giphy.gif"}
   alt="You so of a bitch... I'm in"
@@ -49,14 +49,14 @@ I guess this would be the biggest change with my rewrite. I've started using MDX
     borderRadius: theme.shape.borderRadius,
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   }}
 >
   <img
     src={logo}
     style={{
       height: "40vmin",
-      pointerEvents: "none"
+      pointerEvents: "none",
     }}
     alt="logo"
   />

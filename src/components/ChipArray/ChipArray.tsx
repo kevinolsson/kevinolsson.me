@@ -11,15 +11,15 @@ const useStyles = makeStyles(
     },
     chip: {
       borderRadius: theme.spacing(),
-      borderColor: theme.palette.portfolio.dark,
-      color: theme.palette.portfolio.dark,
+      borderColor: theme.palette.borderColor,
+      color: theme.palette.textColor,
       padding: theme.spacing(),
       marginRight: theme.spacing(2),
       marginBottom: theme.spacing(2),
       ...theme.typography.body2
     },
     icon: {
-      fill: theme.palette.portfolio.pink,
+      fill: theme.palette.primaryColor,
       width: theme.spacing(4),
       height: theme.spacing(4)
     }

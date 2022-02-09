@@ -1,23 +1,25 @@
 import React from "react";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import { theme } from "Theme";
+import { lightTheme as theme } from "theme/Theme";
 import { Provider } from "react-redux";
 import { store } from "index";
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
+
+console.log({ theme });
 
 export const decorators = [
   (Story) => (
-    <BrowserRouter>
-      <Provider store={store}>
+    <Provider store={store}>
+      <BrowserRouter>
         <StyledEngineProvider injectFirst>
           <ThemeProvider theme={theme}>
             <Story />
           </ThemeProvider>
-        </StyledEngineProvider> 
-      </Provider>
-    </BrowserRouter>
-  )
-]
+        </StyledEngineProvider>
+      </BrowserRouter>
+    </Provider>
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -27,4 +29,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};

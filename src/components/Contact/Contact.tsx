@@ -9,7 +9,7 @@ import { ISettings } from "../../data/interfaces";
 const useStyles = makeStyles(
   (theme?: any) => ({
     bold: {
-      color: theme.palette.portfolio.dark,
+      color: theme.palette.textColor,
       fontWeight: theme.typography.fontWeightBold
     }
   }),

@@ -1,46 +1,6 @@
-import { createTheme } from "@mui/material/styles";
+import { baseTheme as scaffolding } from "./Base";
 
-declare module "@mui/material/styles/createTheme" {
-  interface ThemeOptions {
-    themeName?: string;
-  }
-}
-
-declare module "@mui/material/styles/createPalette" {
-  interface PaletteOptions {
-    portfolio: {
-      pink: string;
-      green: string;
-      dark: string;
-      altGrey: string;
-      transparentWhite: string;
-    };
-  }
-}
-
-declare module "@mui/material/styles/createTypography" {
-  interface TypographyOptions {
-    h1: { transition: string };
-    h2: { transition: string };
-    h3: { transition: string };
-    h4: { transition: string };
-    h5: { transition: string };
-    body1: { transition: string };
-    body2: { transition: string };
-  }
-}
-
-const scaffolding = createTheme({ spacing: 4 });
-
-const portfolio = {
-  pink: "#E556A2",
-  green: "#48EC95",
-  dark: "#453751",
-  altGrey: "#A9A2AF",
-  transparentWhite: "rgba(255,255,255,0.95)"
-};
-
-const typography = {
+export const typography = {
   h1: {
     fontFamily: "Lora, serif",
     fontSize: "43.94px",
@@ -143,37 +103,3 @@ const typography = {
     }
   }
 };
-
-export const theme = createTheme({
-  themeName: "kevin-portfolio-theme-light",
-  spacing: 4,
-  palette: {
-    portfolio,
-    primary: {
-      light: portfolio.pink,
-      main: portfolio.pink,
-      dark: portfolio.pink,
-      contrastText: portfolio.dark
-    },
-    text: {
-      primary: portfolio.dark
-    }
-  },
-  typography: {
-    ...scaffolding.typography,
-    ...typography,
-    fontFamily: "Open Sans, sans-serif"
-  },
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          color: portfolio.dark
-        },
-        gutterBottom: {
-          marginBottom: scaffolding.spacing(8)
-        }
-      }
-    }
-  }
-});

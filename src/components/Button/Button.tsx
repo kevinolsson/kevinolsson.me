@@ -5,13 +5,13 @@ import { Button as MuiButton } from "@mui/material/";
 const useStyles = makeStyles(
   (theme?: any) => ({
     root: {
-      backgroundColor: theme.palette.portfolio.altGrey,
-      color: theme.palette.common.white,
+      backgroundColor: theme.palette.buttonBackgroundColor,
+      color: theme.palette.buttonTextColor,
       textTransform: "capitalize",
       fontWeight: theme.typography.fontWeightBold,
       padding: theme.spacing(1, 4),
       "&:hover": {
-        backgroundColor: theme.palette.portfolio.altGrey
+        backgroundColor: theme.palette.buttonBackgroundColor
       }
     }
   }),
